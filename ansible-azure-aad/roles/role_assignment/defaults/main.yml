@@ -1,5 +1,0 @@
----
-
-# file: roles/role_assignment/defaults/main.yml
-
-role_assignment_aad_group_name: group1

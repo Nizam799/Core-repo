@@ -1,5 +1,0 @@
----
-
-# file: roles/role_assignments/vars/main.yml
-
-role_assignment_remote_rbac: []

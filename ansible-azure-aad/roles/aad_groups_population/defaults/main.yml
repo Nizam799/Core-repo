@@ -1,5 +1,0 @@
----
-
-# file: roles/aad_groups_population/defaults/main.yml
-
-aad_groups_population_aad_group_name: group1
