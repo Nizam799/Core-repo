@@ -1,0 +1,16 @@
+---
+- name: Aad-az-rbac-subs-lz
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-rbac-subs-lz-us-customer-dev-001-adf-run
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-rbac-subs-lz-us-customer-dev-001-reader
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-rbac-subs-lz-us-customer-pd-001-adf-run
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-rbac-subs-lz-us-customer-dev-001-adf-run
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-rbac-subs-lz-us-customer-qa-001-reader

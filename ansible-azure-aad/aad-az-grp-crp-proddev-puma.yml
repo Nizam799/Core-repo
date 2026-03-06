@@ -1,0 +1,14 @@
+---
+- name: Aad-az-grp-crp-proddev-puma
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-puma-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-puma-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-puma-ba" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-puma-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-colonelcrisis-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-puma-qa" }

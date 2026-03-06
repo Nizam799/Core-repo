@@ -1,0 +1,14 @@
+---
+- name: Aad-az-grp-crp-proddev-phantom
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-ba" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-phantom-qa" }

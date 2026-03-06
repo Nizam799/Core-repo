@@ -1,0 +1,32 @@
+---
+# Owners : Jason Harmon, Jamie Wanken
+gh_groups:
+  gh-winwire-iam-owners:
+    privacy: closed
+    description: A github managed team for winwire approvers
+    members:
+      - username: jason-harmon_CPSI
+        role: maintainer
+      - username: jamie-wanken_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-winwire-all:
+    nested_groups:
+      - az-grp-crp-proddev-winwire-github
+    users:
+      - anurag.ghosh@trubridge.com
+      - piyush.gupta@trubridge.com
+      - praveen.raju@trubridge.com
+      - srinivasu.akasapu@trubridge.com
+      - tushar.walavalkar@trubridge.com
+      - siva.prabagaran@trubridge.com
+  az-grp-crp-proddev-winwire-github:
+    users:
+      - anurag.ghosh@trubridge.com
+      - jamie.wanken@trubridge.com
+      - jason.harmon@trubridge.com
+      - piyush.gupta@trubridge.com
+      - praveen.raju@trubridge.com
+      - srinivasu.akasapu@trubridge.com
+      - tushar.walavalkar@trubridge.com
+      - siva.prabagaran@trubridge.com

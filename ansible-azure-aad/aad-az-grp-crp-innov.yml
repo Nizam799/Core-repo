@@ -1,0 +1,24 @@
+---
+- name: Aad-az-grp-crp-innov
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-adv" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-aibuilder" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-engineers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-review" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-compliance-evaluation" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-compliance-review" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-dashboard" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-evaluation" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-review" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-hr-evaluation" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-hr-review" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-support-evaluation" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-support-review" }

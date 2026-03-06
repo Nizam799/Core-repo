@@ -1,0 +1,74 @@
+---
+gh_groups:
+  gh-powerbi-iam-owners:
+    privacy: closed
+    description: A github managed team for powerbi approvers
+    members:
+      - username: Kacy-Hattabaugh_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-powerbi-irad-usage-metrics: # Owners: Philip Seemann, Vaibhav Patel, Kacy Hattabaugh, Amy Estep
+    users:
+      - aubrey.stadther@trubridge.com
+      - brian.cranford@trubridge.com
+      - cristin.shehan@trubridge.com
+      - david.palmer@trubridge.com
+      - doug.fridley@trubridge.com
+      - doug.toenes@trubridge.com
+      - gaillard.bixler@trubridge.com
+      - holley.francis@trubridge.com
+      - janice.couey@trubridge.com
+      - jennifer.may@trubridge.com
+      - kathie.robbins@trubridge.com
+      - kelli.bergman@trubridge.com
+      - lance.green@trubridge.com
+      - laura.grandquest@trubridge.com
+      - lisa.snow@trubridge.com
+      - robert.finch@trubridge.com
+      - tiffany.lynes@trubridge.com
+      - troy.dolly@trubridge.com
+      - wesley.domning@trubridge.com
+  az-grp-crp-powerbi-patient-care-support-metrics: # Owners: Jessica Krafthefer and Travis Parker
+    users:
+      - andrew.smith@trubridge.com
+      - anna.fredricks@trubridge.com
+      - ashley.williams@trubridge.com
+      - beth.adams@trubridge.com
+      - brian.ross@trubridge.com
+      - brian.williamson@trubridge.com
+      - bryant.winslett@trubridge.com
+      - candace.wilson@trubridge.com
+      - chantale.davis@trubridge.com
+      - chris.kesting@trubridge.com
+      - christopher.johnson@trubridge.com
+      - cj.milto@trubridge.com
+      - gary.constantine@trubridge.com
+      - jake.turberville@trubridge.com
+      - jay.crocker@trubridge.com
+      - jess.horn@trubridge.com
+      - jessica.krafthefer@trubridge.com
+      - jessica.vines@trubridge.com
+      - jody.stevens@trubridge.com
+      - joel.bishop@trubridge.com
+      - josh.fain@trubridge.com
+      - kristen.bull@trubridge.com
+      - larry.weed@trubridge.com
+      - laura.anthony@trubridge.com
+      - lynn.perry@trubridge.com
+      - missy.ahrens@trubridge.com
+      - monica.mccaskey@trubridge.com
+      - patrick.mcginnis@trubridge.com
+      - peggy.hulcher@trubridge.com
+      - racheal.chamblee@trubridge.com
+      - raven.heard@trubridge.com
+      - richard.largilliere@trubridge.com
+      - ryan.jasper@trubridge.com
+      - sherry.gunderman@trubridge.com
+      - tiffany.davis@trubridge.com
+      - tina.gager@trubridge.com
+      - tj.homeister@trubridge.com
+      - todd.guthrey@trubridge.com
+      - tramain.coats@trubridge.com
+      - travis.parker@trubridge.com
+      - valerie.olson@trubridge.com
+      - wendie.engebretson@trubridge.com

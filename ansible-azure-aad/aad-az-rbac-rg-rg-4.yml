@@ -1,0 +1,10 @@
+---
+- name: Aad-az-rbac-rg-rg-1
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-ptcare-dax-cog-pd-usea-001-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-ptcare-dmo-cog-pd-usea-001-contributor" }

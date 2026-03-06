@@ -1,0 +1,58 @@
+---
+# Owners: Nicole O connell, Or Barak
+gh_groups:
+  gh-cookies-iam-owners:
+    privacy: closed
+    description: A github managed team for cookies approvers
+    members:
+      - username: nicole-oconnell_CPSI
+        role: maintainer
+      - username: or-barak_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-cookies-all:
+    nested_groups:
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-cookies-ba
+      - az-grp-crp-proddev-cookies-dev
+      - az-grp-crp-proddev-cookies-github
+      - az-grp-crp-proddev-cookies-qa
+    users:
+      - charla.allen-ogburn@trubridge.com
+      - madhusudhan.cb@trubridge.com
+      - nagaraj.govindaraj@trubridge.com
+      - newton.v@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - or.barak@trubridge.com
+      - selvakumar.murugan@trubridge.com
+      - senthilkumar.murugan@trubridge.com
+      - suryanarayan.shanmugam@trubridge.com
+      - vignesh.murugesan@trubridge.com
+  az-grp-crp-proddev-cookies-approvers:
+    users:
+      - nicole.oconnell@trubridge.com
+      - or.barak@trubridge.com
+  az-grp-crp-proddev-cookies-ba:
+    users:
+      - charla.allen-ogburn@trubridge.com
+  az-grp-crp-proddev-cookies-dev:
+    users:
+      - nagaraj.govindaraj@trubridge.com
+      - newton.v@trubridge.com
+      - selvakumar.murugan@trubridge.com
+      - senthilkumar.murugan@trubridge.com
+      - suryanarayan.shanmugam@trubridge.com
+      - vignesh.murugesan@trubridge.com
+  az-grp-crp-proddev-cookies-github:
+    users:
+      - nagaraj.govindaraj@trubridge.com
+      - newton.v@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - or.barak@trubridge.com
+      - selvakumar.murugan@trubridge.com
+      - senthilkumar.murugan@trubridge.com
+      - suryanarayan.shanmugam@trubridge.com
+      - vignesh.murugesan@trubridge.com
+  az-grp-crp-proddev-cookies-qa:
+    users:
+      - madhusudhan.cb@trubridge.com

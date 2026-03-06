@@ -1,0 +1,47 @@
+---
+# Owner: Wes Bryant
+gh_groups:
+  gh-phoenix-iam-owners:
+    privacy: closed
+    description: A github managed team for phoenix approvers
+    members:
+      - username: wes-bryant_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-phoenix-all:
+    nested_groups:
+      - az-grp-crp-proddev-phoenix-approvers
+      - az-grp-crp-proddev-phoenix-ba
+      - az-grp-crp-proddev-phoenix-dev
+      - az-grp-crp-proddev-phoenix-github
+      - az-grp-crp-proddev-phoenix-qa
+    users:
+      - craig.pomeroy@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - patrick.peyton@trubridge.com
+      - therese.hart@trubridge.com
+      - tiffany.burt@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-crp-proddev-phoenix-approvers:
+    users:
+      - harvey.mccreary@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-crp-proddev-phoenix-ba:
+    users:
+      - patrick.peyton@trubridge.com
+  az-grp-crp-proddev-phoenix-dev:
+    users:
+      - harvey.mccreary@trubridge.com
+      - therese.hart@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-crp-proddev-phoenix-github:
+    users:
+      - craig.pomeroy@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - patrick.peyton@trubridge.com
+      - therese.hart@trubridge.com
+      - tiffany.burt@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-crp-proddev-phoenix-qa:
+    users:
+      - craig.pomeroy@trubridge.com

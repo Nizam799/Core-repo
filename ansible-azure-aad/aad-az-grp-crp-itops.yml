@@ -1,0 +1,14 @@
+---
+- name: Aad-az-grp-crp-itops
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-infraops" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-infraops-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-moderninfra" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-itops-moderninfra-github" }

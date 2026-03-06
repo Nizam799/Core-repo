@@ -1,0 +1,60 @@
+---
+# Owner: Nick Chao
+gh_groups:
+  gh-prisma-iam-owners:
+    privacy: closed
+    description: A github managed team for prisma approvers
+    members:
+      - username: nick-chao_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-prisma-vulnerabilies-reader:
+    users:
+      - amita.gupta@trubridge.com
+      - blake.clark@trubridge.com
+      - brent.runkle@trubridge.com
+      - cathy.cupp@trubridge.com
+      - chaitra.ranganath@trubridge.com
+      - chason.hicks@trubridge.com
+      - dave.meidlinger@trubridge.com
+      - dhakshanamurthy.k@trubridge.com
+      - ethan.moody@trubridge.com
+      - evan.mitchell@trubridge.com
+      - james.dement@trubridge.com
+      - jason.holmgren@trubridge.com
+      - jasonp@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - justin.arnold@trubridge.com
+      - kumaresh.g@trubridge.com
+      - lynn.schnobrich@trubridge.com
+      - madhusudhan.cb@trubridge.com
+      - mahesh.pillai@trubridge.com
+      - marshall.weekley@trubridge.com
+      - mathanagopal.balaraman@trubridge.com
+      - melissa.johnson@trubridge.com
+      - michael.cramer@trubridge.com
+      - michael.davis@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - nagaraj.govindaraj@trubridge.com
+      - newton.v@trubridge.com
+      - nyeela.harney@trubridge.com
+      - patrick.peyton@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - rishibala.sekar@trubridge.com
+      - rob.resendez@trubridge.com
+      - robert.engberg@trubridge.com
+      - saisraja.r@trubridge.com
+      - sanjana.sheshgir@trubridge.com
+      - selvakumar.murugan@trubridge.com
+      - senthilkumar.murugan@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - stephanie.st.andrie@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sundaramoorthy.adhi@trubridge.com
+      - suryanarayan.shanmugam@trubridge.com
+      - thomas.moore@trubridge.com
+      - tonya.fulmer@trubridge.com
+      - vasu.chinnamani@trubridge.com
+      - vignesh.murugesan@trubridge.com
+      - vignesh.thambusamy@trubridge.com

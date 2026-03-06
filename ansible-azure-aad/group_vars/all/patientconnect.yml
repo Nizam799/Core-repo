@@ -1,0 +1,64 @@
+---
+# Owners : Lynn Schnobrich, Sivakumar Somasundaram
+gh_groups:
+  gh-patientconnect-iam-owners:
+    privacy: closed
+    description: A github managed team for patientconnect approvers
+    members:
+      - username: lynn-schnobrich_CPSI
+        role: maintainer
+      - username: sivakumar-somasundaram_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-patientconnect-approvers:
+    users:
+      - lynn.schnobrich@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+  az-grp-crp-proddev-patientconnect-all:
+    nested_groups:
+      - az-grp-crp-proddev-patientconnect-ba
+      - az-grp-crp-proddev-patientconnect-dev
+      - az-grp-crp-proddev-patientconnect-github
+      - az-grp-crp-proddev-patientconnect-qa
+    users:
+      - jayasuriya.prabu@trubridge.com
+      - lynn.schnobrich@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - ram.prakash@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - saravanan.subramanian@trubridge.com
+      - sudharsanan.p@trubridge.com
+  az-grp-crp-proddev-patientconnect-ba:
+    users:
+      - lynn.schnobrich@trubridge.com
+  az-grp-crp-proddev-patientconnect-dev:
+    users:
+      - jayasuriya.prabu@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - ram.prakash@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - sudharsanan.p@trubridge.com
+  az-grp-crp-proddev-patientconnect-github:
+    users:
+      - jayasuriya.prabu@trubridge.com
+      - lynn.schnobrich@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - ram.prakash@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - saravanan.subramanian@trubridge.com
+      - sudharsanan.p@trubridge.com
+  az-grp-crp-proddev-patientconnect-kvofficers:
+    users:
+      - lynn.schnobrich@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+  az-grp-crp-proddev-patientconnect-qa:
+    users:
+      - ram.prakash@trubridge.com
+      - saravanan.subramanian@trubridge.com

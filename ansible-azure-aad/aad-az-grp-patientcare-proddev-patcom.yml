@@ -1,0 +1,54 @@
+---
+- name: Aad-az-grp-patientcare-proddev-patcom
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-all" }
+    # Core app groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-argo" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-codeowners" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-approvers" }
+    # PAG groups – DEV
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-write" }
+    # PAG groups – PD
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-write" }
+    # PAG groups – STG
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-write" }
+    # PAG groups – QA
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-write" }

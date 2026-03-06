@@ -1,0 +1,10 @@
+---
+- name: Aad-pim
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD AAD role groups
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: aad-pim-cloud-app-admin

@@ -1,0 +1,45 @@
+---
+- name: Aad-az-grp-patientcare-proddev-linus
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-all" }
+    # Core app groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-argo" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-codeowners" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-approvers" }
+    # PAG groups – DEV
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-dev-write" }
+    # PAG groups – PD
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-pd-write" }
+    # PAG groups – STG
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-stg-write" }
+    # PAG groups – QA
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-audit-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-linus-user-pag-pg-qa-write" }

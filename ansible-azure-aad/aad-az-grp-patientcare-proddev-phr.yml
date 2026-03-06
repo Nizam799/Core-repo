@@ -1,0 +1,27 @@
+---
+- name: Aad-az-grp-patientcare-proddev-phr
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-all" }
+    # Core app groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-argo" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-codeowners" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-github" }
+    # PAG groups – DEV
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-write" }
+    # PAG groups – PD
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-write" }
+    # PAG groups – STG
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-write" }
+    # PAG groups – QA
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-write" }

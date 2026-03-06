@@ -1,0 +1,324 @@
+---
+# Owners : William Skelton, Swarna Pujari
+gh_groups:
+  gh-dataplatform-iam-owners:
+    privacy: closed
+    description: A github managed team for dataplatform approvers
+    members:
+      - username: william-skelton_CPSI
+        role: maintainer
+      - username: swarna-pujari_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-dataplatform-all:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-analytics
+      - az-grp-crp-dataplatform-engineers-bi
+      - az-grp-crp-dataplatform-engineers-data
+      - az-grp-crp-dataplatform-engineers-snp
+    users:
+      - amy.estep@trubridge.com
+      - aniketamaldar.singh@trubridge.com
+      - gregory.wilke@trubridge.com
+      - janel.dekker@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - lynn.bunyard@trubridge.com
+      - randall.anderson@trubridge.com
+      - sanjay.kachhadiya@trubridge.com
+      - satej.deosarkar@trubridge.com
+      - steven.cyrway@trubridge.com
+      - suram.reddy@trubridge.com
+      - swarna.pujari@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-custscorecard-reader:
+    users:
+      - gregory.wilke@trubridge.com
+    spn_client_ids:
+      - 1ea30a58-8c60-40f2-8ffa-63b0a2b2d636 # spn-crp-mdp-dev-custscorecard
+      - 2ea62e81-2f8f-4bc3-a356-be7277088724 # spn-crp-mdp-qa-custscorecard
+      - 8410834f-b2d2-4f02-98ce-51c3b15efb4d # spn-crp-mdp-pd-custscorecard
+  az-grp-crp-dataplatform-dagst-webconsole-dev-admin:
+    users:
+      - chase.kleinschmidt@trubridge.com
+      - eric.singer@trubridge.com
+      - gregory.wilke@trubridge.com
+      - randall.anderson@trubridge.com
+      - steven.cyrway@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-dagst-webconsole-pd-admin:
+    users:
+      - chase.kleinschmidt@trubridge.com
+      - eric.singer@trubridge.com
+      - gregory.wilke@trubridge.com
+      - randall.anderson@trubridge.com
+      - steven.cyrway@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-dagst-webconsole-qa-admin:
+    users:
+      - chase.kleinschmidt@trubridge.com
+      - eric.singer@trubridge.com
+      - gregory.wilke@trubridge.com
+      - randall.anderson@trubridge.com
+      - steven.cyrway@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-databricks-admin:
+    users:
+      - william.skelton@trubridge.com
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-analytics
+    spn_client_ids:
+      - 07761268-fc94-44c6-a2aa-03ad6e4502f5 # spn-subs-lz-us-cpsicorp-pd-001-data-platform-security
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+      - 1d1a68ca-6ed4-4504-8c33-5260198ad29b # spn-subs-lz-us-cpsicorp-dev-001-mdp-secrets
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+      - 2a769e02-f73f-45fe-99ed-75000612bc3c # spn-subs-lz-us-cpsicorp-qa-001-mdp-secrets
+      - 4efa1647-346b-45fa-95fd-17d6dcbdd024 # spn-subs-lz-us-cpsicorp-pd-001-mdp-secrets
+      - 544d2e80-c87f-4d33-9fcc-e7b380ffa61d # adf-crp-mdp-ingest-pd-usea-001
+      - 597dfd98-95f4-4b15-b091-1e97ccd28e54 # adf-crp-mdp-ingest-dev-usea-001
+      - f2440cdd-5b62-4740-b337-21746d3dea4c # udmi-crp-mdp-dbt-qa-usea-001
+      - 5fbfbd38-3676-4954-9d46-a53ed39f0de3 # udmi-crp-mdp-dbt-dev-usea-001
+      - 71f12994-3b33-48aa-b14d-b906bf2b23ce # spn-lz-us-cpsicorp-qa-001
+      - 8aa7e936-2069-4d8b-b38c-ffaad82d912a # spn-lz-us-cpsicorp-dev-001
+      - 9948ba05-9342-4025-8d91-0c7a69aa6882 # udmi-crp-mdp-dbt-pd-usea-001
+      - bd92f47c-f4b0-4e64-b166-9d7c9972821f # spn-subs-sandbox-us-cpsicorp-shd-001-data-platform-security
+      - d40ddf67-de5d-4e37-9766-1cac639b47f9 # spn-subs-lz-us-cpsicorp-pd-001-mdp-terraform
+      - d450dff2-765a-4047-982e-a16a2e17e20b # adf-crp-mdp-ingest-qa-usea-001
+      - daf915ba-07e2-47ab-ab0c-b938fef579ca # spn-subs-sandbox-us-cpsicorp-shd-001-mdp-secrets
+  az-grp-crp-dataplatform-databricks-thrive-reader:
+    spn_client_ids:
+      - 1b8d358e-eec1-49d3-8614-6bccc5d300b6 # sp-crp-mdp-dev-powerbi
+      - cf93ff9d-5cf9-4311-b288-36cdc0816ecc # sp-crp-mdp-pd-powerbi
+      - 9151bf3e-a4fe-4f6f-91bf-22dd83fb3591 # sp-crp-mdp-qa-powerbi
+  #  Please consult the Data Platform team with any changes to this group
+  az-grp-crp-dataplatform-discoveryanalytics-develop:
+    spn_client_ids:
+      - a71e4c44-0b0e-48e5-9e84-425f51fa097c # spn-crp-mdp-discoveryanalytics-dev
+      - 2b913722-3eef-4dc0-aab0-9735e6005e7e # spn-crp-mdp-discoveryanalytics-qa
+      - 11608bce-b15c-414b-9fdf-2e074a70b8c8 # spn-crp-mdp-discoveryanalytics-pd
+  az-grp-crp-dataplatform-engineers-analytics:
+    users:
+      - aniketamaldar.Singh@trubridge.com
+      - randall.anderson@trubridge.com
+      - janel.dekker@trubridge.com
+      - sanjay.kachhadiya@trubridge.com
+      - satej.deosarkar@trubridge.com
+      - suram.reddy@trubridge.com
+  az-grp-crp-dataplatform-engineers-bi:
+    users:
+      - arun.mohan@trubridge.com
+      - amy.estep@trubridge.com
+      - lynn.bunyard@trubridge.com
+      - swarna.pujari@trubridge.com
+    nested_groups:
+      - az-grp-v-adg-dataplatform-engineers-bi
+  az-grp-crp-dataplatform-engineers-data:
+    users:
+      - gregory.wilke@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - randall.anderson@trubridge.com
+      - steven.cyrway@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-engineers-snp:
+    users:
+      - anusha.reddy@trubridge.com
+      - bhasker.gandla@trubridge.com
+      - naveenbabu.dullur@trubridge.com
+  az-grp-crp-dataplatform-finops:
+    users:
+      - geoffrey.thomas@trubridge.com
+  az-grp-crp-dataplatform-github:
+    users:
+      - gregory.wilke@trubridge.com
+      - janel.dekker@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - randall.anderson@trubridge.com
+      - steven.cyrway@trubridge.com
+      - swarna.pujari@trubridge.com
+      - swati.thakur@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-mgr:
+    users:
+      - swarna.pujari@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-powerbi-api-reader:
+    spn_client_ids:
+      - 1b8d358e-eec1-49d3-8614-6bccc5d300b6 # sp-crp-mdp-dev-powerbi COP-2312
+      - 9151bf3e-a4fe-4f6f-91bf-22dd83fb3591 # sp-crp-mdp-qa-powerbi COP-2312
+      - cf93ff9d-5cf9-4311-b288-36cdc0816ecc # sp-crp-mdp-pd-powerbi COP-2580
+  az-grp-crp-dataplatform-powerbi-external-beta:
+    users:
+      - aepalmer_kpmg.com#EXT#@cpsinet.onmicrosoft.com
+      - emilycoughlin_kpmg.com#EXT#@cpsinet.onmicrosoft.com
+  az-grp-crp-dataplatform-sec-payroll-view:
+    users:
+      - Amaris.McComas@trubridge.com
+      - Brian.Jager@trubridge.com
+      - brittany.pfaff@trubridge.com
+      - Charles.Mills@trubridge.com
+      - Dawn.McLaughlin@trubridge.com
+      - Dot.Havard@trubridge.com
+      - elizabeth.luckie@trubridge.com
+      - Gregory.Leatherbury@trubridge.com
+      - Jason.Coffin@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - Lindsey.Hall@trubridge.com
+      - Ming.Lin@trubridge.com
+      - merideth.wilson@trubridge.com
+      - Patrick.Murphy@trubridge.com
+      - Patrick.O'Rourke@trubridge.com
+      - randall.anderson@trubridge.com
+      - Rachel.Folk@trubridge.com
+      - Sarah.Caldwell@trubridge.com
+      - Vanessa.Ryan@trubridge.com
+      - Valai.Subramanian@trubridge.com
+      - Vinay.Bassi@trubridge.com
+  az-grp-crp-dataplatform-services-insight:
+    users:
+      - lynn.bunyard@trubridge.com
+      - mani.amenary@trubridge.com
+      - valai.subramanian@trubridge.com
+  az-grp-crp-dataplatform-spns:
+    users:
+      - william.skelton@trubridge.com
+  az-grp-crp-dataplatform-vislz-admin-prod:
+    users:
+      - william.skelton@trubridge.com
+      - swati.thakur@trubridge.com
+      - swarna.pujari@trubridge.com
+      - gregory.wilke@trubridge.com
+      - randall.anderson@trubridge.com
+  az-grp-crp-dataplatform-vislz-dataconsumer-prod:
+    users:
+      - amy.estep@trubridge.com
+      - azure.davis@trubridge.com
+      - ekta.soni@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - lynn.bunyard@trubridge.com
+      - mani.amenary@trubridge.com
+      - raja.balakrishnan@trubridge.com
+      - sanjay.kachhadiya@trubridge.com
+      - steven.cyrway@trubridge.com
+      - thirumalai.kumar@trubridge.com
+  az-grp-crp-dataplatform-vislz-admin-qa:
+    users:
+      - william.skelton@trubridge.com
+      - swati.thakur@trubridge.com
+      - swarna.pujari@trubridge.com
+      - gregory.wilke@trubridge.com
+      - randall.anderson@trubridge.com
+  az-grp-crp-dataplatform-vislz-dataconsumer-qa:
+    users:
+      - amy.estep@trubridge.com
+      - azure.davis@trubridge.com
+      - dallas.mcveay@trubridge.com
+      - david.mei@trubridge.com
+      - ekta.soni@trubridge.com
+      - helena.anderson@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - lynn.bunyard@trubridge.com
+      - mani.amenary@trubridge.com
+      - michael.hunt@trubridge.com
+      - nate.stone@trubridge.com
+      - philip.seemann@trubridge.com
+      - raja.balakrishnan@trubridge.com
+      - sanjay.kachhadiya@trubridge.com
+      - steven.cyrway@trubridge.com
+      - thirumalai.kumar@trubridge.com
+      - vaibhav.patel@trubridge.com
+    spn_client_ids:
+      - 2b913722-3eef-4dc0-aab0-9735e6005e7e # spn-crp-mdp-discoveryanalytics-qa
+  az-grp-crp-patientcare-databricks-aidiscovery:
+    users:
+      - bill.russell@trubridge.com
+      - mark.jones@trubridge.com
+      - marshal.thompson@trubridge.com
+      - steven.smith@trubridge.com
+  az-grp-trb-dataplatform-cbo-analyst:
+    users:
+      - andrew.o'dell@trubridge.com
+      - brian.jager@trubridge.com
+      - chris.odom@trubridge.com
+      - dallas.mcveay@trubridge.com
+      - gregory.leatherbury@trubridge.com
+      - jessica.long@trubridge.com
+      - kenneth.adams@trubridge.com
+      - mani.amenary@trubridge.com
+      - mark.perniciaro@trubridge.com
+      - megan.smith@trubridge.com
+      - nikki.sherota@trubridge.com
+      - patrick.murphy@trubridge.com
+      - patrick.o'rourke@trubridge.com
+      - ryan.aiyer@trubridge.com
+      - sean.adams@trubridge.com
+      - tom.gardner@trubridge.com
+      - valai.subramanian@trubridge.com
+  az-grp-trb-dataplatform-cbo-director:
+    users:
+      - brandon.hayes@trubridge.com
+      - brittany.pfaff@trubridge.com
+      - cam.pearl@trubridge.com
+      - cassie.wise@trubridge.com
+      - chris.bryan@trubridge.com
+      - chris.massey@trubridge.com
+      - joan.scully@trubridge.com
+      - stephanie.revering@trubridge.com
+  az-grp-trb-dataplatform-cbo-manager:
+    users:
+      - ann.esposito@trubridge.com
+      - belinda.soulier@trubridge.com
+      - brandy.corbett@trubridge.com
+      - brandy.jensen@trubridge.com
+      - briana.mcfadden-kimball@trubridge.com
+      - brittany.fields@trubridge.com
+      - camille.wisdom@trubridge.com
+      - cathy.martin@trubridge.com
+      - christopher.mcguirt@trubridge.com
+      - crissy.gautier@trubridge.com
+      - christine.storebo@trubridge.com
+      - danielle.redden@trubridge.com
+      - dawn.christenberry@trubridge.com
+      - dawn.zaiser@trubridge.com
+      - deborah.trancoso@trubridge.com
+      - hannah.breland@trubridge.com
+      - holly.engelbert@trubridge.com
+      - jamie.kilgore@trubridge.com
+      - jamie.wander@trubridge.com
+      - janice.rosselli@trubridge.com
+      - jay.cotney@trubridge.com
+      - jennifer.simmons@trubridge.com
+      - jessica.francis@trubridge.com
+      - jessie.hoadley@trubridge.com
+      - josie.wickham@trubridge.com
+      - karen.vinyard@trubridge.com
+      - kelly.lolley@trubridge.com
+      - kelsey.ireland@trubridge.com
+      - kimberly.webb@trubridge.com
+      - latisha.mcwhite@trubridge.com
+      - lisa.jackson@trubridge.com
+      - monica.rebouche@trubridge.com
+      - patricia.williams@trubridge.com
+      - paula.brannan@trubridge.com
+      - rachell.schoolman@trubridge.com
+      - rebecca.cowdin@trubridge.com
+      - robin.gaspard@trubridge.com
+      - sarah.willey@trubridge.com
+      - sam.gilligan@trubridge.com
+      - sandi.lance@trubridge.com
+      - shalondra.woods@trubridge.com
+      - suzanne.guy@trubridge.com
+      - tara.armstrong@trubridge.com
+      - theresa.curtis@trubridge.com
+      - tracy.williams@trubridge.com
+  az-grp-trb-dataplatform-tbi-analyst:
+    users:
+      - mani.amenary@trubridge.com
+      - raja.balakrishnan@trubridge.com
+  az-grp-v-adg-dataplatform-engineers-bi:
+    users:
+      - ekta.soni@trubridge.com
+      - thirumalai.kumar@trubridge.com

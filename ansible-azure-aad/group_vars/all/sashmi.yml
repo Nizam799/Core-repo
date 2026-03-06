@@ -1,0 +1,50 @@
+---
+# Owners : Nathan McCann, Jeremy Tapper
+gh_groups:
+  gh-sashimi-iam-owners:
+    privacy: closed
+    description: A github managed team for sashimi approvers
+    members:
+      - username: nathan-mccann_CPSI
+        role: maintainer
+      - username: jeremy-tapper_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-sashmi-all:
+    nested_groups:
+      - az-grp-crp-proddev-sashmi-ba
+      - az-grp-crp-proddev-sashmi-dev
+      - az-grp-crp-proddev-sashmi-github
+      - az-grp-crp-proddev-sashmi-mgr
+      - az-grp-crp-proddev-sashmi-qa
+    users:
+      - amey.kulkarni@trubridge.com
+      - cherlyn.mussell@trubridge.com
+      - cheryl.kemp@trubridge.com
+      - christopher.colvin@trubridge.com
+      - denise.wilson@trubridge.com
+      - jeff.evans@trubridge.com
+      - nathan.mccann@trubridge.com
+      - sam.clapper@trubridge.com
+  az-grp-crp-proddev-sashmi-dev:
+    users:
+      - cheryl.kemp@trubridge.com
+      - nathan.mccann@trubridge.com
+  az-grp-crp-proddev-sashmi-ba:
+    users:
+      - christopher.colvin@trubridge.com
+  az-grp-crp-proddev-sashmi-mgr:
+    users:
+      - cherlyn.mussell@trubridge.com
+      - denise.wilson@trubridge.com
+  az-grp-crp-proddev-sashmi-github:
+    users:
+      - cheryl.kemp@trubridge.com
+      - jeff.evans@trubridge.com
+      - nathan.mccann@trubridge.com
+      - sam.clapper@trubridge.com
+  az-grp-crp-proddev-sashmi-qa:
+    users:
+      - amey.kulkarni@trubridge.com
+      - jeff.evans@trubridge.com
+      - sam.clapper@trubridge.com

@@ -1,0 +1,39 @@
+name: IAM - PR
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+    paths:
+      - "deployments/**/**/**/core_aad/**"
+      - "deployments/**/**/**/core_role_definition/**"
+      - "stacks/**/aad/**"
+      - "stacks/**/role_definition/**"
+      - ".github/workflows/iam-pr.yml"
+      - "!deployments/**/**/**/core_github_team/**"
+  workflow_dispatch:
+
+jobs:
+  core_role_definition:
+    name: "Validate terraform - Role_Definition"
+    uses: CPSICorp/reusable-workflow-azure-terraform/.github/workflows/reusable-workflow-terraform-plan-arc.yml@v8
+    secrets: inherit
+    with:
+      planEnv: terraform-deployment-1_0-reader
+      deploymentPath: ./deployments/cpsi/global/iam/core_role_definition
+      applyEnv: terraform-deployment-1_0-pd
+      runnerName: arc-runners-usea
+      varsFile: terraform.tfvars
+      artifactSuffix: core_role_definition
+
+  core_aad:
+    name: "Validate terraform - AAD"
+    needs: core_role_definition
+    uses: CPSICorp/reusable-workflow-azure-terraform/.github/workflows/reusable-workflow-terraform-plan-arc.yml@v8
+    secrets: inherit
+    with:
+      planEnv: terraform-deployment-1_0-reader
+      deploymentPath: ./deployments/cpsi/global/iam/core_aad
+      applyEnv: terraform-deployment-1_0-pd
+      runnerName: arc-runners-usea
+      varsFile: azuread_directory_groups.auto.tfvars
+      artifactSuffix: core_aad

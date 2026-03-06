@@ -1,0 +1,21 @@
+name: Ansible Lint
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Important: This sets up your GITHUB_WORKSPACE environment variable
+      - uses: actions/checkout@v4
+
+      - name: Run ansible-lint
+        # replace `main` with any valid ref, or tags like `v6`
+        uses: ansible/ansible-lint@main
+        with:
+          args: "-x var-naming[no-role-prefix]"
+          working_directory: .
+          requirements_file: requirements.yml

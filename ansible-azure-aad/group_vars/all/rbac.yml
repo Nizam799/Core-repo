@@ -1,0 +1,388 @@
+---
+# Owners : Nick Chao, John Immel
+gh_groups:
+  gh-rbac-iam-owners:
+    privacy: closed
+    description: A github managed team for rbac approvers
+    members:
+      - username: nick-chao_CPSI
+        role: maintainer
+      - username: john-immel_CPSI
+        role: maintainer
+aad_groups:
+  # Modern Data Platform OpenMetadataRBAC groups
+  az-rbac-pd-mdp-vislz-admin:
+    nested_groups:
+      - az-grp-crp-cloudops-groundzero
+      - az-grp-crp-dataplatform-vislz-admin-prod
+  az-rbac-pd-mdp-vislz-dataconsumer:
+    nested_groups:
+      - az-grp-crp-dataplatform-vislz-dataconsumer-prod
+  az-rbac-qa-mdp-vislz-admin:
+    nested_groups:
+      - az-grp-crp-cloudops-groundzero
+      - az-grp-crp-dataplatform-vislz-admin-qa
+  az-rbac-qa-mdp-vislz-dataconsumer:
+    nested_groups:
+      - az-grp-crp-dataplatform-vislz-dataconsumer-qa
+  # Azure AD RBAC groups
+  az-rbac-mgs-brownfield-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-itops-all
+      - az-grp-crp-soc-all
+  az-rbac-mgs-tenant-brownfield-grh-cost-reader:
+    users:
+      - arun.mohan@trubridge.com
+  az-rbac-mgs-lz-contributor:
+    spn_client_ids:
+      - 0a5bde24-5b7a-4ce4-9fa8-439ab3dd5410 # spn-repo-cpsicorp-azure-core-monitoring-terraform
+  az-rbac-mgs-lz-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-dataplatform-all
+      - az-grp-crp-itops-all
+      - az-grp-crp-proddev-cookies-all
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-deacon-all
+      - az-grp-crp-proddev-drasticmeasures-all
+      - az-grp-crp-proddev-nitro-all
+      - az-grp-crp-patientcare-all
+      - az-grp-crp-proddev-patientconnect-all
+      - az-grp-crp-proddev-phantom-all
+      - az-grp-crp-proddev-phoenix-all
+      - az-grp-crp-proddev-puma-all
+      - az-grp-crp-soc-all
+  az-rbac-mgs-lz-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-cloudops-groundzero
+      - az-grp-crp-cloudops-skyline
+  az-rbac-mgs-lz-us-customer-aks-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+  az-rbac-mgs-lz-us-customer-monitoring-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-monitor-all
+      - az-grp-crp-proddev-monitor-all
+  az-rbac-mgs-lz-us-customer-npd-policy-trigger:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-mgs-lz-us-customer-shd-contributor:
+    spn_client_ids:
+      - 371a8c1e-8f66-4866-aea4-40ce1699a4c1 # spn-ssvcs-us-cpsicorp-con-shd-001-aviatrix
+  az-rbac-mgs-lz-us-customer-shd-cus-console-access:
+    nested_groups:
+      - az-grp-trb-itms-all
+  az-rbac-mgs-lz-us-customer-shd-cus-vm-admin:
+    nested_groups:
+      - az-grp-trb-itms-admins
+  az-rbac-mgs-lz-us-customer-shd-reader:
+    nested_groups:
+      - az-grp-trb-itms-all
+  az-rbac-mgs-lz-us-customer-shd-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-trb-itms-admins
+  az-rbac-mgs-lz-us-customer-supp-contributor:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-mgs-lz-us-decommissioned-monitoring-reader:
+    nested_groups:
+      - atl-ece-dev-admins
+      - atl-ece-dev-aht-dev
+      - atl-ece-dev-falcon
+      - atl-ece-dev-hl-dev
+      - atl-ece-dev-techapps
+      - atl-ece-dev-thrive-dev
+      - atl-ece-linus-dev
+      - atl-ece-prod-aht-dev
+      - atl-ece-prod-falcon
+      - atl-ece-prod-hl-dev
+      - atl-ece-prod-techapps
+      - atl-ece-prod-thrive-dev
+      - atl-ece-rcm
+      - az-grp-crp-cloudops-monitor-all
+      - az-grp-crp-proddev-monitor-all
+  az-rbac-mgs-sandbox-akv-admin:
+    spn_client_ids:
+      - 97d44123-83b0-425d-a7b2-b5b1d295db5a # az-rbac-mgs-sandbox-akv-admin
+  az-rbac-mgs-sandbox-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-soc-all
+  az-rbac-mgs-sandbox-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+  az-rbac-mgs-sandbox-us-customer-contributor:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-innov-all
+      - az-grp-crp-itops-all
+      - az-grp-crp-proddev-all
+      - az-grp-crp-proddev-cookies-all
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-deacon-all
+      - az-grp-crp-proddev-drasticmeasures-all
+      - az-grp-crp-proddev-nitro-all
+      - az-grp-crp-patientcare-all
+      - az-grp-crp-proddev-patientconnect-all
+      - az-grp-crp-proddev-phantom-all
+      - az-grp-crp-proddev-phoenix-all
+      - az-grp-crp-proddev-puma-all
+      - az-grp-crp-soc-all
+  az-rbac-mgs-sandbox-us-customer-owner:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+  az-rbac-mgs-sandbox-us-customer-reader:
+    spn_client_ids:
+      - daf915ba-07e2-47ab-ab0c-b938fef579ca # spn-subs-sandbox-us-cpsicorp-shd-001-mdp-secrets
+      - bd92f47c-f4b0-4e64-b166-9d7c9972821f # spn-subs-sandbox-us-cpsicorp-shd-001-data-platform-security
+      - e4219a04-03ae-48eb-819c-7092825152a7 # spn-crp-kubeops-aks-001
+  az-rbac-mgs-ssvcs-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-cloudops-groundzero
+      - az-grp-crp-cloudops-skyline
+  az-rbac-mgs-ssvcs-reader:
+    nested_groups:
+      - az-grp-crp-itops-all
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-soc-all
+  az-rbac-mgs-ssvcs-us-hybrid-mgmt-shd-aks-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+  az-rbac-mgs-ssvcs-us-hybrid-mgmt-shd-seim-reader:
+    nested_groups:
+      - az-grp-crp-soc-all
+  az-rbac-mgs-ssvcs-us-hybrid-reader:
+    spn_client_ids:
+      - e3dbf5a9-cbde-4e66-86b4-8f949c0cdc5f # spn-repo-azure-core-dns-reader
+  az-rbac-mgs-tenant-root-group-cost-reader:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cost-management-reader
+  az-rbac-mgs-tenant-root-group-network-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-groundzero
+  az-rbac-mgs-tenant-root-group-security-admin:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-soc-mgr
+  az-rbac-subs-lz-us-customer-dev-001-adf-run:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-subs-lz-us-customer-dev-001-reader:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+      - 1d1a68ca-6ed4-4504-8c33-5260198ad29b # spn-subs-lz-us-cpsicorp-dev-001-mdp-secrets
+  az-rbac-subs-lz-us-customer-pd-001-adf-run:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-subs-lz-us-customer-qa-001-adf-run:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-subs-lz-us-customer-qa-001-reader:
+    spn_client_ids:
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+      - 2a769e02-f73f-45fe-99ed-75000612bc3c # spn-subs-lz-us-cpsicorp-qa-001-mdp-secrets
+  az-rbac-subs-sandbox-us-customer-shd-001-user-access-admin:
+    spn_client_ids:
+      - bd92f47c-f4b0-4e64-b166-9d7c9972821f # spn-subs-sandbox-us-cpsicorp-shd-001-data-platform-security
+  az-rbac-subs-ssvcs-us-hybrid-con-shd-001-contributor:
+    spn_client_ids:
+      - 63d2b2ae-4d9e-4dea-8e68-d7a2dea58c48 # spn-repo-azure-core-dns
+  az-rbac-subs-ssvcs-us-hybrid-con-shd-001-reader:
+    spn_client_ids:
+      - f6f36c16-11b0-44b7-9509-7ac14542fa0e # spn-subs-lz-us-cpsicorp-dev-001-kafka-terraform
+      - 956bd6ff-83ba-4320-b196-5a5933deaa4e # spn-subs-lz-us-cpsicorp-pd-001-kafka-terraform
+      - 7e9f68c0-d7a4-4f84-b153-df1a6160b651 # spn-subs-lz-us-cpsicorp-qa-001-kafka-terraform
+      - 1d5fc6f5-d602-4251-b7c5-14fba95d8bd1 # spn-subs-lz-us-cpsicorp-stg-001-kafka-terraform
+      - ca18cb11-0af1-4e2c-b35e-c846e34f1c0b # spn-repo-azure-core-kafka-reader
+  az-rbac-subs-ssvcs-us-hybrid-idm-shd-001-contributor:
+    spn_client_ids:
+      - 63d2b2ae-4d9e-4dea-8e68-d7a2dea58c48 # spn-repo-azure-core-dns
+  az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-logic-contributor:
+    nested_groups:
+      - az-grp-crp-soc-all
+  az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-seim-playbook-operator:
+    nested_groups:
+      - az-grp-crp-soc-all
+  az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-seim-responder:
+    nested_groups:
+      - az-grp-crp-soc-all
+  az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-template-spec-contributor:
+    nested_groups:
+      - az-grp-crp-soc-all
+  az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer:
+    spn_client_ids:
+      - 7d2f1975-7257-4ccc-80c7-c6998ef081f8 # func-crp-los-app-dev-usea-001
+  az-rbac-rg-rg-crp-los-app-dev-usea-001-stgblob-contributor:
+    spn_client_ids:
+      - 7d2f1975-7257-4ccc-80c7-c6998ef081f8 # func-crp-los-app-dev-usea-001
+  az-rbac-rg-rg-crp-los-app-pd-usea-001-akv-secrets-officer:
+    spn_client_ids:
+      - 58a703a4-86d8-4c0e-aa2d-b95be4c618bf # func-crp-los-app-pd-usea-001
+  az-rbac-rg-rg-crp-los-app-pd-usea-001-stgblob-contributor:
+    spn_client_ids:
+      - 58a703a4-86d8-4c0e-aa2d-b95be4c618bf # func-crp-los-app-pd-usea-001
+  az-rbac-rg-rg-crp-los-app-qa-usea-001-akv-secrets-officer:
+    spn_client_ids:
+      - 1e8fc1b6-19be-4652-84cb-4d85fcbfd22f # func-crp-los-app-qa-usea-001
+  az-rbac-rg-rg-crp-los-app-qa-usea-001-stgblob-contributor:
+    spn_client_ids:
+      - 1e8fc1b6-19be-4652-84cb-4d85fcbfd22f # func-crp-los-app-qa-usea-001
+  az-rbac-rg-rg-crp-los-app-stg-usea-001-akv-secrets-officer:
+    spn_client_ids:
+      - 95ced8dd-6e49-4774-9fc1-8dd201a31bf6 # func-crp-los-app-stg-usea-001
+  az-rbac-rg-rg-crp-los-app-stg-usea-001-stgblob-contributor:
+    spn_client_ids:
+      - 95ced8dd-6e49-4774-9fc1-8dd201a31bf6 # func-crp-los-app-stg-usea-001
+  az-rbac-rg-rg-crp-mdp-data-dev-usea-001-hub-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-data-dev-usea-001-user-access-admin:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-data-pd-usea-001-hub-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-data-qa-usea-001-hub-virtual-machine-user-login:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-data-dev-usea-001-stgblob-reader:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-data-qa-usea-001-stgblob-reader:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-data-qa-usea-001-user-access-admin:
+    spn_client_ids:
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-dbt-dev-usea-001-cus-mdp-container-contributor:
+    spn_client_ids:
+      - 597dfd98-95f4-4b15-b091-1e97ccd28e54 # adf-crp-mdp-ingest-dev-usea-001
+  az-rbac-rg-rg-crp-mdp-dbt-dev-usea-001-user-access-admin:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-dbt-qa-usea-001-user-access-admin:
+    spn_client_ids:
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-adf-contributor:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-user-access-admin:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-cus-mdp-adf-integration:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-adf-contributor:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-user-access-admin:
+    spn_client_ids:
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-cus-mdp-adf-integration:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-shdsvc-dev-usea-001-akv-reader:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-shdsvc-dev-usea-001-user-access-admin:
+    spn_client_ids:
+      - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security
+  az-rbac-rg-rg-crp-mdp-shdsvc-qa-usea-001-akv-reader:
+    nested_groups:
+      - az-grp-crp-dataplatform-engineers-data
+  az-rbac-rg-rg-crp-mdp-shdsvc-qa-usea-001-user-access-admin:
+    spn_client_ids:
+      - 1ad08628-276b-4cfa-afac-c162ad015788 # spn-subs-lz-us-cpsicorp-qa-001-data-platform-security
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader:
+    spn_client_ids:
+      - f8eeb1bd-d8c4-4457-9c17-b204c34e90e8 # spn-repo-azure-core-databases-reader
+      - ca18cb11-0af1-4e2c-b35e-c846e34f1c0b # spn-repo-azure-core-kafka-reader
+      - 111b6aa7-61a8-48dd-aa95-2edec33e34f2 # spn-repo-azure-core-linus-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor:
+    spn_client_ids:
+      - 11dca565-a730-40b9-ba48-0fbf0fc19cde # spn-subs-lz-us-cpsicorp-dev-001-aks-contributor
+      - 37c37001-9638-4a67-bfa6-cc79309913f3 # spn-subs-lz-us-cpsicorp-dev-001-aks-owner
+      - f6f36c16-11b0-44b7-9509-7ac14542fa0e # spn-subs-lz-us-cpsicorp-dev-001-kafka-terraform
+      - 4a49bb60-1abd-41c4-b4f9-1f49bc03ec45 # spn-subs-lz-us-cpsicorp-dev-001-terraform
+      - 07f9df77-5e48-43c9-9958-dc436036d2d6 # spn-subs-lz-us-cpsicorp-pd-001-aks-contributor
+      - bfc187c8-7f93-42e0-950b-82aed514cd2a # spn-subs-lz-us-cpsicorp-pd-001-aks-owner
+      - 956bd6ff-83ba-4320-b196-5a5933deaa4e # spn-subs-lz-us-cpsicorp-pd-001-kafka-terraform
+      - 3b529b34-1705-4368-97be-df1d6dc6a6ef # spn-subs-lz-us-cpsicorp-pd-001-terraform
+      - bf9b292e-130f-4441-9550-a2fd07e8fc10 # spn-subs-lz-us-cpsicorp-qa-001-aks-contributor
+      - 747d02ec-0920-4fc9-80ea-e62100c6e766 # spn-subs-lz-us-cpsicorp-qa-001-aks-owner
+      - 7e9f68c0-d7a4-4f84-b153-df1a6160b651 # spn-subs-lz-us-cpsicorp-qa-001-kafka-terraform
+      - db7619e6-df81-4a10-ac4f-4455f9c350a9 # spn-subs-lz-us-cpsicorp-qa-001-terraform
+      - 7e5933f7-4ad0-485a-a924-7296edebf40f # spn-subs-lz-us-cpsicorp-stg-001-aks-contributor
+      - 7d9add90-fab6-4dd5-90ff-66df9e149fd7 # spn-subs-lz-us-cpsicorp-stg-001-aks-owner
+      - 1d5fc6f5-d602-4251-b7c5-14fba95d8bd1 # spn-subs-lz-us-cpsicorp-stg-001-kafka-terraform
+      - ceeabf42-7759-458f-9d45-f459f800f44f # spn-subs-lz-us-cpsicorp-stg-001-terraform
+      - 5e28baea-f755-406a-91f5-00987329ac45 # spn-subs-ssvcs-us-cpsicorp-mgmt-shd-001-aks-contributor
+      - db6bc13d-660f-4b16-b4b3-42039f8203a5 # spn-subs-ssvcs-us-cpsicorp-mgmt-shd-001-aks-owner
+      - e593a39d-9859-4eee-a71d-7c400654a086 # spn-subs-ssvcs-us-cpsicorp-mgmt-shd-001-terraform
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-bcdr-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-comp-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-data-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-dvps-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-secm-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-bcdr-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-comp-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-dvps-cus-prvt-dns-reader:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-bcdr-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-comp-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-data-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-dvps-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-secm-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-bcdr-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-comp-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-dvps-prvt-dns-contributor:
+    nested_groups:
+      - az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor
+  az-rbac-rg-rg-crp-shdsvc-mgmt-shd-usea-001-jump-vm-admin-login:
+    nested_groups:
+      - az-pag-crp-cloudops-bastion-login
+  az-rbac-rg-rg-crp-shdsvc-mgmt-shd-uswe-001-jump-vm-admin-login:
+    nested_groups:
+      - az-pag-crp-cloudops-bastion-login
+  az-rbac-rg-rg-ptcare-dax-cog-pd-usea-001-contributor:
+    users:
+      - ansley.bryars@trubridge.com
+      - geoffrey.thomas@trubridge.com
+      - kelsey.heape@trubridge.com
+  az-rbac-rg-rg-ptcare-dmo-cog-pd-usea-001-contributor:
+    users:
+      - ansley.bryars@trubridge.com
+      - geoffrey.thomas@trubridge.com
+      - kelsey.heape@trubridge.com

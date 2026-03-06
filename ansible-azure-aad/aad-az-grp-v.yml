@@ -1,0 +1,14 @@
+---
+- name: Aad-az-grp-v
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: "az-grp-v-adg-dataplatform-engineers-bi"
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: "az-grp-v-adg-proddev-all"
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: "az-grp-v-adg-proddev-dev"
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: "az-grp-v-adg-proddev-qa"

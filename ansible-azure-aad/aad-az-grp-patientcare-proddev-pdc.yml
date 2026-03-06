@@ -1,0 +1,27 @@
+---
+- name: Aad-az-grp-patientcare-proddev-pdc
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-all" }
+    # Core app groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-argo" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-codeowners" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-github" }
+    # PAG groups – DEV
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-dev-write" }
+    # PAG groups – PD
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-pd-write" }
+    # PAG groups – STG
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-stg-write" }
+    # PAG groups – QA
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-pdc-console-pag-pg-qa-write" }

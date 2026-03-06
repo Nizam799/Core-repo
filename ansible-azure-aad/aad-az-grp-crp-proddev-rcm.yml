@@ -1,0 +1,10 @@
+---
+- name: Aad-az-grp-crp-proddev-rcm-github
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-rcm-ops-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-rcm-github" }

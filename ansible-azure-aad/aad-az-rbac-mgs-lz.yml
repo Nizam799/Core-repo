@@ -1,0 +1,20 @@
+---
+- name: Aad-az-rbac-mgs-lz
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-virtual-machine-user-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-aks-cluster-user" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-aks-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-monitoring-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-npd-policy-trigger" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-shd-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-shd-cus-console-access" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-shd-cus-vm-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-shd-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-shd-virtual-machine-user-login"}
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-customer-supp-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-lz-us-decommissioned-monitoring-reader" }

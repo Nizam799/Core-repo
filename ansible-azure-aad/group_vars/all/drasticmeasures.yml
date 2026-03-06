@@ -1,0 +1,66 @@
+---
+# Owners : Nyeela Harney, Justin Arnold
+gh_groups:
+  gh-drasticmeasures-iam-owners:
+    privacy: closed
+    description: A github managed team for drasticmeasures approvers
+    members:
+      - username: nyeela-harney_CPSI
+        role: maintainer
+      - username: justin-arnold_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-drasticmeasures-all:
+    nested_groups:
+      - az-grp-crp-proddev-drasticmeasures-approvers
+      - az-grp-crp-proddev-drasticmeasures-ba
+      - az-grp-crp-proddev-drasticmeasures-dev
+      - az-grp-crp-proddev-drasticmeasures-github
+      - az-grp-crp-proddev-drasticmeasures-qa
+    users:
+      - blessy.rajelin@trubridge.com
+      - darcy.green@trubridge.com
+      - justin.arnold@trubridge.com
+      - leanna.dunn@trubridge.com
+      - marshal.thompson@trubridge.com
+      - michael.cramer@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - nyeela.harney@trubridge.com
+      - rajamathangi.kannan@trubridge.com
+      - robert.engberg@trubridge.com
+      - penninah.giftline@trubridge.com
+      - vetriselvan.selvaraj@trubridge.com
+      - zack.mayhall@trubridge.com
+  az-grp-crp-proddev-drasticmeasures-approvers:
+    users:
+      - marshal.thompson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - nyeela.harney@trubridge.com
+  az-grp-crp-proddev-drasticmeasures-ba:
+    users:
+      - zack.mayhall@trubridge.com
+  az-grp-crp-proddev-drasticmeasures-dev:
+    users:
+      - justin.arnold@trubridge.com
+      - leanna.dunn@trubridge.com
+      - michael.cramer@trubridge.com
+      - rajamathangi.kannan@trubridge.com
+      - robert.engberg@trubridge.com
+      - penninah.giftline@trubridge.com
+      - vetriselvan.selvaraj@trubridge.com
+  az-grp-crp-proddev-drasticmeasures-github:
+    users:
+      - justin.arnold@trubridge.com
+      - leanna.dunn@trubridge.com
+      - marshal.thompson@trubridge.com
+      - michael.cramer@trubridge.com
+      - nyeela.harney@trubridge.com
+      - rajaMathangi.kannan@trubridge.com
+      - robert.engberg@trubridge.com
+      - penninah.giftline@trubridge.com
+      - vetriselvan.selvaraj@trubridge.com
+      - zack.mayhall@trubridge.com
+  az-grp-crp-proddev-drasticmeasures-qa:
+    users:
+      - blessy.rajelin@trubridge.com
+      - darcy.green@trubridge.com

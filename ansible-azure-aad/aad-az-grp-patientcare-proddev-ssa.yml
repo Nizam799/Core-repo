@@ -1,0 +1,36 @@
+---
+- name: Aad-az-grp-patientcare-proddev-ssa
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-all" }
+    # Core app groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-argo" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-codeowners" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-approvers" }
+    # PAG groups – DEV
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-write" }
+    # PAG groups – PD
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-write" }
+    # PAG groups – STG
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-write" }
+    # PAG groups – QA
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-write" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-read" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-write" }

@@ -1,0 +1,12 @@
+---
+- name: Aad-az-grp-crp-proddev-pctool
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-pctool-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-pctool-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-pctool-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-pctool-github" }

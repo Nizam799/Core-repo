@@ -1,0 +1,30 @@
+---
+# Owner: Brad Dekker,Nick Widbloom
+gh_groups:
+  gh-rcm-iam-owners:
+    privacy: closed
+    description: A github managed team for rcm approvers
+    members:
+      - username: brad-dekker_CPSI
+        role: maintainer
+      - username: nick-widboom_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-rcm-ops-all:
+    users:
+      - brad.dekker@trubridge.com
+      - nick.widboom@trubridge.com
+  az-grp-crp-proddev-rcm-github:
+    users:
+      - jordan.opdahl@trubridge.com
+      - dijay.woods@trubridge.com
+      - noah.glazier@trubridge.com
+      - joseph.cheadle@trubridge.com
+      - daniel.vankeulen@trubridge.com
+      - cameron.neville@trubridge.com
+      - derek.delzell@trubridge.com
+      - austen.hof@trubridge.com
+      - randal.wilmert@trubridge.com
+      - zach.kinney@trubridge.com
+      - brad.dekker@trubridge.com
+      - nick.widboom@trubridge.com

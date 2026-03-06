@@ -1,0 +1,42 @@
+---
+# Owners : CJ Milto, Bryan Jarvis
+gh_groups:
+  gh-itms-iam-owners:
+    privacy: closed
+    description: A github managed team for itms approvers
+    members:
+      - username: cj-milto_CPSI
+        role: maintainer
+      - username: bryan-jarvis_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-trb-itms-all:
+    users:
+      - bryan.jarvis@trubridge.com
+      - cj.milto@trubridge.com
+      - curtis.johns@trubridge.com
+      - donald.craig@trubridge.com
+      - ivana.newkirk@trubridge.com
+      - kristen.wilkinson@trubridge.com
+      - james.mcvicar@trubridge.com
+      - jennifer.richmond@trubridge.com
+      - patrick.kellerman@trubridge.com
+    nested_groups:
+      - az-grp-trb-itms-admins
+      - az-grp-trb-itms-github
+  az-grp-trb-itms-admins:
+    users:
+      - bryan.jarvis@trubridge.com
+      - cj.milto@trubridge.com
+      - ivana.newkirk@trubridge.com
+      - james.mcvicar@trubridge.com
+      - jennifer.richmond@trubridge.com
+  az-grp-trb-itms-github:
+    users:
+      - bryan.jarvis@trubridge.com
+      - cj.milto@trubridge.com
+      - curtis.johns@trubridge.com
+      - donald.craig@trubridge.com
+      - jennifer.richmond@trubridge.com
+      - kristen.wilkinson@trubridge.com
+      - patrick.kellerman@trubridge.com

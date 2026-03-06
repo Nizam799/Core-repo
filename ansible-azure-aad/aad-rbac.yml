@@ -1,0 +1,16 @@
+---
+- name: Aad-rbac
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD AAD role groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-directory-readers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-global-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-groups-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-privileged-role-administrator" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-spn-aad-argo-cd-oidc-cloud-app-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-spn-crp-kubeops-aks-001-cloud-app-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-spn-sbx-argocd-cloud-app-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "aad-rbac-spn-prisma-wwfoj-cloud-app-admin" }

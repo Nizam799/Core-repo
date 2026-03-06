@@ -1,0 +1,22 @@
+---
+- name: Aad-az-grp-crp-cloudops
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-cypress" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-cypress-github-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-cypress-privileged" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-github-billing" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-groundzero" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-groundzero-github-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-groundzero-privileged" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-mgr" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-monitor-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline-github-approvers" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline-privileged" }

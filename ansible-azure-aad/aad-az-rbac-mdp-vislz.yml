@@ -1,0 +1,20 @@
+---
+- name: Aad-az-rbac-mdp-vislz
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-dev-mdp-vislz-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-dev-mdp-vislz-dataconsumer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-pd-mdp-vislz-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-pd-mdp-vislz-dataconsumer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-qa-mdp-vislz-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-qa-mdp-vislz-dataconsumer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-stg-mdp-vislz-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-stg-mdp-vislz-dataconsumer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-vislz-admin-prod" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-vislz-dataconsumer-prod" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-vislz-admin-qa" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-vislz-dataconsumer-qa" }

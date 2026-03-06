@@ -1,0 +1,39 @@
+---
+# Owners : Joe Fichera, William Nowell
+gh_groups:
+  gh-soc-iam-owners:
+    privacy: closed
+    description: A github managed team for soc approvers
+    members:
+      - username: joe-fichera_CPSI
+        role: maintainer
+      - username: william-nowell_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-soc-all:
+    nested_groups:
+      - az-grp-crp-soc-approvers
+      - az-grp-crp-soc-github
+      - az-grp-crp-soc-mgr
+    users:
+      - amy.hartzell@trubridge.com
+      - brendan.gill@trubridge.com
+      - brooke.watford@trubridge.com
+      - crystal.hurst@trubridge.com
+      - dylan.munson@trubridge.com
+      - elizabeth.burton@trubridge.com
+      - jamie.rousseau@trubridge.com
+      - joe.fichera@trubridge.com
+      - tyler.dickerson@trubridge.com
+      - william.nowell@trubridge.com
+  az-grp-crp-soc-approvers:
+    users:
+      - jason.harmon@trubridge.com
+      - joe.fichera@trubridge.com
+  az-grp-crp-soc-github:
+    users:
+      - jason.harmon@trubridge.com
+      - joe.fichera@trubridge.com
+  az-grp-crp-soc-mgr:
+    users:
+      - joe.fichera@trubridge.com

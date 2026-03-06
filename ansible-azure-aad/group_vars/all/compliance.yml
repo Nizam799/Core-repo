@@ -1,0 +1,13 @@
+---
+# Owners: Janna Stevens
+aad_groups:
+  az-grp-crp-compliance-all:
+    users:
+      - janna.stevens@trubridge.com
+      - lisa.phillips@trubridge.com
+      - tonya.douglas@trubridge.com
+  az-grp-crp-compliance-github:
+    users:
+      - janna.stevens@trubridge.com
+      - lisa.phillips@trubridge.com
+      - tonya.douglas@trubridge.com

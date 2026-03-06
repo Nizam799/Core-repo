@@ -1,0 +1,56 @@
+---
+# Owner: Patrick Peyton
+gh_groups:
+  gh-bravo-iam-owners:
+    privacy: closed
+    description: A github managed team for bravo approvers
+    members:
+      - username: patrick-peyton_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-bravo-all:
+    nested_groups:
+      - az-grp-crp-proddev-bravo-approvers
+      - az-grp-crp-proddev-bravo-ba
+      - az-grp-crp-proddev-bravo-dev
+      - az-grp-crp-proddev-bravo-github
+      - az-grp-crp-proddev-bravo-qa
+    users:
+      - mahesh.ramasamy@trubridge.com
+      - patrick.peyton@trubridge.com
+      - saranya.n@trubridge.com
+      - sathish.prakash@trubridge.com
+      - sowmiya.arul@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - thirumalaikumar.mahalingam@trubridge.com
+      - vasu.chinnamani@trubridge.com
+  az-grp-crp-proddev-bravo-approvers:
+    users:
+      - subramanian.namasivayam@trubridge.com
+      - thirumalaikumar.mahalingam@trubridge.com
+  az-grp-crp-proddev-bravo-ba:
+    users:
+      - patrick.peyton@trubridge.com
+  az-grp-crp-proddev-bravo-dev:
+    users:
+      - mahesh.ramasamy@trubridge.com
+      - sathish.prakash@trubridge.com
+      - sowmiya.arul@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - thirumalaikumar.mahalingam@trubridge.com
+      - vasu.chinnamani@trubridge.com
+      - saranya.n@trubridge.com
+  az-grp-crp-proddev-bravo-github:
+    users:
+      - mahesh.ramasamy@trubridge.com
+      - patrick.peyton@trubridge.com
+      - saranya.n@trubridge.com
+      - sathish.prakash@trubridge.com
+      - sowmiya.arul@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - thirumalaikumar.mahalingam@trubridge.com
+      - vasu.chinnamani@trubridge.com
+  az-grp-crp-proddev-bravo-qa:
+    users:
+      - saranya.n@trubridge.com
+      - anuradha.k@trubridge.com

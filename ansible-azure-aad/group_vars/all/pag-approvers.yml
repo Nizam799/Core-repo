@@ -1,0 +1,167 @@
+---
+# Owners : Nick Chao, John Immel
+gh_groups:
+  gh-pag-approvers-iam-owners:
+    privacy: closed
+    description: A github managed team for pag approvers
+    members:
+      - username: nick-chao_CPSI
+        role: maintainer
+      - username: john-immel_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-pag-bastion-login-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+  az-grp-crp-pag-pg-admin-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+  az-grp-crp-pag-pg-cda-viewer-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-cda-viewer-approvers
+  az-grp-crp-pag-pg-comctr-adrbk-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-comctr-adrbk-approvers
+  az-grp-crp-pag-pg-comctr-docmnt-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-comctr-docmnt-approvers
+  az-grp-crp-pag-pg-comctr-mailb-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-comctr-mailb-approvers
+  az-grp-crp-pag-pg-lin-alchemy-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-crp-proddev-puma-approvers
+      - az-grp-patientcare-proddev-qualms-alchemy-approvers
+  az-grp-crp-pag-pg-lin-deacon-approver:
+    nested_groups:
+      - az-grp-crp-proddev-deacon-approvers
+      - az-grp-patientcare-proddev-patcom-deacon-approvers
+  az-grp-crp-pag-pg-lin-twillio-approver:
+    nested_groups:
+      - az-grp-crp-proddev-deacon-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-patientcare-proddev-patcom-deacon-approvers
+  az-grp-crp-pag-pg-linus-audit-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-linus-audit-approvers
+  az-grp-crp-pag-pg-linus-tenant-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-linus-tenant-approvers
+  az-grp-crp-pag-pg-linus-user-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-phantom-approvers
+      - az-grp-patientcare-proddev-linus-user-approvers
+  az-grp-crp-pag-pg-note-filters-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-patientcare-proddev-note-filters-approvers
+  az-grp-crp-pag-pg-note-notes-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-patientcare-proddev-note-notes-approvers
+  az-grp-crp-pag-pg-ops-utils-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+  az-grp-crp-pag-pg-patcom-deacon-approver:
+    nested_groups:
+      - az-grp-crp-proddev-deacon-approvers
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-patientcare-proddev-patcom-deacon-approvers
+  az-grp-crp-pag-pg-patcom-ptcht-approver:
+    nested_groups:
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-patientconnect-approvers
+      - az-grp-patientcare-proddev-patcom-ptcht-approvers
+  az-grp-crp-pag-pg-patcom-ptcon-approver:
+    nested_groups:
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-patientconnect-approvers
+      - az-grp-patientcare-proddev-patcom-ptcon-approvers
+  az-grp-crp-pag-pg-patcom-qkcon-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-ehr-coe-all
+      - az-grp-crp-proddev-patientconnect-approvers
+      - az-grp-patientcare-proddev-patcom-qkcon-approvers
+  az-grp-crp-pag-pg-pdc-console-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-puma-approvers
+      - az-grp-patientcare-proddev-pdc-console-approvers
+  az-grp-crp-pag-pg-phr-ecrnow-approver:
+    nested_groups:
+      - az-grp-crp-proddev-bravo-approvers
+      - az-grp-patientcare-proddev-phr-ecrnow-approvers
+  az-grp-crp-pag-pg-qualms-alchemy-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-drasticmeasures-approvers
+      - az-grp-patientcare-proddev-qualms-alchemy-approvers
+  az-grp-crp-pag-pg-ssa-auth-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-crp-proddev-puma-approvers
+      - az-grp-patientcare-proddev-ssa-auth-approvers
+  az-grp-crp-pag-pg-ssa-qc-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-crp-proddev-puma-approvers
+      - az-grp-patientcare-proddev-patcom-qkcon-approvers
+  az-grp-crp-pag-pg-ssa-usersettings-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+      - az-grp-crp-proddev-cookies-approvers
+      - az-grp-crp-proddev-nitro-approvers
+      - az-grp-crp-proddev-puma-approvers
+      - az-grp-patientcare-proddev-ssa-usersettings-approvers
+  az-grp-crp-pag-sqldb-admin-approver:
+    nested_groups:
+      - az-grp-crp-ccoe-all
+      - az-grp-crp-cloudops-mgr
+  az-grp-crp-pag-sqldb-mdp-hvr-approver:
+    nested_groups:
+      - az-grp-crp-dataplatform-mgr

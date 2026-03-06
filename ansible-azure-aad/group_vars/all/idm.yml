@@ -1,0 +1,20 @@
+---
+# Owners : Jason Harmon
+gh_groups:
+  gh-idm-iam-owners:
+    privacy: closed
+    description: A github managed team for idm approvers
+    members:
+      - username: jason-harmon_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-idm-keycloak-dev-realmadmin:
+    users:
+      - rob.resendez@trubridge.com
+      - nick.widboom@trubridge.com
+      - harvey.mccreary@trubridge.com
+  az-grp-crp-idm-keycloak-stg-realmadmin:
+    users:
+      - rob.resendez@trubridge.com
+      - nick.widboom@trubridge.com
+      - harvey.mccreary@trubridge.com

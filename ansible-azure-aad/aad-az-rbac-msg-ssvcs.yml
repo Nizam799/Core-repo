@@ -1,0 +1,14 @@
+---
+- name: Aad-az-rbac-msg-ssvcs
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-virtual-machine-user-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-us-hybrid-mgmt-shd-aks-cluster-user" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-us-hybrid-mgmt-shd-aks-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-us-hybrid-mgmt-shd-seim-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-ssvcs-us-hybrid-reader" }

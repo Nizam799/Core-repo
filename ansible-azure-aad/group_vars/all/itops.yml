@@ -1,0 +1,79 @@
+---
+# Owners : Al Gonzalez, Scott Littrell
+gh_groups:
+  gh-itops-iam-owners:
+    privacy: closed
+    description: A github managed team for itops approvers
+    members:
+      - username: al-gonzalez_CPSI
+        role: maintainer
+      - username: scott-littrell_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-itops-all:
+    nested_groups:
+      - az-grp-crp-itops-github
+      - az-grp-crp-itops-infraops
+      - az-grp-crp-itops-moderninfra
+    users:
+      - al.gonzalez@trubridge.com
+      - daniel.flowers@trubridge.com
+      - derek.duggan@trubridge.com
+      - jadon.best@trubridge.com
+      - kevin.iverson@trubridge.com
+      - lonney.scherr@trubridge.com
+      - mark.jennings@trubridge.com
+      - matt.watts@trubridge.com
+      - michael.salmons@trubridge.com
+      - patrick.cannon@trubridge.com
+      - robby.bouler@trubridge.com
+      - robin.westenfelder@trubridge.com
+      - travis.austin@trubridge.com
+      - tyler.tomlinson@trubridge.com
+  az-grp-crp-itops-github:
+    users:
+      - al.gonzalez@trubridge.com
+      - daniel.flowers@trubridge.com
+      - jadon.best@trubridge.com
+      - lonney.scherr@trubridge.com
+      - matt.watts@trubridge.com
+      - michael.salmons@trubridge.com
+      - patrick.cannon@trubridge.com
+      - robby.bouler@trubridge.com
+      - robin.westenfelder@trubridge.com
+      - scott.littrell@trubridge.com
+      - travis.austin@trubridge.com
+      - tyler.tomlinson@trubridge.com
+  az-grp-crp-itops-infraops:
+    nested_groups:
+      - az-grp-crp-itops-infraops-github
+    users:
+      - derek.duggan@trubridge.com
+      - jadon.best@trubridge.com
+      - kevin.iverson@trubridge.com
+      - mark.jennings@trubridge.com
+      - michael.salmons@trubridge.com
+      - patrick.cannon@trubridge.com
+      - robin.westenfelder@trubridge.com
+      - tyler.tomlinson@trubridge.com
+  az-grp-crp-itops-infraops-github:
+    users:
+      - jadon.best@trubridge.com
+      - michael.salmons@trubridge.com
+      - patrick.cannon@trubridge.com
+      - robin.westenfelder@trubridge.com
+      - tyler.tomlinson@trubridge.com
+  az-grp-crp-itops-moderninfra:
+    nested_groups:
+      - az-grp-crp-itops-moderninfra-github
+    users:
+      - daniel.flowers@trubridge.com
+      - lonney.scherr@trubridge.com
+      - matt.watts@trubridge.com
+      - travis.austin@trubridge.com
+  az-grp-crp-itops-moderninfra-github:
+    users:
+      - daniel.flowers@trubridge.com
+      - lonney.scherr@trubridge.com
+      - matt.watts@trubridge.com
+      - travis.austin@trubridge.com

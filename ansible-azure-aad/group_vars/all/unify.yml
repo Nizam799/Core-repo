@@ -1,0 +1,46 @@
+---
+# Owners : Arun Mohan, Helena Anderson, Sean Adams
+gh_groups:
+  gh-unify-iam-owners:
+    privacy: closed
+    description: A github managed team for unify approvers
+    members:
+      - username: arun-mohan_CPSI
+        role: maintainer
+      - username: helena-anderson_CPSI
+        role: maintainer
+      - username: sean-adams_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-unify-all:
+    users:
+      - aaron.kelly@trubridge.com
+      - amy.allen@trubridge.com
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - helena.anderson@trubridge.com
+      - nbembeze.nkweteshing@trubridge.com
+  az-grp-crp-proddev-unify-approvers:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+  az-grp-crp-proddev-unify-ba:
+    users:
+      - amy.allen@trubridge.com
+  az-grp-crp-proddev-unify-dba:
+    users:
+      - nbembeze.nkweteshing@trubridge.com
+  az-grp-crp-proddev-unify-dev:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+  az-grp-crp-proddev-unify-github:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - helena-anderson@trubridge.com
+      - sean.adams@trubridge.com

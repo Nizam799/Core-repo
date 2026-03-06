@@ -1,0 +1,548 @@
+---
+# Owners: Bill Russell, Marshal Thompson
+# All - Base permissions for all users
+# Argo - Argo admin (Restart Services)
+# Codeowners - Approve Code Changes and Releases (Manual Tagging)
+# Dev - Developers
+# Github - Access to Github and the corresponding suborg
+# Approvers - Approve PIM/PAG requests
+# PAG - Privileged Access Group - Read/Write access to Database
+
+aad_groups:
+  az-grp-patientcare-proddev-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-all
+      - az-grp-patientcare-proddev-comctr-all
+      - az-grp-patientcare-proddev-linus-all
+      - az-grp-patientcare-proddev-note-all
+      - az-grp-patientcare-proddev-patcom-deacon-all
+      - az-grp-patientcare-proddev-pdc-all
+      - az-grp-patientcare-proddev-phr-all
+      - az-grp-patientcare-proddev-qualms-all
+      - az-grp-patientcare-proddev-ssa-all
+    users:
+      - abdul.naufal@trubridge.com
+      - abhijiththaza.veetel@trubridge.com
+      - akhil.achuthan@trubridge.com
+      - amita.gupta@trubridge.com
+      - ananthu.prakash@trubridge.com
+      - angela.virnig@trubridge.com
+      - anish.gopal@trubridge.com
+      - anoop.kalithil@trubridge.com
+      - arun.zachariah@trubridge.com
+      - baiju.ravi@trubridge.com
+      - basil.pathrose@trubridge.com
+      - bill.russell@trubridge.com
+      - blaine.baum@trubridge.com
+      - blake.smith@trubridge.com
+      - charles.byrne@trubridge.com
+      - cheryl.holberg@trubridge.com
+      - cheryl.kemp@trubridge.com
+      - chris.feemster@trubridge.com
+      - christine.prescott@trubridge.com
+      - christopher.colvin@trubridge.com
+      - craig.pomeroy@trubridge.com
+      - darcy.green@trubridge.com
+      - dave.legros@trubridge.com
+      - dave.meidlinger@trubridge.com
+      - ethan.moody@trubridge.com
+      - evan.mitchell@trubridge.com
+      - faiqua.rahman@trubridge.com
+      - gary.overby@trubridge.com
+      - george.sangillo@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - j.c.dalton@trubridge.com
+      - jacob.olier@trubridge.com
+      - jacob.riggs@trubridge.com
+      - james.dement@trubridge.com
+      - james.dinsmore@trubridge.com
+      - jason.phillips@trubridge.com
+      - jayasuriya.prabu@trubridge.com
+      - jeff.evans@trubridge.com
+      - jennifer.tidwell@trubridge.com
+      - jeremy.summerlin@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - jishnu.vadakkepurakkal@trubridge.com
+      - john.harris@trubridge.com
+      - john.richardson@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - justin.arnold@trubridge.com
+      - karen.norwood@trubridge.com
+      - kathleen.swanson@trubridge.com
+      - kendall.smith@trubridge.com
+      - kevin.crutchfield@trubridge.com
+      - kyle.andrews@trubridge.com
+      - latanya.clark@trubridge.com
+      - lauri.middleton@trubridge.com
+      - leah.nash@trubridge.com
+      - leanna.dunn@trubridge.com
+      - libby.summers@trubridge.com
+      - madhav.vinod@trubridge.com
+      - mahesh.pillai@trubridge.com
+      - mark.gartman@trubridge.com
+      - mark.hirschfeldt@trubridge.com
+      - mark.jones@trubridge.com
+      - marshal.thompson@trubridge.com
+      - marshall.weekley@trubridge.com
+      - melissa.johnson@trubridge.com
+      - michael.cramer@trubridge.com
+      - michael.davis@trubridge.com
+      - mileesh.sreenivasan@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - mohammad.sinan@trubridge.com
+      - nandini.pandya@trubridge.com
+      - nathan.mccann@trubridge.com
+      - naveen.p@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - nithin.aithal@trubridge.com
+      - or.barak@trubridge.com
+      - patrick.peyton@trubridge.com
+      - paul.lewis@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pradeesh.prakash@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - ram.prakash@trubridge.com
+      - rishikesh.rajeev@trubridge.com
+      - rob.resendez@trubridge.com
+      - robert.engberg@trubridge.com
+      - ryan.reeves@trubridge.com
+      - sachins.kumar@trubridge.com
+      - sam.clapper@trubridge.com
+      - saravanan.subramanian@trubridge.com
+      - sean.wentworth@trubridge.com
+      - shannon.locklear@trubridge.com
+      - siddalinga.prabhu@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - steven.smith@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
+      - sudharsanan.p@trubridge.com
+      - sujaai.udukumbura@trubridge.com
+      - sumod.krishnan@trubridge.com
+      - susan.brannan@trubridge.com
+      - taranpreetsingh.bhamara@trubridge.com
+      - therese.hart@trubridge.com
+      - thomas.moore@trubridge.com
+      - thomas.whyle@trubridge.com
+      - thomas.wilson@trubridge.com
+      - tiffany.burt@trubridge.com
+      - tim.ogletree@trubridge.com
+      - todd.meyer@trubridge.com
+      - uyen.seevers@trubridge.com
+      - wes.bryant@trubridge.com
+      - zack.mayhall@trubridge.com
+  az-grp-patientcare-proddev-cda-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-argo
+      - az-grp-patientcare-proddev-cda-codeowners
+      - az-grp-patientcare-proddev-cda-dev
+      - az-grp-patientcare-proddev-cda-github
+      - az-grp-patientcare-proddev-cda-viewer-approvers
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-read
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-write
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-read
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-write
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-read
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-write
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-read
+      - az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-write
+  az-grp-patientcare-proddev-cda-argo:
+  az-grp-patientcare-proddev-cda-codeowners:
+  az-grp-patientcare-proddev-cda-dev:
+  az-grp-patientcare-proddev-cda-github:
+  az-grp-patientcare-proddev-cda-viewer-approvers:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-read:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-write:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-read:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-write:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-read:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-write:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-read:
+  az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-write:
+  az-grp-patientcare-proddev-comctr-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-adrbk-approvers
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-read
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-write
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-read
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-write
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-read
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-write
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-read
+      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-write
+      - az-grp-patientcare-proddev-comctr-argo
+      - az-grp-patientcare-proddev-comctr-codeowners
+      - az-grp-patientcare-proddev-comctr-dev
+      - az-grp-patientcare-proddev-comctr-docmnt-approvers
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-read
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-write
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-read
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-write
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-read
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-write
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-read
+      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-write
+      - az-grp-patientcare-proddev-comctr-github
+      - az-grp-patientcare-proddev-comctr-mailb-approvers
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-read
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-write
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-read
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-write
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-read
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-write
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-read
+      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-write
+  az-grp-patientcare-proddev-comctr-adrbk-approvers:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-read:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-write:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-read:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-write:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-read:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-write:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-read:
+  az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-write:
+  az-grp-patientcare-proddev-comctr-argo:
+  az-grp-patientcare-proddev-comctr-codeowners:
+  az-grp-patientcare-proddev-comctr-dev:
+  az-grp-patientcare-proddev-comctr-docmnt-approvers:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-read:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-write:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-read:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-write:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-read:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-write:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-read:
+  az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-write:
+  az-grp-patientcare-proddev-comctr-github:
+  az-grp-patientcare-proddev-comctr-mailb-approvers:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-read:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-write:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-read:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-write:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-read:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-write:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-read:
+  az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-write:
+  az-grp-patientcare-proddev-linus-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-argo
+      - az-grp-patientcare-proddev-linus-audit-approvers
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-dev-read
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-dev-write
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-pd-read
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-pd-write
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-stg-read
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-stg-write
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-qa-read
+      - az-grp-patientcare-proddev-linus-audit-pag-pg-qa-write
+      - az-grp-patientcare-proddev-linus-codeowners
+      - az-grp-patientcare-proddev-linus-dev
+      - az-grp-patientcare-proddev-linus-github
+      - az-grp-patientcare-proddev-linus-tenant-approvers
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-read
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-write
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-read
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-write
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-read
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-write
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-read
+      - az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-write
+      - az-grp-patientcare-proddev-linus-user-approvers
+      - az-grp-patientcare-proddev-linus-user-pag-pg-dev-read
+      - az-grp-patientcare-proddev-linus-user-pag-pg-dev-write
+      - az-grp-patientcare-proddev-linus-user-pag-pg-pd-read
+      - az-grp-patientcare-proddev-linus-user-pag-pg-pd-write
+      - az-grp-patientcare-proddev-linus-user-pag-pg-stg-read
+      - az-grp-patientcare-proddev-linus-user-pag-pg-stg-write
+      - az-grp-patientcare-proddev-linus-user-pag-pg-qa-read
+      - az-grp-patientcare-proddev-linus-user-pag-pg-qa-write
+  az-grp-patientcare-proddev-linus-audit-approvers:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-dev-read:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-dev-write:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-pd-read:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-pd-write:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-stg-read:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-stg-write:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-qa-read:
+  az-grp-patientcare-proddev-linus-audit-pag-pg-qa-write:
+  az-grp-patientcare-proddev-linus-argo:
+  az-grp-patientcare-proddev-linus-codeowners:
+  az-grp-patientcare-proddev-linus-dev:
+  az-grp-patientcare-proddev-linus-github:
+  az-grp-patientcare-proddev-linus-tenant-approvers:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-read:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-write:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-read:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-write:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-read:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-write:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-read:
+  az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-write:
+  az-grp-patientcare-proddev-linus-user-approvers:
+  az-grp-patientcare-proddev-linus-user-pag-pg-dev-read:
+  az-grp-patientcare-proddev-linus-user-pag-pg-dev-write:
+  az-grp-patientcare-proddev-linus-user-pag-pg-pd-read:
+  az-grp-patientcare-proddev-linus-user-pag-pg-pd-write:
+  az-grp-patientcare-proddev-linus-user-pag-pg-stg-read:
+  az-grp-patientcare-proddev-linus-user-pag-pg-stg-write:
+  az-grp-patientcare-proddev-linus-user-pag-pg-qa-read:
+  az-grp-patientcare-proddev-linus-user-pag-pg-qa-write:
+  az-grp-patientcare-proddev-note-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-argo
+      - az-grp-patientcare-proddev-note-codeowners
+      - az-grp-patientcare-proddev-note-dev
+      - az-grp-patientcare-proddev-note-filters-approvers
+      - az-grp-patientcare-proddev-note-filters-pag-pg-dev-read
+      - az-grp-patientcare-proddev-note-filters-pag-pg-dev-write
+      - az-grp-patientcare-proddev-note-filters-pag-pg-pd-read
+      - az-grp-patientcare-proddev-note-filters-pag-pg-pd-write
+      - az-grp-patientcare-proddev-note-filters-pag-pg-stg-read
+      - az-grp-patientcare-proddev-note-filters-pag-pg-stg-write
+      - az-grp-patientcare-proddev-note-filters-pag-pg-qa-read
+      - az-grp-patientcare-proddev-note-filters-pag-pg-qa-write
+      - az-grp-patientcare-proddev-note-github
+      - az-grp-patientcare-proddev-note-notes-approvers
+      - az-grp-patientcare-proddev-note-notes-pag-pg-dev-read
+      - az-grp-patientcare-proddev-note-notes-pag-pg-dev-write
+      - az-grp-patientcare-proddev-note-notes-pag-pg-pd-read
+      - az-grp-patientcare-proddev-note-notes-pag-pg-pd-write
+      - az-grp-patientcare-proddev-note-notes-pag-pg-stg-read
+      - az-grp-patientcare-proddev-note-notes-pag-pg-stg-write
+      - az-grp-patientcare-proddev-note-notes-pag-pg-qa-read
+      - az-grp-patientcare-proddev-note-notes-pag-pg-qa-write
+  az-grp-patientcare-proddev-note-argo:
+  az-grp-patientcare-proddev-note-codeowners:
+  az-grp-patientcare-proddev-note-dev:
+  az-grp-patientcare-proddev-note-filters-approvers:
+  az-grp-patientcare-proddev-note-filters-pag-pg-dev-read:
+  az-grp-patientcare-proddev-note-filters-pag-pg-dev-write:
+  az-grp-patientcare-proddev-note-filters-pag-pg-pd-read:
+  az-grp-patientcare-proddev-note-filters-pag-pg-pd-write:
+  az-grp-patientcare-proddev-note-filters-pag-pg-stg-read:
+  az-grp-patientcare-proddev-note-filters-pag-pg-stg-write:
+  az-grp-patientcare-proddev-note-filters-pag-pg-qa-read:
+  az-grp-patientcare-proddev-note-filters-pag-pg-qa-write:
+  az-grp-patientcare-proddev-note-github:
+  az-grp-patientcare-proddev-note-notes-approvers:
+  az-grp-patientcare-proddev-note-notes-pag-pg-dev-read:
+  az-grp-patientcare-proddev-note-notes-pag-pg-dev-write:
+  az-grp-patientcare-proddev-note-notes-pag-pg-pd-read:
+  az-grp-patientcare-proddev-note-notes-pag-pg-pd-write:
+  az-grp-patientcare-proddev-note-notes-pag-pg-stg-read:
+  az-grp-patientcare-proddev-note-notes-pag-pg-stg-write:
+  az-grp-patientcare-proddev-note-notes-pag-pg-qa-read:
+  az-grp-patientcare-proddev-note-notes-pag-pg-qa-write:
+
+  az-grp-patientcare-proddev-patcom-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-argo
+      - az-grp-patientcare-proddev-patcom-codeowners
+      - az-grp-patientcare-proddev-patcom-deacon-approvers
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-read
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-write
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-read
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-write
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-read
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-write
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-read
+      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-write
+      - az-grp-patientcare-proddev-patcom-dev
+      - az-grp-patientcare-proddev-patcom-github
+      - az-grp-patientcare-proddev-patcom-ptcht-approvers
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-read
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-write
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-read
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-write
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-read
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-write
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-read
+      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-write
+      - az-grp-patientcare-proddev-patcom-ptcon-approvers
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-read
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-write
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-read
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-write
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-read
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-write
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-read
+      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-write
+      - az-grp-patientcare-proddev-patcom-qkcon-approvers
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-read
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-write
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-read
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-write
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-read
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-write
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-read
+      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-write
+  az-grp-patientcare-proddev-patcom-argo:
+  az-grp-patientcare-proddev-patcom-codeowners:
+  az-grp-patientcare-proddev-patcom-deacon-approvers:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-read:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-write:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-read:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-write:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-read:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-write:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-read:
+  az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-write:
+  az-grp-patientcare-proddev-patcom-dev:
+  az-grp-patientcare-proddev-patcom-github:
+  az-grp-patientcare-proddev-patcom-ptcht-approvers:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-read:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-write:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-read:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-write:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-read:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-write:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-read:
+  az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-write:
+  az-grp-patientcare-proddev-patcom-ptcon-approvers:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-read:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-write:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-read:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-write:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-read:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-write:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-read:
+  az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-write:
+  az-grp-patientcare-proddev-patcom-qkcon-approvers:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-read:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-write:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-read:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-write:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-read:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-write:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-read:
+  az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-write:
+  az-grp-patientcare-proddev-pdc-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-argo
+      - az-grp-patientcare-proddev-pdc-codeowners
+      - az-grp-patientcare-proddev-pdc-console-approvers
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-dev-read
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-dev-write
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-pd-read
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-pd-write
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-stg-read
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-stg-write
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-qa-read
+      - az-grp-patientcare-proddev-pdc-console-pag-pg-qa-write
+      - az-grp-patientcare-proddev-pdc-dev
+      - az-grp-patientcare-proddev-pdc-github
+  az-grp-patientcare-proddev-pdc-argo:
+  az-grp-patientcare-proddev-pdc-codeowners:
+  az-grp-patientcare-proddev-pdc-console-approvers:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-dev-read:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-dev-write:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-pd-read:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-pd-write:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-stg-read:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-stg-write:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-qa-read:
+  az-grp-patientcare-proddev-pdc-console-pag-pg-qa-write:
+  az-grp-patientcare-proddev-pdc-dev:
+  az-grp-patientcare-proddev-pdc-github:
+  az-grp-patientcare-proddev-phr-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-argo
+      - az-grp-patientcare-proddev-phr-codeowners
+      - az-grp-patientcare-proddev-phr-ecrnow-approvers
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-read
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-write
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-read
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-write
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-read
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-write
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-read
+      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-write
+      - az-grp-patientcare-proddev-phr-dev
+      - az-grp-patientcare-proddev-phr-github
+  az-grp-patientcare-proddev-phr-argo:
+  az-grp-patientcare-proddev-phr-codeowners:
+  az-grp-patientcare-proddev-phr-ecrnow-approvers:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-read:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-write:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-read:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-write:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-read:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-write:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-read:
+  az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-write:
+  az-grp-patientcare-proddev-phr-dev:
+  az-grp-patientcare-proddev-phr-github:
+  az-grp-patientcare-proddev-qualms-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-alchemy-approvers
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-read
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-write
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-read
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-write
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-read
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-write
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-read
+      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-write
+      - az-grp-patientcare-proddev-qualms-argo
+      - az-grp-patientcare-proddev-qualms-codeowners
+      - az-grp-patientcare-proddev-qualms-dev
+      - az-grp-patientcare-proddev-qualms-github
+  az-grp-patientcare-proddev-qualms-alchemy-approvers:
+  az-grp-patientcare-proddev-qualms-argo:
+  az-grp-patientcare-proddev-qualms-codeowners:
+  az-grp-patientcare-proddev-qualms-dev:
+  az-grp-patientcare-proddev-qualms-github:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-read:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-write:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-read:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-write:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-read:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-write:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-read:
+  az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-write:
+  az-grp-patientcare-proddev-ssa-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-argo
+      - az-grp-patientcare-proddev-ssa-auth-approvers
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-read
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-write
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-read
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-write
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-read
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-write
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-read
+      - az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-write
+      - az-grp-patientcare-proddev-ssa-codeowners
+      - az-grp-patientcare-proddev-ssa-dev
+      - az-grp-patientcare-proddev-ssa-github
+      - az-grp-patientcare-proddev-ssa-usersettings-approvers
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-read
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-write
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-read
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-write
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-read
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-write
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-read
+      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-write
+  az-grp-patientcare-proddev-ssa-argo:
+  az-grp-patientcare-proddev-ssa-auth-approvers:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-read:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-write:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-read:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-write:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-read:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-write:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-read:
+  az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-write:
+  az-grp-patientcare-proddev-ssa-codeowners:
+  az-grp-patientcare-proddev-ssa-dev:
+  az-grp-patientcare-proddev-ssa-github:
+  az-grp-patientcare-proddev-ssa-usersettings-approvers:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-read:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-write:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-read:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-write:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-read:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-write:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-read:
+  az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-write:

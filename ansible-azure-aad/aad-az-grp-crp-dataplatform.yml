@@ -1,0 +1,28 @@
+---
+- name: Aad-az-grp-crp-dataplatform
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-custscorecard-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-dagst-webconsole-dev-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-dagst-webconsole-pd-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-dagst-webconsole-qa-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-databricks-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-databricks-thrive-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-discoveryanalytics-develop" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-engineers-analytics" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-engineers-bi" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-engineers-data" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-engineers-snp" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-finops" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-mgr" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-powerbi-api-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-powerbi-external-beta" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-sec-payroll-view" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-services-insight" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-spns" }

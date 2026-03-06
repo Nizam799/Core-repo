@@ -1,0 +1,14 @@
+---
+- name: Aad-az-grp-crp-proddev
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-busanalyst" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-dev" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-mgr" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-monitor-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-qa" }

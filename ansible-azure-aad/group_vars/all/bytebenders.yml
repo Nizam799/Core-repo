@@ -1,0 +1,52 @@
+---
+# Owner: Brent Runkle
+gh_groups:
+  gh-bytebenders-iam-owners:
+    privacy: closed
+    description: A github managed team for bytebenders approvers
+    members:
+      - username: brent-runkle_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-bytebenders-all:
+    nested_groups:
+      - az-grp-crp-proddev-bytebenders-approvers
+      - az-grp-crp-proddev-bytebenders-ba
+      - az-grp-crp-proddev-bytebenders-dev
+      - az-grp-crp-proddev-bytebenders-github
+      - az-grp-crp-proddev-bytebenders-qa
+    users:
+      - ashwini.chechare@trubridge.com
+      - brent.runkle@trubridge.com
+      - ethan.moody@trubridge.com
+      - evan.mitchell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sachin.sonar@trubridge.com
+      - shubham.kumar@trubridge.com
+  az-grp-crp-proddev-bytebenders-approvers:
+    users:
+      - brent.runkle@trubridge.com
+      - marshal.thompson@trubridge.com
+  az-grp-crp-proddev-bytebenders-ba:
+    users:
+      - jacob.olier@trubridge.com
+  az-grp-crp-proddev-bytebenders-dev:
+    users:
+      - ethan.moody@trubridge.com
+      - evan.mitchell@trubridge.com
+      - sachin.sonar@trubridge.com
+      - shubham.kumar@trubridge.com
+  az-grp-crp-proddev-bytebenders-github:
+    users:
+      - ashwini.chechare@trubridge.com
+      - brent.runkle@trubridge.com
+      - ethan.moody@trubridge.com
+      - evan.mitchell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sachin.sonar@trubridge.com
+      - shubham.kumar@trubridge.com
+  az-grp-crp-proddev-bytebenders-qa:
+    users:
+      - ashwini.chechare@trubridge.com

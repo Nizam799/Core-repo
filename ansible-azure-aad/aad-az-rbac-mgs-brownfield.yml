@@ -1,0 +1,8 @@
+---
+- name: Aad-az-rbac-mgs-brownfield
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-brownfield-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-tenant-brownfield-grh-cost-reader" }

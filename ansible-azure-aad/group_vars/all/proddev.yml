@@ -1,0 +1,109 @@
+---
+# Owners : Nick Chao, John Immel
+gh_groups:
+  gh-proddev-iam-owners:
+    privacy: closed
+    description: A github managed team for proddev approvers
+    members:
+      - username: nick-chao_CPSI
+        role: maintainer
+      - username: john-immel_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-all:
+    nested_groups:
+      - az-grp-crp-proddev-mgr
+      - az-grp-crp-proddev-dev
+      - az-grp-crp-proddev-busanalyst
+      - az-grp-crp-proddev-qa
+  az-grp-crp-proddev-busanalyst:
+    users:
+      - cathy.cupp@trubridge.com
+      - jacob.olier@trubridge.com
+      - ryan.guilfoyle@trubridge.com
+  az-grp-crp-proddev-dev:
+    users:
+      - balaji.ramasamy@trubridge.com
+      - gregory.wilke@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - kyle.andrews@trubridge.com
+      - shannon.locklear@trubridge.com
+    nested_groups:
+      - az-grp-v-adg-proddev-dev
+  az-grp-crp-proddev-mgr:
+    users:
+      - jason.holmgren@trubridge.com
+      - randy.baker@trubridge.com
+      - tim.ogletree@trubridge.com
+  az-grp-crp-proddev-monitor-all:
+    users:
+      - amita.gupta@trubridge.com
+      - amy.allen@trubridge.com
+      - angela.virnig@trubridge.com
+      - angelo.cuesta@trubridge.com
+      - blake.clark@trubridge.com
+      - blake.smith@trubridge.com
+      - blakely.prine@trubridge.com
+      - cathy.cupp@trubridge.com
+      - cheri.gieske@trubridge.com
+      - chris.feemster@trubridge.com
+      - christina.finazzo@trubridge.com
+      - daniel.flowers@trubridge.com
+      - erik.ha@trubridge.com
+      - evan.mitchell@trubridge.com
+      - gary.overby@trubridge.com
+      - george.sangillo@trubridge.com
+      - gregory.wilke@trubridge.com
+      - james.dinsmore@trubridge.com
+      - jamie.wanken@trubridge.com
+      - jason.holmgren@trubridge.com
+      - jennifer.york@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - john.immel@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - justin.arnold@trubridge.com
+      - kendall.smith@trubridge.com
+      - kyle.andrews@trubridge.com
+      - latanya.clark@trubridge.com
+      - mark.hirschfeldt@trubridge.com
+      - marshal.thompson@trubridge.com
+      - marshall.weekley@trubridge.com
+      - matt.watts@trubridge.com
+      - michael.cramer@trubridge.com
+      - michael.davis@trubridge.com
+      - nick.chao@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - patricia.maurin@trubridge.com
+      - patrick.mcginnis@trubridge.com
+      - paul.lewis@trubridge.com
+      - peggy.hulcher@trubridge.com
+      - randy.baker@trubridge.com
+      - ryan.guilfoyle@trubridge.com
+      - rob.resendez@trubridge.com
+      - robert.engberg@trubridge.com
+      - sean.odonnell@trubridge.com
+      - shannon.locklear@trubridge.com
+      - sundaramoorthy.adhi@trubridge.com
+      - suresh.kumaran@trubridge.com
+      - susan.mayhall@trubridge.com
+      - thomas.moore@trubridge.com
+      - thomas.wilson@trubridge.com
+      - tim.ogletree@trubridge.com
+      - zack.mayhall@trubridge.com
+  az-grp-crp-proddev-qa:
+    users:
+      - susan.mayhall@trubridge.com
+      - tim.ogletree@trubridge.com
+    nested_groups:
+      - az-grp-v-adg-proddev-qa
+  az-grp-v-adg-proddev-all:
+    nested_groups:
+      - az-grp-v-adg-proddev-dev
+      - az-grp-v-adg-proddev-qa
+  az-grp-v-adg-proddev-dev:
+    users:
+      - rajendran.balasubramanian@trubridge.com
+      - saravanan.ganesan@trubridge.com
+      - sasi.sivakumar@trubridge.com
+      - vasant.reuben@trubridge.com
+  az-grp-v-adg-proddev-qa:

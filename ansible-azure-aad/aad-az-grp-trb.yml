@@ -1,0 +1,15 @@
+---
+- name: Aad-az-grp-trb
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD Persona groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-dataplatform-cbo-analyst" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-dataplatform-cbo-director" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-dataplatform-cbo-manager" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-dataplatform-tbi-analyst" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-itms-all" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-itms-admins" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-trb-itms-github" }

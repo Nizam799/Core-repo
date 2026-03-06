@@ -1,0 +1,18 @@
+---
+# Owners : Donnie Gober, Bill Russell
+gh_groups:
+  gh-github-temp-iam-owners:
+    privacy: closed
+    description: A github managed team for github-temp approvers
+    members:
+      - username: donnie-gober_CPSI_CPSI
+        role: maintainer
+      - username: bill-russell_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-github-temp-read:
+    users:
+      - bill.russell@trubridge.com
+      - donnie.gober@trubridge.com
+      - mark.jones@trubridge.com
+      - steven.smith@trubridge.com

@@ -1,0 +1,13 @@
+name: Ansible Populate AAD Groups CRON
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 11 * * *'
+
+jobs:
+  deployAnsible:
+    uses: ./.github/workflows/ansible-populate-aad-groups.yml
+    with:
+      githubEnv: terraform-deployment-1_0-pd
+    secrets: inherit

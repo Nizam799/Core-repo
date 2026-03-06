@@ -1,0 +1,29 @@
+---
+# Owners : Kathryn Coburn, Arun Mohan
+gh_groups:
+  gh-pctool-iam-owners:
+    privacy: closed
+    description: A github managed team for pctool approvers
+    members:
+      - username: kathryn-coburn_CPSI
+        role: maintainer
+      - username: arun-mohan_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-proddev-pctool-all:
+    nested_groups:
+      - az-grp-crp-proddev-pctool-approvers
+      - az-grp-crp-proddev-pctool-dev
+      - az-grp-crp-proddev-pctool-github
+  az-grp-crp-proddev-pctool-approvers:
+    users:
+      - helena.anderson@trubridge.com
+      - kathryn.coburn@trubridge.com
+  az-grp-crp-proddev-pctool-dev:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+  az-grp-crp-proddev-pctool-github:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com

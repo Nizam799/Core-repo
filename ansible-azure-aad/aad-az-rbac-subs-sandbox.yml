@@ -1,0 +1,9 @@
+---
+- name: Aad-az-rbac-subs-sandbox
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-sandbox-us-customer-shd-001-user-access-admin" }

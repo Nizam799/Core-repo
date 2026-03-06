@@ -1,0 +1,62 @@
+---
+- name: Aad-pag-approvers
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD AAD role groups
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-bastion-login-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-admin-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-cda-viewer-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-comctr-adrbk-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-comctr-docmnt-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-comctr-mailb-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-lin-alchemy-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-lin-deacon-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-lin-twillio-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-linus-audit-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-linus-tenant-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-linus-user-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-note-filters-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-note-notes-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-ops-utils-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-patcom-deacon-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-patcom-ptcht-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-patcom-ptcon-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-patcom-qkcon-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-pdc-console-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-phr-ecrnow-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-qualms-alchemy-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-ssa-auth-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-ssa-qc-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-pg-ssa-usersettings-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-sqldb-admin-approver
+    - role: aad_groups_population
+      aad_groups_population_aad_group_name: az-grp-crp-pag-sqldb-mdp-hvr-approver

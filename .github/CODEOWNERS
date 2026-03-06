@@ -1,0 +1,35 @@
+* @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/ @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/aad.yml @CPSICorp/gh-aad-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/bravo.yml @CPSICorp/gh-bravo-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/bytebenders.yml @CPSICorp/gh-bytebenders-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/cloudops.yml @CPSICorp/gh-cloudops-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/colonelcrisis.yml @CPSICorp/gh-colonelcrisis-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/cookies.yml @CPSICorp/gh-cookies-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/cosmiccaribou.yml @CPSICorp/gh-cosmiccaribou-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/dataplatform.yml @CPSICorp/gh-dataplatform-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/deacon.yml @CPSICorp/gh-deacon-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/drasticmeasures.yml @CPSICorp/gh-drasticmeasures-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/ehr.yml @CPSICorp/gh-ehr-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/github-temp.yml @CPSICorp/gh-github-temp-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/idm.yml @CPSICorp/gh-idm-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/innovation.yml @CPSICorp/gh-innovation-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/itms.yml @CPSICorp/gh-itms-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/itops.yml @CPSICorp/gh-itops-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/pag-approvers.yml @CPSICorp/gh-pag-approvers-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/patientconnect.yml @CPSICorp/gh-patientconnect-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/pctool.yml @CPSICorp/gh-pctool-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/phantom.yml @CPSICorp/gh-phantom-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/phoenix.yml @CPSICorp/gh-phoenix-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/prisma.yml @CPSICorp/gh-prisma-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/proddev.yml @CPSICorp/gh-proddev-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/randomchaos.yml @CPSICorp/gh-randomchaos-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/rbac.yml @CPSICorp/gh-rbac-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/rcm.yml @CPSICorp/gh-rcm-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/resolutionaries.yml @CPSICorp/gh-resolutionaries-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/sashimi.yml @CPSICorp/gh-sashimi-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/soc.yml @CPSICorp/gh-soc-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/unify.yml @CPSICorp/gh-unify-iam-owners @CPSICorp/az-cloudops-groundzero
+ansible-azure-aad/group_vars/all/winwire.yml @CPSICorp/gh-winwire-iam-owners @CPSICorp/az-cloudops-groundzero
+.github/CODEOWNERS @CPSICorp/gh-platform
+.github/workflows @CPSICorp/gh-platform

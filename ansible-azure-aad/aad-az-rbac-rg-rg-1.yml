@@ -1,0 +1,25 @@
+---
+- name: Aad-az-rbac-rg-rg-1
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-dev-usea-001-stgblob-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-pd-usea-001-akv-secrets-officer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-pd-usea-001-stgblob-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-qa-usea-001-akv-secrets-officer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-qa-usea-001-stgblob-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-stg-usea-001-akv-secrets-officer" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-stg-usea-001-stgblob-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-dev-usea-001-hub-virtual-machine-user-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-dev-usea-001-stgblob-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-dev-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-pd-usea-001-hub-virtual-machine-user-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-qa-usea-001-hub-virtual-machine-user-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-qa-usea-001-stgblob-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-data-qa-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-dbt-dev-usea-001-cus-mdp-container-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-dbt-dev-usea-001-user-access-admin" }

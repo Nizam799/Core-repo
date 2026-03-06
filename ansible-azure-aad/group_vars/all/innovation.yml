@@ -1,0 +1,319 @@
+---
+# Owners : Kathryn Coburn, Arun Mohan
+gh_groups:
+  gh-innovation-iam-owners:
+    privacy: closed
+    description: A github managed team for innovation approvers
+    members:
+      - username: kathryn-coburn_CPSI
+        role: maintainer
+      - username: arun-mohan_CPSI
+        role: maintainer
+aad_groups:
+  az-grp-crp-innov-adv:
+    users:
+      - chris.odom@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - sean.adams@trubridge.com
+      - swarna.pujari@trubridge.com
+      - tom.gardner@trubridge.com
+  az-grp-crp-innov-aibuilder:
+    users:
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christopher.johnson@trubridge.com
+      - divyesh.patel@trubridge.com
+      - jody.stevens@trubridge.com
+      - harsh.doshi@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - michael.davis@trubridge.com
+      - nate.stone@trubridge.com
+      - patrick.mcginnis@trubridge.com
+      - tom.gardner@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-innov-all:
+    nested_groups:
+      - az-grp-crp-innov-adv
+      - az-grp-crp-innov-aibuilder
+      - az-grp-crp-innov-github
+      - az-grp-crp-innov-rag-engineers
+    users:
+      - cheri.gieske@trubridge.com
+      - chris.odom@trubridge.com
+      - christopher.johnson@trubridge.com
+      - jody.stevens@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - michael.davis@trubridge.com
+      - nate.stone@trubridge.com
+      - patrick.bruno@trubridge.com
+      - patrick.mcginnis@trubridge.com
+      - sean.adams@trubridge.com
+      - swarna.pujari@trubridge.com
+      - tom.gardner@trubridge.com
+      - william.skelton@trubridge.com
+      - shelia.jennings@trubridge.com
+  az-grp-crp-innov-rag-all:
+    nested_groups:
+      - az-grp-crp-innov-rag-compliance-evaluation
+      - az-grp-crp-innov-rag-compliance-review
+      - az-grp-crp-innov-rag-engineers
+      - az-grp-crp-innov-rag-financial-health-evaluation
+      - az-grp-crp-innov-rag-financial-health-review
+      - az-grp-crp-innov-rag-hr-evaluation
+      - az-grp-crp-innov-rag-hr-review
+      - az-grp-crp-innov-rag-review
+      - az-grp-crp-innov-rag-support-evaluation
+      - az-grp-crp-innov-rag-support-review
+  az-grp-crp-innov-github:
+    users:
+      - arun.mohan@trubridge.com
+      - chris.odom@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - michael.davis@trubridge.com
+      - nate.stone@trubridge.com
+      - patrick.bruno@trubridge.com
+      - swarna.pujari@trubridge.com
+      - william.skelton@trubridge.com
+  az-grp-crp-innov-rag-compliance-evaluation:
+    users:
+      - tish.robinson@trubridge.com
+  az-grp-crp-innov-rag-compliance-review:
+    users:
+      - amy.hartzell@trubridge.com
+      - andrea.prusko@trubridge.com
+      - janna.stevens@trubridge.com
+      - jason.harmon@trubridge.com
+      - joe.fichera@trubridge.com
+      - tish.robinson@trubridge.com
+      - zack.mckee@trubridge.com
+  az-grp-crp-innov-rag-engineers:
+    users:
+      - aaron.kelly@trubridge.com
+      - amy.allen@trubridge.com
+      - arun.mohan@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - divyesh.patel@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - nate.stone@trubridge.com
+  az-grp-crp-innov-rag-financial-health-dashboard:
+    users:
+      - amanda.stenger@trubridge.com
+      - amy.allen@trubridge.com
+      - ashish.goel@trubridge.com
+      - ashish.shetty@trubridge.com
+      - asifaj.shaikh@trubridge.com
+      - dan.loberg@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - nagnath.nande@trubridge.com
+      - nate.stone@trubridge.com
+      - nisha.singh@trubridge.com
+      - pavani.nellutla@trubridge.com
+      - raghavendhiran.thamizhchelvan@trubridge.com
+      - ravindra.nautiyal@trubridge.com
+      - sean.adams@trubridge.com
+      - toni.young@trubridge.com
+      - vinod.sewlani@trubridge.com
+  az-grp-crp-innov-rag-financial-health-evaluation:
+    users:
+      - aishwarya.shahi@trubridge.com
+      - ajayg.gund@trubridge.com
+      - amudha.govindaraj@trubridge.com
+      - ankita.gurav@trubridge.com
+      - asma.banu@trubridge.com
+      - deepak.gupta@trubridge.com
+      - deepakanil.singh@trubridge.com
+      - furkan.shaikh@trubridge.com
+      - gowtham.vijayakumar@trubridge.com
+      - kanakavalli.kannadasan@trubridge.com
+      - karishma.goad@trubridge.com
+      - khiruthik.kumar@trubridge.com
+      - khushboo.khan@trubridge.com
+      - mahadevaswamy.s@trubridge.com
+      - manish.sharma@trubridge.com
+      - manish.vishwakarma@trubridge.com
+      - mohan.chellappillai@trubridge.com
+      - mohdrehan.shaikh@trubridge.com
+      - nayini.jahnavi@trubridge.com
+      - nikhil.shewale@trubridge.com
+      - niranjan.goad@trubridge.com
+      - nitishs.kumar@trubridge.com
+      - om.barange@trubridge.com
+      - pooja.shetty@trubridge.com
+      - pooja.singh@trubridge.com
+      - raju.gurjar@trubridge.com
+      - renukamma.sabanna@trubridge.com
+      - siddarth.mali@trubridge.com
+      - sunny.purohit@trubridge.com
+      - ullalshahid.yaqub@trubridge.com
+      - vallabhu.swathi@trubridge.com
+      - vignesh.thirumaniraj@trubridge.com
+      - zeba.kuldunkar@trubridge.com
+      - zoaib.khan@trubridge.com
+  az-grp-crp-innov-rag-financial-health-review:
+    users:
+      - amanda.stenger@trubridge.com
+      - amy.allen@trubridge.com
+      - ashish.goel@trubridge.com
+      - ashish.shetty@trubridge.com
+      - asifaj.shaikh@trubridge.com
+      - dan.loberg@trubridge.com
+      - danielle.redden@trubridge.com
+      - harish.sharma@trubridge.com
+      - kavita.naidu@trubridge.com
+      - lalitha.shinde@trubridge.com
+      - lilly.amboji@trubridge.com
+      - nagnath.nande@trubridge.com
+      - neelam.keerthana@trubridge.com
+      - nisha.singh@trubridge.com
+      - pam.fondren@trubridge.com
+      - pavani.nellutla@trubridge.com
+      - raghavendhiran.thamizhchelvan@trubridge.com
+      - ravindra.nautiyal@trubridge.com
+      - rohitk.singh@trubridge.com
+      - rudani.patel@trubridge.com
+      - sean.adams@trubridge.com
+      - shannon.densmore@trubridge.com
+      - shipra.jaiswal@trubridge.com
+      - siddarth.mali@trubridge.com
+      - siddhesh.parab@trubridge.com
+      - smruti.kambli@trubridge.com
+      - suraj.bsingh@trubridge.com
+      - toni.young@trubridge.com
+      - vinod.sewlani@trubridge.com
+  az-grp-crp-innov-rag-hr-evaluation:
+    users:
+      - hilary.floate@trubridge.com
+      - kipp.bedford@Trubridge.com
+  az-grp-crp-innov-rag-hr-review:
+    users:
+      - hilary.floate@trubridge.com
+      - joe.pollard@trubridge.com
+      - kelly.lippe@trubridge.com
+      - kipp.bedford@trubridge.com
+  az-grp-crp-innov-rag-review:
+    users:
+      - aaron.kelly@trubridge.com
+      - amaris.mccomas@trubridge.com
+      - amy.allen@trubridge.com
+      - amy.estep@trubridge.com
+      - amy.hartzell@trubridge.com
+      - andrea.prusko@trubridge.com
+      - arun.mohan@trubridge.com
+      - azure.davis@trubridge.com
+      - chason.hicks@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - janna.stevens@trubridge.com
+      - jason.harmon@trubridge.com
+      - jason.holmgren@trubridge.com
+      - joe.fichera@trubridge.com
+      - kacy.hattabaugh@trubridge.com
+      - lynn.bunyard@trubridge.com
+      - nate.stone@trubridge.com
+      - nirav.sheth@trubridge.com
+      - renee.sexton@trubridge.com
+      - robin.mobley@trubridge.com
+      - sean.adams@trubridge.com
+      - swarna.pujari@trubridge.com
+  az-grp-crp-innov-rag-support-evaluation:
+    users:
+      - anna.fredricks@trubridge.com
+      - ashley.todd@trubridge.com
+      - ashley.williams@trubridge.com
+      - beth.adams@trubridge.com
+      - brian.williamson@trubridge.com
+      - brooke.maniec@trubridge.com
+      - bryant.winslett@trubridge.com
+      - catherine.maxwell@trubridge.com
+      - danielle.zirlott@trubridge.com
+      - heather.blair@trubridge.com
+      - jake.turberville@trubridge.com
+      - james.jepko@trubridge.com
+      - jessica.krafthefer@trubridge.com
+      - joey.clarke@trubridge.com
+      - josh.fain@trubridge.com
+      - josh.wyckoff@trubridge.com
+      - karla.essmiller@trubridge.com
+      - kawana.bowen@trubridge.com
+      - kayla.granberry@trubridge.com
+      - kelsey.heape@trubridge.com
+      - lauren.williamson@trubridge.com
+      - missy.ahrens@trubridge.com
+      - monica.mccaskey@trubridge.com
+      - nicholas.gaston@trubridge.com
+      - racheal.chamblee@trubridge.com
+      - stephanie.watz@trubridge.com
+      - tj.homeister@trubridge.com
+      - tramain.coats@trubridge.com
+      - valerie.olson@trubridge.com
+  az-grp-crp-innov-rag-support-review:
+    users:
+      - adam.bishop@trubridge.com
+      - alan.erickson@trubridge.com
+      - amanda.borchardt@trubridge.com
+      - ashley.williams@trubridge.com
+      - beth.adams@trubridge.com
+      - brian.ross@trubridge.com
+      - brian.williamson@trubridge.com
+      - brooke.maniec@trubridge.com
+      - carol.wittry@trubridge.com
+      - daryl.miller@trubridge.com
+      - jay.crocker@trubridge.com
+      - jessica.krafthefer@trubridge.com
+      - joey.doan@trubridge.com
+      - kayla.granberry@trubridge.com
+      - lauren.williamson@trubridge.com
+      - matthew.quimby@trubridge.com
+      - missy.ahrens@trubridge.com
+      - monica.mccaskey@trubridge.com
+      - stacey.grajczyk@trubridge.com
+      - stephanie.watz@trubridge.com
+      - tina.yeakel@trubridge.com
+      - todd.guthrey@trubridge.com
+      - tramaine.lett@trubridge.com
+      - valerie.olson@trubridge.com
+      - wendie.engebretson@trubridge.com
+  az-grp-crp-patientcare-ragbot-dashboard:
+    users:
+      - amy.allen@trubridge.com
+      - andrew.smith@trubridge.com
+      - anna.fredricks@trubridge.com
+      - ashley.williams@trubridge.com
+      - beth.adams@trubridge.com
+      - brian.ross@trubridge.com
+      - brian.williamson@trubridge.com
+      - bryant.winslett@trubridge.com
+      - candace.wilson@trubridge.com
+      - chantale.davis@trubridge.com
+      - chris.kesting@trubridge.com
+      - christopher.johnson@trubridge.com
+      - gary.constantine@trubridge.com
+      - jake.turberville@trubridge.com
+      - jess.horn@trubridge.com
+      - jessica.krafthefer@trubridge.com
+      - jessica.vines@trubridge.com
+      - jody.stevens@trubridge.com
+      - joel.bishop@trubridge.com
+      - josh.fain@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - kristen.bull@trubridge.com
+      - larry.weed@trubridge.com
+      - laura.anthony@trubridge.com
+      - lynn.perry@trubridge.com
+      - michael.davis@trubridge.com
+      - missy.ahrens@trubridge.com
+      - monica.mccaskey@trubridge.com
+      - patrick.mcginnis@trubridge.com
+      - racheal.chamblee@trubridge.com
+      - raven.heard@trubridge.com
+      - shelia.jennings@trubridge.com
+      - sherry.gunderman@trubridge.com
+      - tiffany.davis@trubridge.com
+      - tina.gager@trubridge.com
+      - tj.homeister@trubridge.com
+      - todd.guthrey@trubridge.com
+      - tramain.coats@trubridge.com
+      - travis.parker@trubridge.com
+      - valerie.olson@trubridge.com
+      - wendie.engebretson@trubridge.com

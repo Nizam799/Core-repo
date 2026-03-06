@@ -1,0 +1,16 @@
+---
+- name: Aad-az-rbac-subs-ssvcs
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-con-shd-001-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-con-shd-001-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-idm-shd-001-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-logic-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-seim-playbook-operator" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-seim-responder" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-template-spec-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-subs-ssvcs-us-cust-mgmt-shd-001-owner" }

@@ -1,0 +1,25 @@
+---
+- name: Aad-az-rbac-rg-rg-1
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-dbt-qa-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-adf-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-cus-mdp-adf-integration" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-dev-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-adf-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-cus-mdp-adf-integration" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-ingest-qa-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-shdsvc-dev-usea-001-akv-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-shdsvc-dev-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-shdsvc-qa-usea-001-akv-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-mdp-shdsvc-qa-usea-001-user-access-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-all-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-all-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-bcdr-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-bcdr-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-comp-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-comp-prvt-dns-contributor" }

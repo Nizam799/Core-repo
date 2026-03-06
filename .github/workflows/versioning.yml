@@ -1,0 +1,17 @@
+name: Versioning
+
+on:
+  pull_request:
+    types:
+      - closed
+      - opened
+      - edited
+      - reopened
+      - synchronize
+    branches:
+      - main
+
+jobs:
+  automatic-tagging:
+    uses: CPSICorp/reusable-workflow-auto-tagging/.github/workflows/autotagging.yml@v2
+    secrets: inherit

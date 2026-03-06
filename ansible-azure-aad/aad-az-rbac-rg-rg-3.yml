@@ -1,0 +1,22 @@
+---
+- name: Aad-az-rbac-rg-rg-1
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    # - aad_groups
+    # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-data-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-data-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-dvps-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-dvps-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-secm-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-usea-001-secm-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-bcdr-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-bcdr-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-comp-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-comp-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-dvps-cus-prvt-dns-reader" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-dns-shd-uswe-001-dvps-prvt-dns-contributor" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-mgmt-shd-usea-001-jump-vm-admin-login" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-shdsvc-mgmt-shd-uswe-001-jump-vm-admin-login" }
