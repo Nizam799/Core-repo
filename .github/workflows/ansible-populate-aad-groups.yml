@@ -17,23 +17,7 @@ jobs:
         name: Create Matrix
       - id: setmatrix
         name: Build matrix (filepath + name)
-        run: |
-          set -e
-          IFS=$'\n'
-          matrixArray=($(find ./ansible-azure-aad/ -type f -name 'aad-*.yml' | sort))
-
-          # Create an array of objects: [{ "filepath": "...", "name": "aad-xxx.yml" }, ...]
-          printf '%s\n' "${matrixArray[@]}" \
-            | jq -R . \
-            | jq -s 'map({filepath: ., name: (split("/") | last)})' > matrix.json
-
-          cat matrix.json
-
-          {
-            echo "MATRIX<<EOF"
-            cat matrix.json
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+        run: ./.github/scripts/refactor.sh
 
   deploy-ansible:
     needs: create-matrix
