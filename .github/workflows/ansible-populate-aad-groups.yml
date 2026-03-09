@@ -19,57 +19,57 @@ jobs:
         name: Build matrix (filepath + name)
         run: ./.github/scripts/refactor.shs
 
-  deploy-ansible:
-    needs: create-matrix
-    runs-on: arc-runners-usea
-    environment: ${{ inputs.githubEnv }}
-    # 👇 This makes each matrix job display as the filename
-    name: ${{ matrix.name }}
+  # deploy-ansible:
+  #   needs: create-matrix
+  #   runs-on: arc-runners-usea
+  #   environment: ${{ inputs.githubEnv }}
+  #   # 👇 This makes each matrix job display as the filename
+  #   name: ${{ matrix.name }}
 
-    permissions:
-      id-token: write
-      contents: read
+    # permissions:
+    #   id-token: write
+    #   contents: read
 
-    strategy:
-      fail-fast: false
-      # 👇 Use include so each object provides matrix variables
-      matrix:
-        include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
+  #   strategy:
+  #     fail-fast: false
+  #     # 👇 Use include so each object provides matrix variables
+  #     matrix:
+  #       include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
 
-    steps:
-      - uses: actions/checkout@v4
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10'
 
-      - name: Install ansible[azure]
-        run: pip install ansible[azure]
+  #     - name: Install ansible[azure]
+  #       run: pip install ansible[azure]
 
-      - name: Install azure requirements
-        run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-          ansible-galaxy collection install azure.azcollection:3.6.0 --force
-          pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
-          pip install msal --upgrade
+  #     - name: Install azure requirements
+  #       run: |
+  #         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+  #         ansible-galaxy collection install azure.azcollection:3.6.0 --force
+  #         pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
+  #         pip install msal --upgrade
 
-      - name: Azure Login
-        uses: azure/login@v2
-        with:
-          client-id: ${{ vars.CLIENT_ID }}
-          tenant-id: ${{ vars.TENANT_ID }}
-          allow-no-subscriptions: true
+  #     - name: Azure Login
+  #       uses: azure/login@v2
+  #       with:
+  #         client-id: ${{ vars.CLIENT_ID }}
+  #         tenant-id: ${{ vars.TENANT_ID }}
+  #         allow-no-subscriptions: true
 
-      - name: Replace tokens
-        uses: cschleiden/replace-tokens@v1
-        with:
-          files: '[ "ansible-azure-aad/group_vars/*.yml" ]'
-          tokenPrefix: '__'
-          tokenSuffix: '__'
-        env:
-          TENANT_ID: '${{ vars.TENANT_ID }}'
+  #     - name: Replace tokens
+  #       uses: cschleiden/replace-tokens@v1
+  #       with:
+  #         files: '[ "ansible-azure-aad/group_vars/*.yml" ]'
+  #         tokenPrefix: '__'
+  #         tokenSuffix: '__'
+  #       env:
+  #         TENANT_ID: '${{ vars.TENANT_ID }}'
 
-      - name: Run Ansible playbook
-        run: |
-            ansible-playbook "${{ matrix.filepath }}"
+  #     - name: Run Ansible playbook
+  #       run: |
+  #           ansible-playbook "${{ matrix.filepath }}"
