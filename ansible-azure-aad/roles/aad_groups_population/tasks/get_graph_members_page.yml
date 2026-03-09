@@ -1,0 +1,21 @@
+- name: Call Graph API page
+  ansible.builtin.shell: |
+    az rest --method GET --uri "{{ next_url }}" -o json
+  register: graph_page
+  changed_when: false
+
+- name: Parse page result
+  ansible.builtin.set_fact:
+    graph_page_json: "{{ graph_page.stdout | from_json }}"
+
+- name: Append members
+  ansible.builtin.set_fact:
+    graph_members_all: "{{ graph_members_all + (graph_page_json.value | default([])) }}"
+
+- name: Update next_url
+  ansible.builtin.set_fact:
+    next_url: "{{ graph_page_json['@odata.nextLink'] | default('') }}"
+
+- name: Continue pagination if nextLink exists
+  ansible.builtin.include_tasks: get_graph_members_page.yml
+  when: next_url != ""

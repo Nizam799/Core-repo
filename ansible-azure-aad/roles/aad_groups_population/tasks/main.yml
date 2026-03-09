@@ -1,0 +1,401 @@
+# file: roles/aad_groups_population/tasks/main.yml
+
+### Merge multiple variables files from group_vars/all/*.yml  ###
+
+- name: Merge aad_groups from group_vars/all/*.yml
+  ansible.builtin.set_fact:
+    aad_groups: >-
+      {{
+        (aad_groups | default({}))
+        | combine(
+            ((lookup('file', item) | from_yaml).aad_groups | default({})),
+            recursive=True
+          )
+      }}
+  loop: "{{ lookup('fileglob', playbook_dir ~ '/group_vars/all/*.yml', wantlist=True) }}"
+  loop_control:
+    label: "{{ item | basename }}"
+  run_once: true
+
+### Get info About Group ###
+
+- name: Gather parent group {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup_info:
+    attribute_name: displayName
+    attribute_value: "{{ aad_groups_population_aad_group_name }}"
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    return_group_members: false # Retrieve the group's members as part of the output
+  register: main_group
+
+### Get Group and User members ###
+
+- name: Initialize Graph pagination
+  ansible.builtin.set_fact:
+    graph_members_all: []
+    next_url: "https://graph.microsoft.com/v1.0/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,userPrincipalName,displayName"
+
+- name: Fetch all Graph members
+  ansible.builtin.include_tasks: get_graph_members_page.yml
+
+# - name: Retrieve Users and nested Groups of {{ aad_groups_population_aad_group_name }}
+#   ansible.builtin.shell: |
+#     az rest \
+#       --method GET \
+#       --uri "https://graph.microsoft.com/v1.0/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,userPrincipalName,displayName&$top=999" \
+#       -o json
+#   register: graph_members
+#   changed_when: false
+
+# - name: Setting user and nested group data to Json
+#   ansible.builtin.set_fact:
+#     graph_members: "{{ graph_members.stdout | from_json }}"
+
+- name: Init member lists
+  ansible.builtin.set_fact:
+    user_members: []
+    nested_group_members: []
+
+- name: Setting users fact
+  ansible.builtin.set_fact:
+    user_members: >-
+      {{ (user_members | default([]))
+         + [ { 'id': item.id,
+               'upn': (item.userPrincipalName | default('') | trim | lower) } ] }}
+  loop: "{{ graph_members_all | default([]) }}"
+  when: item['@odata.type'] == '#microsoft.graph.user'
+
+- name: Setting nested Group fact
+  ansible.builtin.set_fact:
+    nested_group_members: "{{ (nested_group_members | default([])) + [{'id': item.id, 'displayName': item.displayName}] }}"
+  loop: "{{ graph_members_all | default([]) }}"
+  when:
+    - item['@odata.type'] == '#microsoft.graph.group'
+
+### Get members list of SPNs ###
+
+- name: Retrieve SPNs of {{ aad_groups_population_aad_group_name }}
+  ansible.builtin.shell: |
+    az rest \
+      --method GET \
+      --uri "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,displayName,appId&$top=999" \
+      --query "value[?appId!=null && displayName!=null].{id: id, appId: appId, displayName: displayName}" \
+      -o json
+  register: graph_spn_members
+  changed_when: false
+
+- name: Setting SPN fact
+  ansible.builtin.set_fact:
+    spn_members: "{{ graph_spn_members.stdout | from_json }}"
+
+### Remove any users that should not be part of the group ###
+
+- name: Remove all users if there are no users defined for {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    absent_members: "{{ (user_members | default([])) | map(attribute='id') | list }}"
+  register: no_users
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].users is not defined
+    - user_members | length > 0
+
+- name: Remove users not in desired list for {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    absent_members: >-
+      {{
+        (user_members | default([]))
+        | selectattr('upn', 'defined')
+        | rejectattr(
+            'upn',
+            'in',
+            (aad_groups[aad_groups_population_aad_group_name].users
+              | default([])
+              | map('lower')
+              | list)
+          )
+        | map(attribute='id')
+        | list
+      }}
+  register: removed_extra_users
+  when: aad_groups[aad_groups_population_aad_group_name].users is defined
+
+### Remove any nested groups that should not be part of the group ###
+
+- name: Remove all nested_groups if there is no nested_groups defined for {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    absent_members: "{{ (nested_group_members | default([])) | map(attribute='id') | list }}"
+  register: no_nested_groups
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].nested_groups is not defined
+    - nested_group_members | length > 0
+
+# Remove nested groups that are not listed in the specified nested_groups
+- name: Remove any nested groups that are not listed as members of {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    absent_members: >-
+      {{
+        (nested_group_members | default([]))
+        | selectattr('displayName', 'defined')
+        | rejectattr('displayName', 'in', (aad_groups[aad_groups_population_aad_group_name].nested_groups | default([])))
+        | map(attribute='id')
+        | list
+      }}
+  register: removed_extra_nested_groups
+  when: aad_groups[aad_groups_population_aad_group_name].nested_groups is defined
+
+### Remove any SPNs that should not be part of the group ###
+
+# Remove SPNs from the group if no SPN is defined for the group
+- name: Remove all SPNs if there is no SPN defined for {{ aad_groups_population_aad_group_name }}
+  ansible.builtin.shell: |
+    az rest \
+      --method DELETE \
+      --uri "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members/{{ item.id }}/\$ref"
+  loop: "{{ spn_members }}"
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].spn_client_ids is not defined
+    - spn_members | length > 0
+  register: removed_spns_cli
+  changed_when: true
+
+# Remove SPNs that are not listed as members of the group
+- name: Remove any SPNs that are not listed as members of {{ aad_groups_population_aad_group_name }}
+  ansible.builtin.shell: |
+    az rest \
+      --method DELETE \
+      --uri "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members/{{ item.id }}/\$ref"
+  loop: "{{ spn_members }}"
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].spn_client_ids is defined
+    - spn_members | length > 0
+    - item.appId not in aad_groups[aad_groups_population_aad_group_name].spn_client_ids
+  register: removed_spns_cli
+  changed_when: true
+
+### Populate Group with Users ###
+
+- name: Build list of current user member UPNs (lowercased)
+  ansible.builtin.set_fact:
+    current_member_upns: >-
+      {{
+        (user_members | default([]))
+        | map(attribute='upn') | select('defined')
+        | map('lower') | map('trim')
+        | reject('equalto','')
+        | list | unique
+      }}
+
+- name: Filter to only users not already in the group (case-insensitive)
+  ansible.builtin.set_fact:
+    users_to_add: >-
+      {{
+        (
+          (aad_groups[aad_groups_population_aad_group_name].users | default([]))
+          | map('lower') | map('trim') | reject('equalto','') | list | unique
+        )
+        | difference(
+            (
+              current_member_upns | default([])
+            )
+            | map('lower') | map('trim') | reject('equalto','') | list | unique
+          )
+      }}
+  changed_when: false
+  when: aad_groups[aad_groups_population_aad_group_name].users is defined
+
+- name: Dynamically grab object_id for users_to_add
+  azure.azcollection.azure_rm_aduser_info:
+    user_principal_name: "{{ item }}"
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+  loop: "{{ users_to_add | default([]) }}"
+  loop_control:
+    label: "{{ item }}"
+  when: users_to_add is defined and users_to_add | length > 0
+  register: upn_info
+  failed_when: false
+  changed_when: false
+
+- name: Build list of user object_ids from UPN lookups
+  ansible.builtin.set_fact:
+    user_object_ids_to_add: >-
+      {{
+        (
+          upn_info.results | default([])
+          | map(attribute='ad_users')
+          | select('defined') | list
+          | flatten
+          | map(attribute='object_id')
+          | select('defined') | list
+          | unique
+        )
+        | difference(user_members | map(attribute='id') | list)
+      }}
+  when: upn_info is defined
+
+- name: Ensure users are members of {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    present_members: "{{ user_object_ids_to_add }}"
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].users is defined
+    - user_object_ids_to_add | length > 0
+
+### Populate Group with Nested Groups ###
+
+- name: Build list of current nested groups
+  ansible.builtin.set_fact:
+    current_nested_group: >-
+      {{
+        nested_group_members | default([])
+        | map(attribute='displayName')
+        | select('defined') | list
+      }}
+  when: nested_group_members is defined
+
+- name: Filter to only nested groups not already in the group
+  ansible.builtin.set_fact:
+    groups_to_add: >-
+      {{
+        (
+          (aad_groups[aad_groups_population_aad_group_name].nested_groups | default([]))
+          | map('trim') | reject('equalto','') | list | unique
+        )
+        | difference(
+            (
+              current_nested_group | default([])
+            )
+            | map('trim') | reject('equalto','') | list | unique
+          )
+      }}
+  changed_when: false
+  when: aad_groups[aad_groups_population_aad_group_name].nested_groups is defined
+
+- name: Dynamically grab object_id for nested groups
+  azure.azcollection.azure_rm_adgroup_info:
+    attribute_name: 'displayName'
+    attribute_value: '{{ item }}'
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+  register: groups_info
+  loop: "{{ groups_to_add | default([]) }}"
+  when: aad_groups[aad_groups_population_aad_group_name].nested_groups is defined  # Only execute if nested_groups are defined
+
+- name: Build list of nested group object_ids
+  ansible.builtin.set_fact:
+    nested_group_object_ids: >-
+      {{
+        groups_info.results | default([])
+        | map(attribute='ad_groups')
+        | select('defined') | list
+        | flatten
+        | map(attribute='object_id')
+        | select('defined') | list
+        | unique
+      }}
+  when: groups_info is defined
+
+- name: Build list of current nested group IDs
+  ansible.builtin.set_fact:
+    current_nested_ids: "{{ (nested_group_members | default([])) | map(attribute='id') | list }}"
+
+- name: Filter to only groups not already in the group
+  ansible.builtin.set_fact:
+    nested_group_object_ids_to_add: "{{ (nested_group_object_ids | default([])) | difference(current_nested_ids | default([])) }}"
+  when: groups_info is defined
+
+- name: Ensure nested groups are members of {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    raw_membership: true
+    present_members: "{{ nested_group_object_ids_to_add }}"
+  when:
+    - nested_group_object_ids is defined
+    - nested_group_object_ids_to_add | length > 0
+
+
+### Populate Group with SPNs ###
+
+# Resolve object_ids
+
+- name: Build list of current SPN IDs
+  ansible.builtin.set_fact:
+    current_spn_app_ids: "{{ (spn_members | default([])) | map(attribute='appId') | list | unique }}"
+
+- name: Filter to only SPNs not already in the group
+  ansible.builtin.set_fact:
+    spns_to_add: >-
+      {{
+        (
+          (aad_groups[aad_groups_population_aad_group_name].spn_client_ids | default([]))
+          | map('trim') | reject('equalto','') | list | unique
+        )
+        | difference(
+            (
+              current_spn_app_ids | default([])
+            )
+            | map('trim') | reject('equalto','') | list | unique
+          )
+      }}
+  changed_when: false
+  when: aad_groups[aad_groups_population_aad_group_name].spn_client_ids is defined
+
+- name: Resolve SPN object_ids from app_ids
+  azure.azcollection.azure_rm_adserviceprincipal_info:
+    app_id: "{{ item }}"
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+  loop: "{{ spns_to_add | default([]) }}"
+  when: aad_groups[aad_groups_population_aad_group_name].spn_client_ids is defined
+  register: spns_to_add_info
+
+- name: Build list of SPN object_ids
+  ansible.builtin.set_fact:
+    spn_object_ids_to_add: >-
+      {{ spns_to_add_info.results
+         | selectattr('skipped', 'undefined')
+         | map(attribute='service_principals')
+         | map('first')
+         | map(attribute='object_id')
+         | list }}
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].spn_client_ids is defined
+    - spns_to_add_info | length > 0
+
+- name: Ensure SPNs are members of {{ aad_groups_population_aad_group_name }}
+  azure.azcollection.azure_rm_adgroup:
+    tenant: "65822a18-e4a3-4658-89cc-86edadc7bda5"
+    auth_source: cli
+    object_id: "{{ main_group.ad_groups[0].object_id }}"
+    state: present
+    present_members: "{{ spn_object_ids_to_add }}"
+    raw_membership: true
+  when:
+    - aad_groups[aad_groups_population_aad_group_name].spn_client_ids is defined
+    - spn_object_ids_to_add | length > 0
