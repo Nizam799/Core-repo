@@ -18,10 +18,10 @@ jobs:
         with:
           fetch-depth: 0
       - name: Add permissions
-        run : chmod +x .github/script/refactor.sh
+        run : chmod +x .github/scripts/refactor.sh
       - id: setmatrix
         name: Build matrix (filepath + name)
-        run: ./.github/script/refactor.sh
+        run: ./.github/scripts/refactor.sh
 
   # deploy-ansible:
   #   needs: create-matrix
