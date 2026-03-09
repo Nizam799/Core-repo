@@ -15,7 +15,6 @@ aad_groups:
       - az-grp-crp-proddev-deacon-approvers
       - az-grp-crp-proddev-deacon-dev
       - az-grp-crp-proddev-deacon-github
-      - az-grp-crp-proddev-deacon-qa
       - az-grp-crp-proddev-deacon-git
     users:
       - abdul.naufal@trubridge.com
