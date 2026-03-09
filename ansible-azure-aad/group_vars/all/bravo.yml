@@ -50,6 +50,7 @@ aad_groups:
       - subramanian.namasivayam@trubridge.com
       - thirumalaikumar.mahalingam@trubridge.com
       - vasu.chinnamani@trubridge.com
+      - mohammed.nizam
   az-grp-crp-proddev-bravo-qa:
     users:
       - saranya.n@trubridge.com

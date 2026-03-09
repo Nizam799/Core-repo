@@ -13,8 +13,10 @@ jobs:
     outputs:
       matrix: ${{ steps.setmatrix.outputs.MATRIX }}
     steps:
-      - uses: actions/checkout@v4
-        name: Create Matrix
+      - name: Create Matrix
+        uses: actions/checkout@v4
+      - name: Add permissions
+        run : chmod +x .github/script/refactor.sh
       - id: setmatrix
         name: Build matrix (filepath + name)
         run: ./.github/script/refactor.sh
