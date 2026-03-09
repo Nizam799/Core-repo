@@ -174,7 +174,6 @@ aad_groups:
   az-grp-crp-cloudops-skyline-privileged:
     users:
       - blake.clark@trubridge.com
-      - bhuvan.kalyan@trubridge.com
       - cathy.cupp@trubridge.com
       - gousiya.sayyad@trubridge.com
       - jeremy.parrillo@trubridge.com

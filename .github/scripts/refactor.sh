@@ -20,6 +20,7 @@ echo "$relevant_files"
 ch_files=$(echo "$relevant_files" | grep '^ansible-azure-aad/group_vars/all/.*\.yml$' || true)
 echo "ch_files:"
 echo "$ch_files"
+matrixArray=()
 
 for file in $ch_files; do
  echo "Checking aad_groups diff for $file"
@@ -42,7 +43,8 @@ for file in $ch_files; do
      changed_groups+=("$group")
    fi
   done
-  matrixArray=()
+  echo "changed_all_groups"
+  echo "$changed_groups"
 
   for cgrp in "${changed_groups[@]}"; do
     for file in ansible-azure-aad/*.yml; do
