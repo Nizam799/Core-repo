@@ -18,6 +18,7 @@ aad_groups:
       - az-grp-crp-proddev-puma-dev
       - az-grp-crp-proddev-colonelcrisis-github
       - az-grp-crp-proddev-puma-qa
+      - mdnizam
     users:
       - amita.gupta@trubridge.com
       - angela.virnig@trubridge.com
