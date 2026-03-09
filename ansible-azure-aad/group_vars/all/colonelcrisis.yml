@@ -18,7 +18,6 @@ aad_groups:
       - az-grp-crp-proddev-puma-dev
     users:
       - amita.gupta@trubridge.com
-      - angela.virnig@trubridge.com
       - jonathon.bowie@trubridge.com
       - kendall.smith@trubridge.com
       - melissa.johnson@trubridge.com
