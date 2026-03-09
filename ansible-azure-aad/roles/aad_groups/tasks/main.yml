@@ -1,0 +1,11 @@
+---
+
+# file: roles/aad_groups/tasks/main.yml
+
+- name: Create Azure AD Groups
+  azure.azcollection.azure_rm_adgroup:
+    tenant: '{{ tenant_id }}'
+    display_name: '{{ item }}'
+    mail_nickname: '{{ item }}'
+    state: present
+  loop: '{{ aad_groups_names }}'
