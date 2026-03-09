@@ -48,7 +48,6 @@ aad_groups:
       - sathish.prakash@trubridge.com
       - sowmiya.arul@trubridge.com
       - subramanian.namasivayam@trubridge.com
-      - thirumalaikumar.mahalingam@trubridge.com
       - vasu.chinnamani@trubridge.com
   az-grp-crp-proddev-bravo-qa:
     users:
