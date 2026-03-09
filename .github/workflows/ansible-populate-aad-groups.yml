@@ -17,7 +17,7 @@ jobs:
         name: Create Matrix
       - id: setmatrix
         name: Build matrix (filepath + name)
-        run: ./.github/scripts/refactor.sh
+        run: ./.github/script/refactor.sh
 
   # deploy-ansible:
   #   needs: create-matrix
