@@ -17,7 +17,9 @@ relevant_files=$(echo "$trifiles" | grep -E "$relevant_paths_regex" || true)
 echo "Relevant files:"
 echo "$relevant_files"
 
-ch_files=$(echo "$relevant_files" | grep '^ansible-aad/group_vars/all/.*\.yaml$' || true)
+ch_files=$(echo "$relevant_files" | grep '^ansible-azure-aad/group_vars/all/.*\.yml$' || true)
+echo "ch_files:"
+echo "$ch_files"
 
 for file in $ch_files; do
  echo "Checking aad_groups diff for $file"
@@ -53,7 +55,7 @@ for file in $ch_files; do
  fi
 done
 # matrixArray=($(find ./ansible-azure-aad/ -type f -name 'aad-*.yml' | sort))
-
+echo "$matrixArray"
 # Create an array of objects: [{ "filepath": "...", "name": "aad-xxx.yml" }, ...]
 printf '%s\n' "${matrixArray[@]}" \
   | jq -R . \
