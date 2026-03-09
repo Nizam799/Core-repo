@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Create Matrix
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Add permissions
         run : chmod +x .github/script/refactor.sh
       - id: setmatrix
