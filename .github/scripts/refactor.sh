@@ -43,22 +43,20 @@ for file in $ch_files; do
      changed_groups+=("$group")
    fi
   done
-  echo "changed_all_groups"
+  echo "All_changed_groups"
   echo "$changed_groups"
 
   for cgrp in "${changed_groups[@]}"; do
     for file in ansible-azure-aad/*.yml; do
       found=$(yq e ".[]?.roles[]? | select(.aad_groups_population_aad_group_name == \"$cgrp\")" "$file")
-
       if [ -n "$found" ]; then
-        matrixArray+=("$file")
+        matrixArray+=("./$file")
       fi
     done
   done
  fi
 done
-# matrixArray=($(find ./ansible-azure-aad/ -type f -name 'aad-*.yml' | sort))
-echo "$matrixArray"
+
 # Create an array of objects: [{ "filepath": "...", "name": "aad-xxx.yml" }, ...]
 printf '%s\n' "${matrixArray[@]}" \
   | jq -R . \
