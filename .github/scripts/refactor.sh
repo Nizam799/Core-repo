@@ -28,24 +28,25 @@ for file in $ch_files; do
 
  yq e '.aad_groups' base.yaml > base_aad.yaml
  yq e '.aad_groups' head.yaml > head_aad.yaml
-
  yq e -P 'sort_keys(..)' base_aad.yaml > base_norm.yaml
  yq e -P 'sort_keys(..)' head_aad.yaml > head_norm.yaml
-
+ echo "Checking aad_groups blocks for $file"
+ changed_groups=()
  if ! diff -q base_norm.yaml head_norm.yaml >/dev/null; then
-  for group in $(yq e '.aad_groups | keys | .[]' head_norm.yaml); do
-   base_block=$(yq e ".aad_groups.\"$group\"" base_norm.yaml)
-   head_block=$(yq e ".aad_groups.\"$group\"" head_norm.yaml)
+  for group in $(yq e 'keys | .[]' head_norm.yaml); do
+   base_block=$(yq e ".\"$group\"" base_norm.yaml)
+   head_block=$(yq e ".\"$group\"" head_norm.yaml)
 
    if [ "$base_block" != "$head_block" ]; then
      echo "Changed group: $group"
+     changed_groups+=("$group")
    fi
   done
   matrixArray=()
 
-  for group in "${changed_groups[@]}"; do
+  for cgrp in "${changed_groups[@]}"; do
     for file in ansible-azure-aad/*.yml; do
-      found=$(yq e ".[]?.roles[]? | select(.aad_groups_population_aad_group_name == \"$group\")" "$file")
+      found=$(yq e ".[]?.roles[]? | select(.aad_groups_population_aad_group_name == \"$cgrp\")" "$file")
 
       if [ -n "$found" ]; then
         matrixArray+=("$file")
