@@ -14,14 +14,6 @@ Reference tickets, audits, onboarding/offboarding, compliance drivers, or applic
 
 ---
 
-## Impact & Risk Considerations
-List anything reviewers should know:
-- Affected users, apps, or environments  
-- Potential access changes  
-- Rollback impact  
-- Any downtime or sequence required
-
----
 
 ## Supplementary Information
 Add any supporting references that help reviewers validate the request:
@@ -36,6 +28,4 @@ Add any supporting references that help reviewers validate the request:
 - [ ] Access deltas reviewed (add/remove/modify)  
 - [ ] Terraform plan reviewed  
 - [ ] No unintended privilege escalation  
-- [ ] Rollback plan identified  
 - [ ] All linting/CI checks pass  
-

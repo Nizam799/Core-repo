@@ -11,10 +11,12 @@ aad_groups:
   az-grp-crp-idm-keycloak-dev-realmadmin:
     users:
       - rob.resendez@trubridge.com
-      - nick.widboom@trubridge.com
+      - harvey.mccreary@trubridge.com
+  az-grp-crp-idm-keycloak-pd-realmadmin:
+    users:
+      - rob.resendez@trubridge.com
       - harvey.mccreary@trubridge.com
   az-grp-crp-idm-keycloak-stg-realmadmin:
     users:
       - rob.resendez@trubridge.com
-      - nick.widboom@trubridge.com
       - harvey.mccreary@trubridge.com

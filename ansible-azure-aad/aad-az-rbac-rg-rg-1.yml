@@ -6,6 +6,7 @@
   roles:
     # - aad_groups
     # Azure AD RBAC groups
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-cost-data-shd-usea-001-stgblob-reader" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-dev-usea-001-stgblob-contributor" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-rg-rg-crp-los-app-pd-usea-001-akv-secrets-officer" }

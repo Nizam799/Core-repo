@@ -24,8 +24,6 @@ aad_groups:
     nested_groups:
       - az-grp-trb-itms-admins
       - az-grp-trb-itms-github
-      - az-grp-crp-proddev-deacon-github
-
   az-grp-trb-itms-admins:
     users:
       - bryan.jarvis@trubridge.com

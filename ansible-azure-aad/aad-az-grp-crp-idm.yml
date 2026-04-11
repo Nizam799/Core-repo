@@ -7,4 +7,5 @@
     # - aad_groups
     # Azure AD Persona groups
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-idm-keycloak-dev-realmadmin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-idm-keycloak-pd-realmadmin" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-idm-keycloak-stg-realmadmin" }

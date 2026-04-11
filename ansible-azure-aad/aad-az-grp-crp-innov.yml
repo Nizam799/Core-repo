@@ -17,6 +17,7 @@
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-dashboard" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-evaluation" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-review" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-financial-health-users" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-github" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-hr-evaluation" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-hr-review" }
