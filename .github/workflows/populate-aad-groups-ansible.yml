@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-matrix:
-    runs-on: arc-runners-usea
+    runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.setmatrix.outputs.MATRIX }}
       aad_groups_changed: ${{ steps.setmatrix.outputs.aad_groups_changed }}
