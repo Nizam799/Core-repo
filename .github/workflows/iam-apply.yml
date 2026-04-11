@@ -14,36 +14,7 @@ on:
       - "!deployments/**/**/**/core_github_team/**"
 
 jobs:
-  # TF Core Role Definitions
-  core_role_definition:
-    name: "Validate terraform - Role_Definition"
-    uses: CPSICorp/reusable-workflow-azure-terraform/.github/workflows/reusable-workflow-terraform-deploy-arc.yml@v8
-    secrets: inherit
-    with:
-      planEnv: terraform-deployment-1_0-pd
-      deploymentPath: ./deployments/cpsi/global/iam/core_role_definition
-      applyEnv: terraform-deployment-1_0-pd
-      runnerName: arc-runners-usea
-      varsFile: terraform.tfvars
-      artifactSuffix: core_role_definition
-
-  # TF Core AAD
-  core_aad:
-    name: "Validate terraform - AAD"
-    needs: core_role_definition
-    uses: CPSICorp/reusable-workflow-azure-terraform/.github/workflows/reusable-workflow-terraform-deploy-arc.yml@v8
-    secrets: inherit
-    with:
-      planEnv: terraform-deployment-1_0-pd
-      deploymentPath: ./deployments/cpsi/global/iam/core_aad
-      applyEnv: terraform-deployment-1_0-pd
-      runnerName: arc-runners-usea
-      varsFile: azuread_directory_groups.auto.tfvars
-      artifactSuffix: core_aad
-
-  # Ansible AAD
   deployAnsible:
-    needs: [core_role_definition, core_aad]
     if: github.ref == 'refs/heads/main' && success()
     uses: ./.github/workflows/populate-aad-groups-ansible.yml
     with:
