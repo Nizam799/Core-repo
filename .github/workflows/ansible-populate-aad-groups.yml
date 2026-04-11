@@ -86,7 +86,7 @@ jobs:
           pip install msal --upgrade
 
       - name: Azure Login
-        uses: azure/login@v2
+        uses: azure/login@v3
         with:
           client-id: ${{ vars.CLIENT_ID }}
           tenant-id: ${{ vars.TENANT_ID }}
