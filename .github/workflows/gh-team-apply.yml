@@ -27,7 +27,7 @@ jobs:
       gh_groups_changed: ${{ steps.group.outputs.gh_groups_changed }}
     steps:
       - name: checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Add permissions
@@ -63,7 +63,7 @@ jobs:
         working-directory: ${{ env.TF_ROOT }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
