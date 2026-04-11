@@ -17,7 +17,6 @@ aad_groups:
       - az-grp-crp-proddev-pctool-github
   az-grp-crp-proddev-pctool-approvers:
     users:
-      - helena.anderson@trubridge.com
       - kathryn.coburn@trubridge.com
   az-grp-crp-proddev-pctool-dev:
     users:

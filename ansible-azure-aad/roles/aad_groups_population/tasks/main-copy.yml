@@ -30,38 +30,12 @@
 
 ### Get Group and User members ###
 
-# - name: Retrieve Users and nested Groups of {{ aad_groups_population_aad_group_name }}
-#   ansible.builtin.shell: |
-#     az rest \
-#       --method GET \
-#       --uri "https://graph.microsoft.com/v1.0/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,userPrincipalName,displayName&$top=999" \
-#       -o json
-#   register: graph_members
-#   changed_when: false
-
 - name: Retrieve Users and nested Groups of {{ aad_groups_population_aad_group_name }}
   ansible.builtin.shell: |
-    python3 << 'EOF'
-    import subprocess, json, sys
-
-    uri = "https://graph.microsoft.com/v1.0/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,userPrincipalName,displayName&$top=999"
-    all_values = []
-
-    while uri:
-        result = subprocess.run(
-            ["az", "rest", "--method", "GET", "--uri", uri, "-o", "json"],
-            capture_output=True, text=True
-        )
-        if result.returncode != 0:
-            print(result.stderr, file=sys.stderr)
-            sys.exit(1)
-
-        page = json.loads(result.stdout)
-        all_values.extend(page.get("value", []))
-        uri = page.get("@odata.nextLink")
-
-    print(json.dumps({"value": all_values}))
-    EOF
+    az rest \
+      --method GET \
+      --uri "https://graph.microsoft.com/v1.0/groups/{{ main_group.ad_groups[0].object_id }}/members?$select=id,userPrincipalName,displayName&$top=999" \
+      -o json
   register: graph_members
   changed_when: false
 

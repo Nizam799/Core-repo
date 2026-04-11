@@ -1,4 +1,4 @@
-name: Ansible Populate AAD Groups
+name: Populate AAD Groups
 
 on:
   workflow_call:
@@ -9,34 +9,27 @@ on:
 
 jobs:
   create-matrix:
-    runs-on: ubuntu-latest
+    runs-on: arc-runners-usea
     outputs:
       matrix: ${{ steps.setmatrix.outputs.MATRIX }}
+      aad_groups_changed: ${{ steps.setmatrix.outputs.aad_groups_changed }}
+
     steps:
-      - uses: actions/checkout@v4
-        name: Create Matrix
-      - id: setmatrix
-        name: Build matrix (filepath + name)
-        run: |
-          set -e
-          IFS=$'\n'
-          matrixArray=($(find ./ansible-azure-aad/ -type f -name 'aad-*.yml' | sort))
+      - name: Create Matrix
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-          # Create an array of objects: [{ "filepath": "...", "name": "aad-xxx.yml" }, ...]
-          printf '%s\n' "${matrixArray[@]}" \
-            | jq -R . \
-            | jq -s 'map({filepath: ., name: (split("/") | last)})' > matrix.json
+      - name: Add permissions
+        run: chmod +x .github/scripts/matrix.sh
 
-          cat matrix.json
-
-          {
-            echo "MATRIX<<EOF"
-            cat matrix.json
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
+      - name: Build matrix (filepath + name)
+        id: setmatrix
+        run: ./.github/scripts/matrix.sh
 
   deploy-ansible:
     needs: create-matrix
+    if: needs.create-matrix.outputs.aad_groups_changed != 'false'
     runs-on: arc-runners-usea
     environment: ${{ inputs.githubEnv }}
     # 👇 This makes each matrix job display as the filename

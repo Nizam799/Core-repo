@@ -5,8 +5,6 @@ gh_groups:
     privacy: closed
     description: A github managed team for colonelcrisis approvers
     members:
-      - username: stephanie-st-andrie_CPSI
-        role: maintainer
       - username: james-dement_CPSI
         role: maintainer
 # Team puma changed their name to colonelcrisis
@@ -16,8 +14,12 @@ aad_groups:
       - az-grp-crp-proddev-puma-approvers
       - az-grp-crp-proddev-puma-ba
       - az-grp-crp-proddev-puma-dev
+      - az-grp-crp-proddev-colonelcrisis-github
+      - az-grp-crp-proddev-puma-qa
     users:
       - amita.gupta@trubridge.com
+      - angela.virnig@trubridge.com
+      - james.dement@trubridge.com
       - jonathon.bowie@trubridge.com
       - kendall.smith@trubridge.com
       - melissa.johnson@trubridge.com

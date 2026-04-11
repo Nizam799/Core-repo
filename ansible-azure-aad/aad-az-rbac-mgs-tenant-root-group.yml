@@ -9,3 +9,4 @@
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-tenant-root-group-cost-reader" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-tenant-root-group-network-reader" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-tenant-root-group-security-admin" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-rbac-mgs-tenant-root-group-cost-contributor" }

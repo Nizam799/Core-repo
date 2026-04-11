@@ -7,11 +7,10 @@ gh_groups:
     members:
       - username: joe-fichera_CPSI
         role: maintainer
-      - username: william-nowell_CPSI
-        role: maintainer
 aad_groups:
   az-grp-crp-soc-all:
     nested_groups:
+      - az-grp-crp-soc-approvers
       - az-grp-crp-soc-github
       - az-grp-crp-soc-mgr
     users:

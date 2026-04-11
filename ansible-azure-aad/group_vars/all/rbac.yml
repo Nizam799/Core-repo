@@ -113,6 +113,14 @@ aad_groups:
     nested_groups:
       - az-grp-crp-cloudops-all
   az-rbac-mgs-sandbox-us-customer-contributor:
+    users:
+      - jason.philips@trubridge.com
+      - michael.salmon@trubridge.com
+      - nick.chao@trubridge.com
+      - nick.widboom@trubridge.com
+      - shrenik.punna@trubridge.com
+      - thomas.burt@trubridge.com
+      - wynn.vanduyn@trubridge.com
     nested_groups:
       - az-grp-crp-cloudops-all
       - az-grp-crp-innov-all
@@ -167,6 +175,9 @@ aad_groups:
     nested_groups:
       - az-grp-crp-ccoe-all
       - az-grp-crp-soc-mgr
+  az-rbac-mgs-tenant-root-group-cost-contributor:
+    nested_groups:
+      - az-grp-crp-dataplatform-finops
   az-rbac-subs-lz-us-customer-dev-001-adf-run:
     nested_groups:
       - az-grp-crp-dataplatform-engineers-data
@@ -212,6 +223,9 @@ aad_groups:
   az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-template-spec-contributor:
     nested_groups:
       - az-grp-crp-soc-all
+  az-rbac-rg-rg-crp-cost-data-shd-usea-001-stgblob-reader:
+    nested_groups:
+      - az-grp-crp-dataplatform-finops
   az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer:
     spn_client_ids:
       - 7d2f1975-7257-4ccc-80c7-c6998ef081f8 # func-crp-los-app-dev-usea-001

@@ -29,6 +29,10 @@ azuread_rbac_groups = {
     role_definition_id = "/providers/Microsoft.Authorization/roleDefinitions/fb1c8493-542b-48eb-b624-b4c8fea62acd"
     scope              = "/providers/Microsoft.Management/managementGroups/65822a18-e4a3-4658-89cc-86edadc7bda5"
   }
+  "az-rbac-mgs-tenant-root-group-cost-contributor" = {
+    role_definition_id = "/providers/Microsoft.Authorization/roleDefinitions/434105ed-43f6-45c7-a02f-909b2ba83430"
+    scope              = "/providers/Microsoft.Management/managementGroups/65822a18-e4a3-4658-89cc-86edadc7bda5"
+  }
   /*
 Management Group Scopes
 */
@@ -216,7 +220,10 @@ Subscription Scopes
   /*
 RG Scopes
 */
-
+  "az-rbac-rg-rg-crp-cost-data-shd-usea-001-stgblob-reader" = {
+    role_definition_id = "/subscriptions/d5d897c6-a179-40db-92e3-6ae73eb04ca1/providers/Microsoft.Authorization/roleDefinitions/2a2b9908-6ea1-4ae2-8e65-a410df84e7d1"
+    scope              = "/subscriptions/d5d897c6-a179-40db-92e3-6ae73eb04ca1/resourceGroups/rg-crp-cost-data-shd-usea-001"
+  }
   "az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer" = {
     role_definition_id = "/subscriptions/bc394838-9294-437f-8aa2-2a624e96c1f0/providers/Microsoft.Authorization/roleDefinitions/b86a8fe4-44ce-4948-aee5-eccb2c155cd7"
     scope              = "/subscriptions/bc394838-9294-437f-8aa2-2a624e96c1f0/resourceGroups/rg-crp-los-app-dev-usea-001"

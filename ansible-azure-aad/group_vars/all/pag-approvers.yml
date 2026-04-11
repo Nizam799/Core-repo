@@ -7,8 +7,6 @@ gh_groups:
     members:
       - username: nick-chao_CPSI
         role: maintainer
-      - username: john-immel_CPSI
-        role: maintainer
 aad_groups:
   az-grp-crp-pag-bastion-login-approver:
     nested_groups:

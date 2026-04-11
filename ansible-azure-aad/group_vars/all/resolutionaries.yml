@@ -18,53 +18,39 @@ aad_groups:
       - az-grp-crp-proddev-resolutionaries-mgr
       - az-grp-crp-proddev-resolutionaries-qa
     users:
-      - aditya.ghute@trubridge.com
-      - apparao.koyyalamudi@trubridge.com
-      - govardhan.reddy@trubridge.com
-      - hrishikesh.kamble@trubridge.com
+      - cheryl.holberg@trubridge.com
+      - christine.prescott@trubridge.com
+      - dave.legros@trubridge.com
       - j.c.dalton@trubridge.com
+      - jeremy.summerlin@trubridge.com
       - jeremy.tapper@trubridge.com
-      - kumaresh.g@trubridge.com
+      - karen.norwood@trubridge.com
       - mark.gartman@trubridge.com
       - michael.davis@trubridge.com
       - nathan.mccann@trubridge.com
-      - shyamkumar.baburavuru@trubridge.com
-      - sundaramoorthy.adhi@trubridge.com
-      - thamotharan.natarajan@trubridge.com
-      - tim.ogletree@trubridge.com
-      - tonya.fulmer@trubridge.com
   az-grp-crp-proddev-resolutionaries-dev:
     users:
-      - aditya.ghute@trubridge.com
-      - govardhan.reddy@trubridge.com
       - j.c.dalton@trubridge.com
+      - jeremy.summerlin@trubridge.com
       - jeremy.tapper@trubridge.com
-      - kumaresh.g@trubridge.com
       - mark.gartman@trubridge.com
       - nathan.mccann@trubridge.com
-      - shyamkumar.baburavuru@trubridge.com
-      - sundaramoorthy.adhi@trubridge.com
-      - thamotharan.natarajan@trubridge.com
   az-grp-crp-proddev-resolutionaries-ba:
     users:
-      - tonya.fulmer@trubridge.com
+      - cheryl.holberg@trubridge.com
+      - karen.norwood@trubridge.com
   az-grp-crp-proddev-resolutionaries-github:
     users:
-      - aditya.ghute@trubridge.com
       - j.c.dalton@trubridge.com
+      - jeremy.summerlin@trubridge.com
       - jeremy.tapper@trubridge.com
-      - kumaresh.g@trubridge.com
       - mark.gartman@trubridge.com
       - michael.davis@trubridge.com
       - nathan.mccann@trubridge.com
-      - sundaramoorthy.adhi@trubridge.com
-      - thamotharan.natarajan@trubridge.com
   az-grp-crp-proddev-resolutionaries-mgr:
     users:
       - michael.davis@trubridge.com
-      - shyamkumar.baburavuru@trubridge.com
   az-grp-crp-proddev-resolutionaries-qa:
     users:
-      - apparao.koyyalamudi@trubridge.com
-      - hrishikesh.kamble@trubridge.com
-      - tim.ogletree@trubridge.com
+      - christine.prescott@trubridge.com
+      - dave.legros@trubridge.com

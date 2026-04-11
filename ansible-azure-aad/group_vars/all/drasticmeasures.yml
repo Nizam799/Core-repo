@@ -28,7 +28,6 @@ aad_groups:
       - nyeela.harney@trubridge.com
       - rajamathangi.kannan@trubridge.com
       - robert.engberg@trubridge.com
-      - penninah.giftline@trubridge.com
       - vetriselvan.selvaraj@trubridge.com
       - zack.mayhall@trubridge.com
   az-grp-crp-proddev-drasticmeasures-approvers:
@@ -46,7 +45,6 @@ aad_groups:
       - michael.cramer@trubridge.com
       - rajamathangi.kannan@trubridge.com
       - robert.engberg@trubridge.com
-      - penninah.giftline@trubridge.com
       - vetriselvan.selvaraj@trubridge.com
   az-grp-crp-proddev-drasticmeasures-github:
     users:
@@ -57,7 +55,6 @@ aad_groups:
       - nyeela.harney@trubridge.com
       - rajaMathangi.kannan@trubridge.com
       - robert.engberg@trubridge.com
-      - penninah.giftline@trubridge.com
       - vetriselvan.selvaraj@trubridge.com
       - zack.mayhall@trubridge.com
   az-grp-crp-proddev-drasticmeasures-qa:
