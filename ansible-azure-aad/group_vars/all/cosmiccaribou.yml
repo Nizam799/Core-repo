@@ -15,7 +15,6 @@ aad_groups:
       - az-grp-crp-proddev-cosmiccaribou-approvers
       - az-grp-crp-proddev-cosmiccaribou-ba
       - az-grp-crp-proddev-cosmiccaribou-dev
-      - az-grp-crp-proddev-cosmiccaribou-github
       - az-grp-crp-proddev-cosmiccaribou-qa
     users:
       - cherlyn.mussell@trubridge.com

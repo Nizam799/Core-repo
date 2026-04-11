@@ -7,8 +7,6 @@ gh_groups:
     members:
       - username: nyeela-harney_CPSI
         role: maintainer
-      - username: justin-arnold_CPSI
-        role: maintainer
 aad_groups:
   az-grp-crp-proddev-drasticmeasures-all:
     nested_groups:
