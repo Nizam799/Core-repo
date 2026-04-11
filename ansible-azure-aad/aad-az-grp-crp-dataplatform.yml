@@ -21,6 +21,7 @@
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-finops" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-github" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-mgr" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-patientcare-analyst" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-powerbi-api-reader" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-powerbi-external-beta" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-dataplatform-sec-payroll-view" }

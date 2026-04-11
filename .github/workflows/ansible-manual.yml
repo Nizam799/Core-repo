@@ -1,0 +1,80 @@
+name: Ansible - Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      playbooks:
+        description: 'Comma-separated list of playbook filenames - e.g. "playbook1, playbook2, playbook3"'
+        required: true
+        type: string
+
+jobs:
+  create-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.setmatrix.outputs.MATRIX }}
+    steps:
+      - uses: actions/checkout@v6
+        name: Create Matrix
+
+      - name: Build matrix from input
+        id: setmatrix
+        run: |
+          matrix=$(echo "${{ inputs.playbooks }}" \
+            | tr ',' '\n' \
+            | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' \
+            | jq -R '{name: ., filepath: ("./ansible-azure-aad/" + .)}' \
+            | jq -sc '.')
+          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+
+  deploy-ansible:
+    needs: create-matrix
+    runs-on: arc-runners-usea
+    name: ${{ matrix.name }}
+
+    permissions:
+      id-token: write
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install ansible[azure]
+        run: pip install ansible[azure]
+
+      - name: Install azure requirements
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+          ansible-galaxy collection install azure.azcollection:3.6.0 --force
+          pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
+          pip install msal --upgrade
+
+      - name: Azure Login
+        uses: azure/login@v3
+        with:
+          client-id: ${{ vars.CLIENT_ID }}
+          tenant-id: ${{ vars.TENANT_ID }}
+          allow-no-subscriptions: true
+
+      - name: Replace tokens
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: '[ "ansible-azure-aad/group_vars/*.yml" ]'
+          tokenPrefix: '__'
+          tokenSuffix: '__'
+        env:
+          TENANT_ID: '${{ vars.TENANT_ID }}'
+
+      - name: Run Ansible playbook
+        run: |
+            ansible-playbook "${{ matrix.filepath }}"

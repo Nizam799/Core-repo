@@ -45,7 +45,7 @@ jobs:
   deployAnsible:
     needs: [core_role_definition, core_aad]
     if: github.ref == 'refs/heads/main' && success()
-    uses: ./.github/workflows/ansible-populate-aad-groups.yml
+    uses: ./.github/workflows/populate-aad-groups-ansible.yml
     with:
       githubEnv: terraform-deployment-1_0-pd
     secrets: inherit

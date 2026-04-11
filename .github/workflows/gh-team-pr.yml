@@ -1,22 +1,23 @@
-name: Deploy - GitHub Teams
+name: PR - GitHub Teams
 
 on:
-  push:
-    branches: [main]
+  pull_request:
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
     paths:
       - "deployments/cpsi/global/iam/core_github_team/**"
       - "ansible-azure-aad/group_vars/all/**"
-      - ".github/workflows/gh-team-apply.yml"
+      - ".github/workflows/gh-team-pr.yml"
       - "modules/terraform-github-team/terraform-github-team"
       - "stacks/iam/github_team/**"
-
-concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
 
 permissions:
   id-token: write
   contents: read
+  pull-requests: write
 
 jobs:
   preflight:
@@ -36,16 +37,16 @@ jobs:
         id: group
         run: ./.github/scripts/gh-groups.sh
         env:
-          MODE: MAIN
-  apply:
-    name: Terraform Apply (GitHub Teams)
+          MODE: PR
+  plan:
+    name: Validate Terraform Plan (GitHub Teams)
     needs: preflight
     if: needs.preflight.outputs.only_ansible != 'true' || needs.preflight.outputs.gh_groups_changed == 'true'
     runs-on: ubuntu-latest
-    environment: terraform-deployment-1_0-pd
-
+    environment: terraform-deployment-1_0-reader
     permissions:
       contents: read
+      pull-requests: write
       id-token: write
 
     env:
@@ -64,6 +65,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
@@ -78,16 +80,27 @@ jobs:
           GITHUB_APP_PEM_FILE: |-
             ${{ secrets.TEAM_MGMT_GITHUB_APP_PEM_FILE }}
 
-      - name: Terraform Apply
+      - name: Terraform Plan
+        id: plan
         run: |
           terraform fmt -check -recursive
+          exitcode=0
           terraform plan \
             -lock=false \
-            -out=.planfile
-
-          terraform apply -auto-approve .planfile
+            -detailed-exitcode \
+            -out=.planfile || exitcode=$?
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
         env:
           GITHUB_APP_ID: ${{ vars.APP_ID }}
           GITHUB_APP_INSTALLATION_ID: ${{ vars.APP_INSTALLATION_ID }}
           GITHUB_APP_PEM_FILE: |-
             ${{ secrets.TEAM_MGMT_GITHUB_APP_PEM_FILE }}
+
+      - name: Terraform Plan Comment
+        uses: borchero/terraform-plan-comment@v2.4.0
+        continue-on-error: true
+        with:
+          token: ${{ github.token }}
+          planfile: .planfile
+          working-directory: ${{ env.TF_ROOT }}
+          header: "Terraform Plan: GitHub Teams"
