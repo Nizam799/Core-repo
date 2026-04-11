@@ -23,7 +23,6 @@ aad_groups:
       - sowmiya.arul@trubridge.com
       - subramanian.namasivayam@trubridge.com
       - thirumalaikumar.mahalingam@trubridge.com
-      - vasu.chinnamani@trubridge.com
   az-grp-crp-proddev-bravo-approvers:
     users:
       - subramanian.namasivayam@trubridge.com
@@ -38,7 +37,6 @@ aad_groups:
       - sowmiya.arul@trubridge.com
       - subramanian.namasivayam@trubridge.com
       - thirumalaikumar.mahalingam@trubridge.com
-      - vasu.chinnamani@trubridge.com
       - saranya.n@trubridge.com
   az-grp-crp-proddev-bravo-github:
     users:
@@ -49,7 +47,6 @@ aad_groups:
       - sowmiya.arul@trubridge.com
       - subramanian.namasivayam@trubridge.com
       - thirumalaikumar.mahalingam@trubridge.com
-      - vasu.chinnamani@trubridge.com
   az-grp-crp-proddev-bravo-qa:
     users:
       - saranya.n@trubridge.com

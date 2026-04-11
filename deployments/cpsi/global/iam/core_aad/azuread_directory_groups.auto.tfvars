@@ -55,4 +55,36 @@ azuread_directory_groups = {
     role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
     directory_scope_id = "e02724c4-b59f-4bdc-bdd1-d2367ca25a3c"
   }
+  "aad-pag-spn-crp-linus-app-dev-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "92a14435-3595-4f42-bf7a-bf956e885a4a"
+  }
+  "aad-pag-spn-crp-linus-app-qa-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "ddaab416-9d26-41b1-89e4-9ff77886b6e4"
+  }
+  "aad-pag-spn-crp-linus-app-pd-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "47c1d014-2093-4e5e-896e-178b8dae6f91"
+  }
+  "aad-pag-spn-crp-linus-app-stg-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "99899de3-30ce-49ac-b020-4b9fa25abb92"
+  }
+  "aad-pag-spn-crp-ssa-app-dev-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "ecef8a16-803c-4bf7-933c-46cbacc39caa"
+  }
+  "aad-pag-spn-crp-ssa-app-qa-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "b164a11e-c19c-4e6b-b6d3-b25cc462c625"
+  }
+  "aad-pag-spn-crp-ssa-app-pd-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "a07e1013-9ce4-4943-9c37-499432132b65"
+  }
+  "aad-pag-spn-crp-ssa-app-stg-usea-001-los" = {
+    role_id            = "158c047a-c907-4556-b7ef-446551a6b5f7"
+    directory_scope_id = "35773424-66db-47ae-9690-d23b665924bb"
+  }
 }

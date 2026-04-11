@@ -4,11 +4,6 @@ gh_groups:
   gh-cosmiccaribou-iam-owners:
     privacy: closed
     description: A github managed team for cosmiccaribou approvers
-    members:
-      - username: rashieka-coleman_CPSI
-        role: maintainer
-      - username: libby-summer_CPSI
-        role: maintainer
 aad_groups:
   az-grp-crp-proddev-cosmiccaribou-all:
     nested_groups:

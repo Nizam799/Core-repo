@@ -2,3 +2,7 @@
 warn_list:
     - var-naming[no-role-prefix]
     - name[casing]
+exclude_paths:
+    # Exclude a specific directory
+    - .github/workflows/
+    - .github/dependabot.yml

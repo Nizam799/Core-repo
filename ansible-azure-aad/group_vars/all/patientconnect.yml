@@ -23,6 +23,7 @@ aad_groups:
     users:
       - jayasuriya.prabu@trubridge.com
       - lynn.schnobrich@trubridge.com
+      - marshal.thompson@trubridge.com
       - mohamed.yegiah@trubridge.com
       - pooshparaj.pandurangan@trubridge.com
       - pravalika.madagoni@trubridge.com
@@ -36,6 +37,7 @@ aad_groups:
   az-grp-crp-proddev-patientconnect-dev:
     users:
       - jayasuriya.prabu@trubridge.com
+      - marshal.thompson@trubridge.com
       - mohamed.yegiah@trubridge.com
       - pooshparaj.pandurangan@trubridge.com
       - pravalika.madagoni@trubridge.com
@@ -46,6 +48,7 @@ aad_groups:
     users:
       - jayasuriya.prabu@trubridge.com
       - lynn.schnobrich@trubridge.com
+      - marshal.thompson@trubridge.com
       - mohamed.yegiah@trubridge.com
       - pooshparaj.pandurangan@trubridge.com
       - pravalika.madagoni@trubridge.com

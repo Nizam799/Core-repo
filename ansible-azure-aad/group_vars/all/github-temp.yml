@@ -5,7 +5,7 @@ gh_groups:
     privacy: closed
     description: A github managed team for github-temp approvers
     members:
-      - username: donnie-gober_CPSI_CPSI
+      - username: donnie-gober_CPSI
         role: maintainer
       - username: bill-russell_CPSI
         role: maintainer
