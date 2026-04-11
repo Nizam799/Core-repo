@@ -16,7 +16,6 @@ aad_groups:
       - erik.ha@trubridge.com
       - jason.phillips@trubridge.com
       - matt.watts@trubridge.com
-      - wynn.vanduyn@trubridge.com
   az-grp-crp-cloudops-all:
     nested_groups:
       - az-grp-crp-cloudops-cypress
