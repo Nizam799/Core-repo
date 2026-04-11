@@ -5,8 +5,6 @@ gh_groups:
     privacy: closed
     description: A github managed team for colonelcrisis approvers
     members:
-      - username: stephanie-st-andrie_CPSI
-        role: maintainer
       - username: james-dement_CPSI
         role: maintainer
 # Team puma changed their name to colonelcrisis

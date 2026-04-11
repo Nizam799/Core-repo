@@ -1,0 +1,99 @@
+name: Populate AAD Groups
+
+on:
+  workflow_call:
+    inputs:
+      githubEnv:
+        required: true
+        type: string
+
+jobs:
+  create-matrix:
+    runs-on: arc-runners-usea
+    outputs:
+      matrix: ${{ steps.setmatrix.outputs.MATRIX }}
+      aad_groups_changed: ${{ steps.setmatrix.outputs.aad_groups_changed }}
+
+    steps:
+      - name: Create Matrix
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Add permissions
+        run: chmod +x .github/scripts/matrix.sh
+
+      - name: Build matrix (filepath + name)
+        id: setmatrix
+        run: ./.github/scripts/matrix.sh
+
+  deploy-ansible:
+    needs: create-matrix
+    if: needs.create-matrix.outputs.aad_groups_changed != 'false'
+    runs-on: arc-runners-usea
+    environment: ${{ inputs.githubEnv }}
+    # 👇 This makes each matrix job display as the filename
+    name: ${{ matrix.name }}
+
+    permissions:
+      id-token: write
+      contents: read
+
+    strategy:
+      fail-fast: false
+      # 👇 Use include so each object provides matrix variables
+      matrix:
+        include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update -y &&
+          sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+
+      - name: Install Azure CLI
+        run: |
+          sudo mkdir -p /etc/apt/keyrings
+          curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
+            gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
+          sudo chmod go+r /etc/apt/keyrings/microsoft.gpg
+          AZ_DIST=$(lsb_release -cs)
+          printf 'Types: deb\nURIs: https://packages.microsoft.com/repos/azure-cli/\nSuites: %s\nComponents: main\nSigned-by: /etc/apt/keyrings/microsoft.gpg\n' "$AZ_DIST" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
+          sudo apt-get update -y && sudo apt-get install -y azure-cli
+          az version
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install ansible[azure]
+        run: pip install ansible[azure]
+
+      - name: Install azure requirements
+        run: |
+          ansible-galaxy collection install azure.azcollection:3.6.0 --force
+          pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
+          pip install msal --upgrade
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ vars.CLIENT_ID }}
+          tenant-id: ${{ vars.TENANT_ID }}
+          allow-no-subscriptions: true
+
+      - name: Replace tokens
+        uses: cschleiden/replace-tokens@v1
+        with:
+          files: '[ "ansible-azure-aad/group_vars/*.yml" ]'
+          tokenPrefix: '__'
+          tokenSuffix: '__'
+        env:
+          TENANT_ID: '${{ vars.TENANT_ID }}'
+
+      - name: Run Ansible playbook
+        run: |
+            ansible-playbook "${{ matrix.filepath }}"

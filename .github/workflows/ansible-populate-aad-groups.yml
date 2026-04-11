@@ -13,7 +13,7 @@ jobs:
     outputs:
       matrix: ${{ steps.setmatrix.outputs.MATRIX }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         name: Create Matrix
       - id: setmatrix
         name: Build matrix (filepath + name)
@@ -53,7 +53,23 @@ jobs:
         include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update -y &&
+          sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
+
+      - name: Install Azure CLI
+        run: |
+          sudo mkdir -p /etc/apt/keyrings
+          curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
+            gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
+          sudo chmod go+r /etc/apt/keyrings/microsoft.gpg
+          AZ_DIST=$(lsb_release -cs)
+          printf 'Types: deb\nURIs: https://packages.microsoft.com/repos/azure-cli/\nSuites: %s\nComponents: main\nSigned-by: /etc/apt/keyrings/microsoft.gpg\n' "$AZ_DIST" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
+          sudo apt-get update -y && sudo apt-get install -y azure-cli
+          az version
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -65,7 +81,6 @@ jobs:
 
       - name: Install azure requirements
         run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
           ansible-galaxy collection install azure.azcollection:3.6.0 --force
           pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
           pip install msal --upgrade

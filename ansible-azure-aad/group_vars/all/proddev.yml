@@ -32,7 +32,6 @@ aad_groups:
       - az-grp-v-adg-proddev-dev
   az-grp-crp-proddev-mgr:
     users:
-      - jason.holmgren@trubridge.com
       - randy.baker@trubridge.com
       - tim.ogletree@trubridge.com
   az-grp-crp-proddev-monitor-all:
@@ -56,7 +55,6 @@ aad_groups:
       - gregory.wilke@trubridge.com
       - james.dinsmore@trubridge.com
       - jamie.wanken@trubridge.com
-      - jason.holmgren@trubridge.com
       - jennifer.york@trubridge.com
       - jeremy.tapper@trubridge.com
       - john.immel@trubridge.com
@@ -84,7 +82,6 @@ aad_groups:
       - sean.odonnell@trubridge.com
       - shannon.locklear@trubridge.com
       - sundaramoorthy.adhi@trubridge.com
-      - suresh.kumaran@trubridge.com
       - susan.mayhall@trubridge.com
       - thomas.moore@trubridge.com
       - thomas.wilson@trubridge.com

@@ -66,13 +66,14 @@ aad_groups:
       - az-grp-crp-innov-rag-support-review
   az-grp-crp-innov-github:
     users:
+      - aaron.kelly@trubridge.com
+      - amy.allen@trubridge.com
       - arun.mohan@trubridge.com
-      - chris.odom@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - divyesh.patel@trubridge.com
       - kathryn.coburn@trubridge.com
-      - michael.davis@trubridge.com
       - nate.stone@trubridge.com
-      - patrick.bruno@trubridge.com
-      - swarna.pujari@trubridge.com
       - william.skelton@trubridge.com
   az-grp-crp-innov-rag-compliance-evaluation:
     users:
@@ -98,56 +99,234 @@ aad_groups:
       - nate.stone@trubridge.com
   az-grp-crp-innov-rag-financial-health-dashboard:
     users:
+      - ajay.verma@trubridge.com
+      - alkendra.singh@trubridge.com
       - amanda.stenger@trubridge.com
       - amy.allen@trubridge.com
+      - ankit.pawar@trubridge.com
+      - ankit.sharma@trubridge.com
       - ashish.goel@trubridge.com
+      - ashish.kadam@trubridge.com
       - ashish.shetty@trubridge.com
+      - ashish.tandon@trubridge.com
+      - ashwinyashwant.more@trubridge.com
       - asifaj.shaikh@trubridge.com
+      - bhuvan.kumar@trubridge.com
+      - bmujeeb.urrehman@trubridge.com
       - dan.loberg@trubridge.com
+      - joel.karkada@trubridge.com
       - kathryn.coburn@trubridge.com
+      - lilly.amboji@trubridge.com
+      - manovika.roy@trubridge.com
+      - mohdsalman.khan@trubridge.com
       - nagnath.nande@trubridge.com
       - nate.stone@trubridge.com
+      - ngangom.samarendra@trubridge.com
+      - nilesh.nistane@trubridge.com
       - nisha.singh@trubridge.com
+      - paragd.ingole@trubridge.com
       - pavani.nellutla@trubridge.com
+      - posen.nokpa@trubridge.com
+      - priyanka.karkera@trubridge.com
       - raghavendhiran.thamizhchelvan@trubridge.com
+      - rahil.bagwan@trubridge.com
+      - rahul.shirke@trubridge.com
+      - rajaprasanakumar.t@trubridge.com
+      - rajesh.pradhan@trubridge.com
       - ravindra.nautiyal@trubridge.com
+      - rohan.pandit@trubridge.com
+      - rohan.vhegde@trubridge.com
+      - saib.saini@trubridge.com
+      - sairam.perumal@trubridge.com
+      - sameerd.sayyed@trubridge.com
+      - sandeep.pawar@trubridge.com
       - sean.adams@trubridge.com
+      - shahid.shaikh@trubridge.com
+      - shahnawaz.rayeen@trubridge.com
+      - shrinivas.talikoti@trubridge.com
+      - smruti.kambli@trubridge.com
+      - sumeet.paranjpe@trubridge.com
+      - suraj.bsingh@trubridge.com
+      - sushant.saka@trubridge.com
+      - tahmina.mukadam@trubridge.com
       - toni.young@trubridge.com
+      - vicky.jaiswal@trubridge.com
+      - vigneshp.nakhawa@trubridge.com
+      - vikas.rai@trubridge.com
       - vinod.sewlani@trubridge.com
+      - vishal.bhusari@trubridge.com
+      - vivek.barot@trubridge.com
+      - vivek.jogi@trubridge.com
+      - yogesh.chatwani@trubridge.com
   az-grp-crp-innov-rag-financial-health-evaluation:
     users:
+      - abdul.quadir@trubridge.com
       - aishwarya.shahi@trubridge.com
       - ajayg.gund@trubridge.com
+      - ajit.patel@trubridge.com
+      - akanksha.patil@trubridge.com
+      - akshaysudarshan.deshpande@trubridge.com
+      - amary.george@trubridge.com
+      - amit.jangid@trubridge.com
       - amudha.govindaraj@trubridge.com
+      - anam.qureshi1@trubridge.com
+      - anand.pandey@trubridge.com
+      - andriyaj.john@trubridge.com
+      - anitha.sathyamoorthi@trubridge.com
       - ankita.gurav@trubridge.com
+      - antara.chaudhuri@trubridge.com
+      - archana.gupta@trubridge.com
+      - arunbalaji.a@trubridge.com
+      - ashmitas.pillai@trubridge.com
       - asma.banu@trubridge.com
+      - avinash.chimkar@trubridge.com
+      - bhakiyalakshmi.ramakrishnan@trubridge.com
+      - bhuvaneshwari.b@trubridge.com
+      - chinna.samy@trubridge.com
+      - cinderella.srinivasan@trubridge.com
+      - danielle.zirlott@trubridge.com
+      - dawn.zaiser@trubridge.com
+      - deana.rose@trubridge.com
       - deepak.gupta@trubridge.com
+      - deepak.ravichadran@trubridge.com
       - deepakanil.singh@trubridge.com
+      - denise.files@trubridge.com
+      - dhanalakshmi.c@trubridge.com
+      - dhruv.pansuriya@trubridge.com
+      - dinesh.muruganandam@trubridge.com
+      - edlin.shekina@trubridge.com
+      - eswaran.cp@trubridge.com
+      - fathima.sayed@trubridge.com
+      - felexia.m@trubridge.com
+      - flaming.s@trubridge.com
       - furkan.shaikh@trubridge.com
+      - gokul.kuppusamy@trubridge.com
+      - gokulakrishnan.ravichandiran@trubridge.com
+      - gomathi.c@trubridge.com
       - gowtham.vijayakumar@trubridge.com
+      - gutta.ramadevi@trubridge.com
+      - harish.choudhary@trubridge.com
+      - heswavi.p@trubridge.com
+      - hiralall.sharma@trubridge.com
+      - ishakumari.singh@trubridge.com
+      - ishwar.rathod@trubridge.com
+      - jagadeshan.s@trubridge.com
+      - jamie.kilgore@trubridge.com
+      - jennifer.petite@trubridge.com
+      - jhansi.kasireddy@trubridge.com
+      - john.mariajohn@trubridge.com
+      - judeamal.j@trubridge.com
+      - jyoti.panigrahi@trubridge.com
+      - jyoti.shinde@trubridge.com
+      - kalaichelvi.k@trubridge.com
+      - kali.cruickshank@trubridge.com
       - kanakavalli.kannadasan@trubridge.com
+      - kanika.sharma@trubridge.com
       - karishma.goad@trubridge.com
       - khiruthik.kumar@trubridge.com
       - khushboo.khan@trubridge.com
+      - kimberly.webb@trubridge.com
+      - kiran.madta@trubridge.com
+      - kirti.shukla@trubridge.com
+      - kishor.pagare@trubridge.com
+      - korehari.krishna@trubridge.com
+      - krishnaveni.gaigulla@trubridge.com
+      - kriti.mishra@trubridge.com
+      - kuldeep.verma@trubridge.com
+      - lakshmi.priyadharshiniv@trubridge.com
+      - madhumitha.h@trubridge.com
+      - mageben.rajan@trubridge.com
       - mahadevaswamy.s@trubridge.com
+      - mahima.kamble@trubridge.com
+      - manikandan.manoharan@trubridge.com
       - manish.sharma@trubridge.com
       - manish.vishwakarma@trubridge.com
+      - mayank.gupta@trubridge.com
+      - mayurhanumat.bhaigade@trubridge.com
+      - mohammadadil.khan@trubridge.com
+      - mohammeda.riyaz@trubridge.com
       - mohan.chellappillai@trubridge.com
+      - mohdfaiz.siddique@trubridge.com
       - mohdrehan.shaikh@trubridge.com
+      - monica.ramane@trubridge.com
+      - nandhini.m@trubridge.com
+      - nandhinim.ravi@trubridge.com
       - nayini.jahnavi@trubridge.com
+      - neha.pawar@trubridge.com
+      - nikhat.parveen@trubridge.com
       - nikhil.shewale@trubridge.com
       - niranjan.goad@trubridge.com
+      - nishantsanjiv.gharat@trubridge.com
       - nitishs.kumar@trubridge.com
       - om.barange@trubridge.com
+      - omkar.biradar@trubridge.com
+      - paligiri.rafi@trubridge.com
+      - pannerselvam.haran@trubridge.com
+      - pavaniatma.kuri@trubridge.com
+      - phanindhar.bharmavath@trubridge.com
+      - ponna.saisaranya@trubridge.com
       - pooja.shetty@trubridge.com
       - pooja.singh@trubridge.com
+      - pradeep.sharma@trubridge.com
+      - pranav.jaiswal@trubridge.com
+      - prasannavenkatesh.k@trubridge.com
+      - rajaprasanakumar.t@trubridge.com
+      - rajesh.kapal@trubridge.com
+      - rajesh.s@trubridge.com
       - raju.gurjar@trubridge.com
+      - ranganatha.k@trubridge.com
       - renukamma.sabanna@trubridge.com
+      - revathy.rangasamy@trubridge.com
+      - rishivigneshwari.k@trubridge.com
+      - riya.dutta@trubridge.com
+      - rohit.devadiga@trubridge.com
+      - safwan.khan@trubridge.com
+      - sagar.parab@trubridge.com
+      - saida.naaz@trubridge.com
+      - sairam.perumal@trubridge.com
+      - samantha.batteate@trubridge.com
+      - sana.khan@trubridge.com
+      - sandeep.pawar@trubridge.com
+      - santanu.goswami@trubridge.com
+      - santhoshkumar.sasidharannair@trubridge.com
+      - saravanan.m@trubridge.com
+      - shahid.shaikh@trubridge.com
+      - shahn.shaikh@trubridge.com
+      - shaik.shahid@trubridge.com
+      - shanel.riales@trubridge.com
+      - shashikant.gholap@trubridge.com
+      - shivani.mendhe@trubridge.com
       - siddarth.mali@trubridge.com
+      - sivakrishnakumar.masilamani@trubridge.com
+      - soham.todankar@trubridge.com
+      - sonali.galgale@trubridge.com
+      - sourav.biswas@trubridge.com
+      - stephanye.bell@trubridge.com
+      - sujit.sanjeevaraj@trubridge.com
+      - sumitd.kumar@trubridge.com
+      - sumithra.pl@trubridge.com
       - sunny.purohit@trubridge.com
+      - swathy.anandan@trubridge.com
+      - swetha.keziah@trubridge.com
+      - syedabdul.rahman@trubridge.com
+      - thamizharasi.p@trubridge.com
+      - thivakar.r@trubridge.com
+      - thothathre.harilokbhiraman@trubridge.com
+      - timeka.sanks@trubridge.com
+      - udhaya.kumar@trubridge.com
       - ullalshahid.yaqub@trubridge.com
+      - uppara.madhu@trubridge.com
+      - usama.qureshi@trubridge.com
+      - ushapriya.a@trubridge.com
       - vallabhu.swathi@trubridge.com
+      - vicky.jaiswal@trubridge.com
       - vignesh.thirumaniraj@trubridge.com
+      - vikashsampath.s@trubridge.com
+      - vikram.naruka@trubridge.com
+      - vinayak.panicker@trubridge.com
+      - vinodh.devaraj@trubridge.com
+      - vishal.r@trubridge.com
+      - yasmin.kaleel@trubridge.com
       - zeba.kuldunkar@trubridge.com
       - zoaib.khan@trubridge.com
   az-grp-crp-innov-rag-financial-health-review:
@@ -181,6 +360,99 @@ aad_groups:
       - suraj.bsingh@trubridge.com
       - toni.young@trubridge.com
       - vinod.sewlani@trubridge.com
+  az-grp-crp-innov-rag-financial-health-users:
+    users:
+      - abdul.quadir@trubridge.com
+      - ajit.patel@trubridge.com
+      - akanksha.patil@trubridge.com
+      - amary.george@trubridge.com
+      - amit.jangid@trubridge.com
+      - anand.pandey@trubridge.com
+      - andriyaj.john@trubridge.com
+      - anitha.sathyamoorthi@trubridge.com
+      - antara.chaudhuri@trubridge.com
+      - arunbalaji.a@trubridge.com
+      - bhakiyalakshmi.ramakrishnan@trubridge.com
+      - bhuvaneshwari.b@trubridge.com
+      - cinderella.srinivasan@trubridge.com
+      - deepak.ravichadran@trubridge.com
+      - dhanalakshmi.c@trubridge.com
+      - dinesh.muruganandam@trubridge.com
+      - edlin.shekina@trubridge.com
+      - eswaran.cp@trubridge.com
+      - felexia.m@trubridge.com
+      - flaming.s@trubridge.com
+      - gokul.kuppusamy@trubridge.com
+      - gokulakrishnan.ravichandiran@trubridge.com
+      - gomathi.c@trubridge.com
+      - gutta.ramadevi@trubridge.com
+      - heswavi.p@trubridge.com
+      - ishakumari.singh@trubridge.com
+      - ishwar.rathod@trubridge.com
+      - jagadeshan.s@trubridge.com
+      - john.mariajohn@trubridge.com
+      - judeamal.j@trubridge.com
+      - jyoti.shinde@trubridge.com
+      - kalaichelvi.k@trubridge.com
+      - kanika.sharma@trubridge.com
+      - kiran.madta@trubridge.com
+      - kishor.pagare@trubridge.com
+      - korehari.krishna@trubridge.com
+      - krishnaveni.gaigulla@trubridge.com
+      - kriti.mishra@trubridge.com
+      - kuldeep.verma@trubridge.com
+      - lakshmi.priyadharshiniv@trubridge.com
+      - madhumitha.h@trubridge.com
+      - mageben.rajan@trubridge.com
+      - manikandan.manoharan@trubridge.com
+      - mayank.gupta@trubridge.com
+      - mayurhanumat.bhaigade@trubridge.com
+      - mohammadadil.khan@trubridge.com
+      - mohammeda.riyaz@trubridge.com
+      - nandhini.m@trubridge.com
+      - omkar.biradar@trubridge.com
+      - paligiri.rafi@trubridge.com
+      - phanindhar.bharmavath@trubridge.com
+      - ponna.saisaranya@trubridge.com
+      - pranav.jaiswal@trubridge.com
+      - prasannavenkatesh.k@trubridge.com
+      - rajaprasanakumar.t@trubridge.com
+      - rajesh.s@trubridge.com
+      - ranganatha.k@trubridge.com
+      - rishivigneshwari.k@trubridge.com
+      - riya.dutta@trubridge.com
+      - rohit.devadiga@trubridge.com
+      - saida.naaz@trubridge.com
+      - sairam.perumal@trubridge.com
+      - sana.khan@trubridge.com
+      - sandeep.pawar@trubridge.com
+      - santanu.goswami@trubridge.com
+      - santhoshkumar.sasidharannair@trubridge.com
+      - saravanan.m@trubridge.com
+      - shahid.shaikh@trubridge.com
+      - shahn.shaikh@trubridge.com
+      - shaik.shahid@trubridge.com
+      - sivakrishnakumar.masilamani@trubridge.com
+      - sourav.biswas@trubridge.com
+      - sreel.prabhakara@trubridge.com
+      - sujit.sanjeevaraj@trubridge.com
+      - sumitd.kumar@trubridge.com
+      - sumithra.pl@trubridge.com
+      - swathy.anandan@trubridge.com
+      - swetha.keziah@trubridge.com
+      - syedabdul.rahman@trubridge.com
+      - thamizharasi.p@trubridge.com
+      - thivakar.r@trubridge.com
+      - thothathre.harilokbhiraman@trubridge.com
+      - uppara.madhu@trubridge.com
+      - usama.qureshi@trubridge.com
+      - ushapriya.a@trubridge.com
+      - vicky.jaiswal@trubridge.com
+      - vikashsampath.s@trubridge.com
+      - vinayak.panicker@trubridge.com
+      - vinodh.devaraj@trubridge.com
+      - vishal.r@trubridge.com
+      - yasmin.kaleel@trubridge.com
   az-grp-crp-innov-rag-hr-evaluation:
     users:
       - hilary.floate@trubridge.com
@@ -206,7 +478,6 @@ aad_groups:
       - christina.finazzo@trubridge.com
       - janna.stevens@trubridge.com
       - jason.harmon@trubridge.com
-      - jason.holmgren@trubridge.com
       - joe.fichera@trubridge.com
       - kacy.hattabaugh@trubridge.com
       - lynn.bunyard@trubridge.com
@@ -286,8 +557,10 @@ aad_groups:
       - bryant.winslett@trubridge.com
       - candace.wilson@trubridge.com
       - chantale.davis@trubridge.com
+      - cheri.gieske@trubridge.com
       - chris.kesting@trubridge.com
       - christopher.johnson@trubridge.com
+      - cj.milto@trubridge.com
       - gary.constantine@trubridge.com
       - jake.turberville@trubridge.com
       - jess.horn@trubridge.com
@@ -305,6 +578,7 @@ aad_groups:
       - missy.ahrens@trubridge.com
       - monica.mccaskey@trubridge.com
       - patrick.mcginnis@trubridge.com
+      - peggy.hulcher@trubridge.com
       - racheal.chamblee@trubridge.com
       - raven.heard@trubridge.com
       - shelia.jennings@trubridge.com

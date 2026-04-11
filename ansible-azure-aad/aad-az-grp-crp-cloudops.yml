@@ -20,3 +20,4 @@
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline-github-approvers" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-cloudops-skyline-privileged" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-cloudops-skyline-los" }
