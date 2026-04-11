@@ -15,7 +15,6 @@ aad_groups:
   az-grp-crp-proddev-patientconnect-all:
     nested_groups:
       - az-grp-crp-proddev-patientconnect-ba
-      - az-grp-crp-proddev-patientconnect-dev
       - az-grp-crp-proddev-patientconnect-github
       - az-grp-crp-proddev-patientconnect-qa
     users:

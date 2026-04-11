@@ -14,7 +14,6 @@ aad_groups:
     users:
       - chris.odom@trubridge.com
       - kathryn.coburn@trubridge.com
-      - sean.adams@trubridge.com
       - swarna.pujari@trubridge.com
       - tom.gardner@trubridge.com
   az-grp-crp-innov-aibuilder:
