@@ -13,7 +13,6 @@ aad_groups:
   az-grp-crp-dns-contributor-all:
     users:
       - angelo.cuesta@trubridge.com
-      - daniel.flowers@trubridge.com
       - erik.ha@trubridge.com
       - jason.phillips@trubridge.com
       - matt.watts@trubridge.com
