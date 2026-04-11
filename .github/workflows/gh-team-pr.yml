@@ -97,7 +97,7 @@ jobs:
             ${{ secrets.TEAM_MGMT_GITHUB_APP_PEM_FILE }}
 
       - name: Terraform Plan Comment
-        uses: borchero/terraform-plan-comment@v2.4.0
+        uses: borchero/terraform-plan-comment@v3.0.0
         continue-on-error: true
         with:
           token: ${{ github.token }}
