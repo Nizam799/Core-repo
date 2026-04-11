@@ -23,6 +23,7 @@ else
   
   for file in $(echo "$ch_files" | grep -E "$ANSIBLE_PLAYBOOK_PATH"); do
     if printf '%s\n' "${existing_playbooks[@]}" | grep -qx "$file"; then
+      echo "Playbook to Run $file"
       matrixArray+=("./$file")
     else
       echo "Skipping non-existing (deleted) playbook: $file"
