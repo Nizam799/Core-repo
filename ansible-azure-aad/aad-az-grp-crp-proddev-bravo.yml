@@ -9,6 +9,5 @@
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-all" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-approvers" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-ba" }
-    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-dev" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-github" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-proddev-bravo-qa" }
