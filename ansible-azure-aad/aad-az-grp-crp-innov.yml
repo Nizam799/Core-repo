@@ -7,7 +7,6 @@
     # - aad_groups
     # Azure AD Persona groups
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-adv" }
-    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-aibuilder" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-all" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-all" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-innov-rag-engineers" }
