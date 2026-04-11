@@ -30,7 +30,7 @@ jobs:
   deploy-ansible:
     needs: create-matrix
     if: needs.create-matrix.outputs.aad_groups_changed != 'false'
-    runs-on: arc-runners-usea
+    runs-on: ubuntu-latest
     environment: ${{ inputs.githubEnv }}
     # 👇 This makes each matrix job display as the filename
     name: ${{ matrix.name }}
