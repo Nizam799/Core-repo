@@ -6,7 +6,7 @@ gh_groups:
     description: A github managed team for idm approvers
     members:
       - username: jason-harmon_CPSI
-        role: maintainer
+        role: designer
 aad_groups:
   az-grp-crp-idm-keycloak-dev-realmadmin:
     users:

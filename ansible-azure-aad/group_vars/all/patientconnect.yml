@@ -7,8 +7,6 @@ gh_groups:
     members:
       - username: lynn-schnobrich_CPSI
         role: maintainer
-      - username: sivakumar-somasundaram_CPSI
-        role: maintainer
 aad_groups:
   az-grp-crp-proddev-patientconnect-approvers:
     users:

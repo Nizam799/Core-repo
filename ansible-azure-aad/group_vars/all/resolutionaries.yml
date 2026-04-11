@@ -15,7 +15,6 @@ aad_groups:
       - az-grp-crp-proddev-resolutionaries-ba
       - az-grp-crp-proddev-resolutionaries-dev
       - az-grp-crp-proddev-resolutionaries-github
-      - az-grp-crp-proddev-resolutionaries-mgr
       - az-grp-crp-proddev-resolutionaries-qa
     users:
       - aditya.ghute@trubridge.com
