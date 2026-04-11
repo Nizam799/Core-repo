@@ -30,7 +30,6 @@ aad_groups:
       - patrick.peyton@trubridge.com
   az-grp-crp-proddev-bravo-dev:
     users:
-      - mahesh.ramasamy@trubridge.com
       - sathish.prakash@trubridge.com
       - sowmiya.arul@trubridge.com
       - subramanian.namasivayam@trubridge.com

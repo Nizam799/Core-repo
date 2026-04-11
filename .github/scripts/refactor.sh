@@ -7,7 +7,7 @@ git fetch origin main:origin/main
 # Get changed group_vars files from last commit
 ANSIBLE_PATH='^ansible-azure-aad/group_vars/all/.*\.yml$'
 TRIGGERED_PATHS='^(deployments/.*/.*/.*/core_aad/|deployments/.*/.*/.*/core_role_definition/|stacks/.*/aad/|stacks/.*/role_definition/|\.github/workflows/iam-apply\.yml|ansible-azure-aad/)'
-ch_files=$(git diff --name-only HEAD^1..HEAD | grep "$TRIGGERED_PATHS" || true)
+ch_files=$(git diff --name-only HEAD^1..HEAD | grep -E "$TRIGGERED_PATHS" || true)
 echo "ch_files: $ch_files"
 echo "aad_groups_changed=true" >> "$GITHUB_OUTPUT"
 matrixArray=()
