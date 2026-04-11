@@ -8,3 +8,5 @@
     # Azure AD Persona groups
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-compliance-all" }
     - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-compliance-github" }
+    - { role: aad_groups_population, aad_groups_population_aad_group_name: "az-grp-crp-compliance-github" }
+
