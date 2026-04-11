@@ -1,17 +1,16 @@
 name: IAM - Apply
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
     paths:
       - "deployments/**/**/**/core_aad/**"
       - "deployments/**/**/**/core_role_definition/**"
       - "stacks/**/aad/**"
       - "stacks/**/role_definition/**"
-      - ".github/workflows/iam-apply.yml"
-      - "ansible-azure-aad/**"
+      - ".github/workflows/iam-pr.yml"
       - "!deployments/**/**/**/core_github_team/**"
+  workflow_dispatch:
 
 jobs:
   # TF Core Role Definitions
