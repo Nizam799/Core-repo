@@ -1,84 +1,59 @@
 name: Ansible Populate AAD Groups
 
 on:
-  workflow_call:
-    inputs:
-      githubEnv:
-        required: true
-        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - "deployments/**/**/**/core_aad/**"
+      - "deployments/**/**/**/core_role_definition/**"
+      - "stacks/**/aad/**"
+      - "stacks/**/role_definition/**"
+      - ".github/workflows/iam-apply.yml"
+      - "ansible-azure-aad/**"
+      - "!deployments/**/**/**/core_github_team/**"
 
 jobs:
-  create-matrix:
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.setmatrix.outputs.MATRIX }}
+  deploy-ansible:
+    runs-on: Linux
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
-      - name: Create Matrix
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install yq
+      - uses: actions/checkout@v4
+
+      - name: Install Dependencies
         run: |
-          sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -O /usr/local/bin/yq
-          sudo chmod +x /usr/local/bin/yq
-          yq --version
-      - name: Add permissions
-        run : chmod +x .github/scripts/refactor.sh
-      - id: setmatrix
-        name: Build matrix (filepath + name)
-        run: ./.github/scripts/refactor.sh
+          sudo apt-get update -y &&
+          sudo env OPENSSL_FORCE_FIPS_MODE=0 apt-get install -y \
+            apt-transport-https ca-certificates curl gnupg lsb-release
 
-  # deploy-ansible:
-  #   needs: create-matrix
-  #   runs-on: arc-runners-usea
-  #   environment: ${{ inputs.githubEnv }}
-  #   # 👇 This makes each matrix job display as the filename
-  #   name: ${{ matrix.name }}
+      - name: Install Azure CLI
+        run: |
+          sudo mkdir -p /etc/apt/keyrings
+          curl -sLS https://packages.microsoft.com/keys/microsoft.asc |
+            gpg --dearmor | sudo tee /etc/apt/keyrings/microsoft.gpg > /dev/null
+          sudo chmod go+r /etc/apt/keyrings/microsoft.gpg
+          AZ_DIST=$(lsb_release -cs)
+          printf 'Types: deb\nURIs: https://packages.microsoft.com/repos/azure-cli/\nSuites: %s\nComponents: main\nSigned-by: /etc/apt/keyrings/microsoft.gpg\n' "$AZ_DIST" | sudo tee /etc/apt/sources.list.d/azure-cli.sources
+          sudo apt-get update -y && sudo apt-get install -y azure-cli
+          az version
 
-    # permissions:
-    #   id-token: write
-    #   contents: read
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-  #   strategy:
-  #     fail-fast: false
-  #     # 👇 Use include so each object provides matrix variables
-  #     matrix:
-  #       include: ${{ fromJson(needs.create-matrix.outputs.matrix) }}
+      - name: Install ansible[azure]
+        run: pip install ansible[azure]
 
-  #   steps:
-  #     - uses: actions/checkout@v4
+      - name: Install azure requirements
+        run: |
+          ansible-galaxy collection install azure.azcollection:3.6.0 --force
+          pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
+          pip install msal --upgrade
 
-  #     - name: Set up Python
-  #       uses: actions/setup-python@v4
-  #       with:
-  #         python-version: '3.10'
-
-  #     - name: Install ansible[azure]
-  #       run: pip install ansible[azure]
-
-  #     - name: Install azure requirements
-  #       run: |
-  #         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-  #         ansible-galaxy collection install azure.azcollection:3.6.0 --force
-  #         pip install -r ~/.ansible/collections/ansible_collections/azure/azcollection/requirements.txt
-  #         pip install msal --upgrade
-
-  #     - name: Azure Login
-  #       uses: azure/login@v2
-  #       with:
-  #         client-id: ${{ vars.CLIENT_ID }}
-  #         tenant-id: ${{ vars.TENANT_ID }}
-  #         allow-no-subscriptions: true
-
-  #     - name: Replace tokens
-  #       uses: cschleiden/replace-tokens@v1
-  #       with:
-  #         files: '[ "ansible-azure-aad/group_vars/*.yml" ]'
-  #         tokenPrefix: '__'
-  #         tokenSuffix: '__'
-  #       env:
-  #         TENANT_ID: '${{ vars.TENANT_ID }}'
-
-  #     - name: Run Ansible playbook
-  #       run: |
-  #           ansible-playbook "${{ matrix.filepath }}"
+      - name: Run Ansible playbook
+        run: |
+            ansible-playbook aad-az-grp-crp-dataplatform.yml -vvv

@@ -1,0 +1,89 @@
+---
+# Owners: PatientCare PD Leadership
+gh_groups:
+  gh-patientcare-pd-leadership-iam-owners:
+    privacy: closed
+    description: A github managed team for PatientCare PD leadership approver policy owners
+    members:
+      - username: bill-russell_CPSI
+        role: maintainer
+      - username: marshal-thompson_CPSI
+        role: maintainer
+
+aad_groups:
+  az-grp-patientcare-pd-approvers:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
+      - michael.davis@trubridge.com
+      - sean.wentworth@trubridge.com
+      - steven.smith@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-amblst-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-cda-viewer-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-comctr-adrbk-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-comctr-docmnt-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-comctr-mailb-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-ehidoc-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-linus-audit-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-linus-tenant-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-linus-user-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-mccmai-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-note-filters-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-note-notes-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-onc-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-patcom-deacon-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-patcom-ptcht-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-patcom-ptcon-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-patcom-qkcon-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-pdc-console-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-phr-ecrnow-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-qualms-alchemy-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-ssa-auth-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers
+  az-grp-patientcare-proddev-ssa-usersettings-approvers:
+    nested_groups:
+      - az-grp-patientcare-pd-approvers

@@ -8,18 +8,30 @@
 # Approvers - Approve PIM/PAG requests
 # PAG - Privileged Access Group - Read/Write access to Database
 
+gh_groups:
+  gh-patientcare-iam-owners:
+    privacy: closed
+    description: A github managed team for patientcare approvers
+    members:
+      - username: bill-russell_CPSI
+        role: maintainer
+      - username: jacob-olier_CPSI
+        role: maintainer
+      - username: marshal-thompson_CPSI
+        role: maintainer
+      - username: michael-davis_CPSI
+        role: maintainer
+      - username: steven-smith_CPSI
+        role: maintainer
+      - username: wes-bryant_CPSI
+        role: maintainer
+      - username: arun-zachariah_CPSI
+        role: maintainer
+      - username: sean-wentworth_CPSI
+        role: maintainer
+
 aad_groups:
   az-grp-patientcare-proddev-all:
-    nested_groups:
-      - az-grp-patientcare-proddev-cda-all
-      - az-grp-patientcare-proddev-comctr-all
-      - az-grp-patientcare-proddev-linus-all
-      - az-grp-patientcare-proddev-note-all
-      - az-grp-patientcare-proddev-patcom-deacon-all
-      - az-grp-patientcare-proddev-pdc-all
-      - az-grp-patientcare-proddev-phr-all
-      - az-grp-patientcare-proddev-qualms-all
-      - az-grp-patientcare-proddev-ssa-all
     users:
       - abdul.naufal@trubridge.com
       - abhijiththaza.veetel@trubridge.com
@@ -56,7 +68,7 @@ aad_groups:
       - jacob.riggs@trubridge.com
       - james.dement@trubridge.com
       - james.dinsmore@trubridge.com
-      - jason.phillips@trubridge.com
+      - jasonp@trubridge.com
       - jayasuriya.prabu@trubridge.com
       - jeff.evans@trubridge.com
       - jennifer.tidwell@trubridge.com
@@ -75,7 +87,6 @@ aad_groups:
       - latanya.clark@trubridge.com
       - lauri.middleton@trubridge.com
       - leah.nash@trubridge.com
-      - leanna.dunn@trubridge.com
       - libby.summers@trubridge.com
       - madhav.vinod@trubridge.com
       - mahesh.pillai@trubridge.com
@@ -83,7 +94,6 @@ aad_groups:
       - mark.hirschfeldt@trubridge.com
       - mark.jones@trubridge.com
       - marshal.thompson@trubridge.com
-      - marshall.weekley@trubridge.com
       - melissa.johnson@trubridge.com
       - michael.cramer@trubridge.com
       - michael.davis@trubridge.com
@@ -95,7 +105,6 @@ aad_groups:
       - naveen.p@trubridge.com
       - nicole.oconnell@trubridge.com
       - nithin.aithal@trubridge.com
-      - or.barak@trubridge.com
       - patrick.peyton@trubridge.com
       - paul.lewis@trubridge.com
       - pooshparaj.pandurangan@trubridge.com
@@ -110,6 +119,7 @@ aad_groups:
       - sam.clapper@trubridge.com
       - saravanan.subramanian@trubridge.com
       - sean.wentworth@trubridge.com
+      - senthil.srinivasan@trubridge.com
       - shannon.locklear@trubridge.com
       - siddalinga.prabhu@trubridge.com
       - sivakumar.somasundaram@trubridge.com
@@ -124,425 +134,886 @@ aad_groups:
       - therese.hart@trubridge.com
       - thomas.moore@trubridge.com
       - thomas.whyle@trubridge.com
-      - thomas.wilson@trubridge.com
       - tiffany.burt@trubridge.com
       - tim.ogletree@trubridge.com
       - todd.meyer@trubridge.com
       - uyen.seevers@trubridge.com
       - wes.bryant@trubridge.com
       - zack.mayhall@trubridge.com
+  az-grp-patientcare-proddev-amblst-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-amblst-argo
+      - az-grp-patientcare-proddev-amblst-codeowners
+      - az-grp-patientcare-proddev-amblst-dev
+      - az-grp-patientcare-proddev-amblst-approvers
+  az-grp-patientcare-proddev-amblst-argo:
+  az-grp-patientcare-proddev-amblst-codeowners:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - james.dement@trubridge.com
+  az-grp-patientcare-proddev-amblst-dev:
   az-grp-patientcare-proddev-cda-all:
     nested_groups:
       - az-grp-patientcare-proddev-cda-argo
       - az-grp-patientcare-proddev-cda-codeowners
       - az-grp-patientcare-proddev-cda-dev
-      - az-grp-patientcare-proddev-cda-github
       - az-grp-patientcare-proddev-cda-viewer-approvers
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-read
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-write
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-read
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-write
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-read
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-write
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-read
-      - az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-write
   az-grp-patientcare-proddev-cda-argo:
   az-grp-patientcare-proddev-cda-codeowners:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - james.dement@trubridge.com
+      - Jayasuriya.Prabu@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - Kendall.Smith@trubridge.com
+      - Mahesh.Pillai@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
   az-grp-patientcare-proddev-cda-dev:
-  az-grp-patientcare-proddev-cda-github:
-  az-grp-patientcare-proddev-cda-viewer-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-codeowners
   az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-codeowners
   az-grp-patientcare-proddev-cda-viewer-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-dev
   az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-dev
   az-grp-patientcare-proddev-cda-viewer-pag-pg-pd-write:
   az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-all
   az-grp-patientcare-proddev-cda-viewer-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-dev
   az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-all
   az-grp-patientcare-proddev-cda-viewer-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-cda-dev
   az-grp-patientcare-proddev-comctr-all:
     nested_groups:
       - az-grp-patientcare-proddev-comctr-adrbk-approvers
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-read
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-write
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-read
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-write
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-read
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-write
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-read
-      - az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-write
       - az-grp-patientcare-proddev-comctr-argo
       - az-grp-patientcare-proddev-comctr-codeowners
       - az-grp-patientcare-proddev-comctr-dev
       - az-grp-patientcare-proddev-comctr-docmnt-approvers
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-read
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-write
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-read
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-write
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-read
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-write
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-read
-      - az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-write
-      - az-grp-patientcare-proddev-comctr-github
       - az-grp-patientcare-proddev-comctr-mailb-approvers
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-read
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-write
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-read
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-write
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-read
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-write
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-read
-      - az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-write
-  az-grp-patientcare-proddev-comctr-adrbk-approvers:
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-read:
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-pd-write:
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-adrbk-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-argo:
+    users:
+      - leah.nash@trubridge.com
+      - blaine.baum@trubridge.com
+      - charles.byrne@trubridge.com
+      - evan.mitchell@trubridge.com
+      - gary.overby@trubridge.com
+      - tim.ogletree@trubridge.com
+      - bill.russell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
   az-grp-patientcare-proddev-comctr-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - blaine.baum@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
+      - evan.mitchell@trubridge.com
   az-grp-patientcare-proddev-comctr-dev:
-  az-grp-patientcare-proddev-comctr-docmnt-approvers:
+    users:
+      - blaine.baum@trubridge.com
+      - charles.byrne@trubridge.com
+      - evan.mitchell@trubridge.com
+      - gary.overby@trubridge.com
+      - tim.ogletree@trubridge.com
+      - bill.russell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-read:
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-pd-write:
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-docmnt-pag-pg-qa-write:
-  az-grp-patientcare-proddev-comctr-github:
-  az-grp-patientcare-proddev-comctr-mailb-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-read:
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-pd-write:
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-all
   az-grp-patientcare-proddev-comctr-mailb-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-comctr-dev
+  az-grp-patientcare-proddev-cql-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-cql-approvers
+      - az-grp-patientcare-proddev-cql-argo
+      - az-grp-patientcare-proddev-cql-codeowners
+      - az-grp-patientcare-proddev-cql-dev
+  az-grp-patientcare-proddev-cql-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
+      - justin.arnold@trubridge.com
+      - robert.engberg@trubridge.com
+      - michael.cramer@trubridge.com
+  az-grp-patientcare-proddev-cql-dev:
+    users:
+      - jeff.evans@trubridge.com
+      - justin.arnold@trubridge.com
+      - michael.cramer@trubridge.com
+      - robert.engberg@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
+  az-grp-patientcare-proddev-csthlt-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-csthlt-approvers
+      - az-grp-patientcare-proddev-csthlt-argo
+      - az-grp-patientcare-proddev-csthlt-codeowners
+      - az-grp-patientcare-proddev-csthlt-dev
+  az-grp-patientcare-proddev-csthlt-codeowners:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - james.dement@trubridge.com
+      - Jayasuriya.Prabu@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - Kendall.Smith@trubridge.com
+      - Mahesh.Pillai@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
+  az-grp-patientcare-proddev-csthlt-dev:
+    users:
+      - cheryl.kemp@trubridge.com
+      - george.sangillo@trubridge.com
+      - sam.clapper@trubridge.com
+      - thomas.moore@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
+  az-grp-patientcare-proddev-ehidoc-all:
+    users:
+      - cheryl.holberg@trubridge.com
+      - christine.prescott@trubridge.com
+      - dave.legros@trubridge.com
+      - j.c.dalton@trubridge.com
+      - jeremy.summerlin@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - karen.norwood@trubridge.com
+      - mark.gartman@trubridge.com
+      - michael.davis@trubridge.com
+      - nathan.mccann@trubridge.com
+    nested_groups:
+      - az-grp-patientcare-proddev-ehidoc-approvers
+      - az-grp-patientcare-proddev-ehidoc-argo
+      - az-grp-patientcare-proddev-ehidoc-codeowners
+      - az-grp-patientcare-proddev-ehidoc-dev
+  az-grp-patientcare-proddev-ehidoc-argo:
+    users:
+      - jeremy.summerlin@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - michael.davis@trubridge.com
+      - nathan.mccann@trubridge.com
+  az-grp-patientcare-proddev-ehidoc-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - jeremy.summerlin@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - marshal.thompson@trubridge.com
+      - michael.davis@trubridge.com
+      - nathan.mccann@trubridge.com
+  az-grp-patientcare-proddev-ehidoc-dev:
+    users:
+      - j.c.dalton@trubridge.com
+      - jeremy.summerlin@trubridge.com
+      - jeremy.tapper@trubridge.com
+      - mark.gartman@trubridge.com
+      - michael.davis@trubridge.com
+      - nathan.mccann@trubridge.com
   az-grp-patientcare-proddev-linus-all:
     nested_groups:
       - az-grp-patientcare-proddev-linus-argo
       - az-grp-patientcare-proddev-linus-audit-approvers
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-dev-read
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-dev-write
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-pd-read
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-pd-write
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-stg-read
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-stg-write
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-qa-read
-      - az-grp-patientcare-proddev-linus-audit-pag-pg-qa-write
       - az-grp-patientcare-proddev-linus-codeowners
       - az-grp-patientcare-proddev-linus-dev
-      - az-grp-patientcare-proddev-linus-github
       - az-grp-patientcare-proddev-linus-tenant-approvers
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-read
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-write
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-read
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-write
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-read
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-write
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-read
-      - az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-write
       - az-grp-patientcare-proddev-linus-user-approvers
-      - az-grp-patientcare-proddev-linus-user-pag-pg-dev-read
-      - az-grp-patientcare-proddev-linus-user-pag-pg-dev-write
-      - az-grp-patientcare-proddev-linus-user-pag-pg-pd-read
-      - az-grp-patientcare-proddev-linus-user-pag-pg-pd-write
-      - az-grp-patientcare-proddev-linus-user-pag-pg-stg-read
-      - az-grp-patientcare-proddev-linus-user-pag-pg-stg-write
-      - az-grp-patientcare-proddev-linus-user-pag-pg-qa-read
-      - az-grp-patientcare-proddev-linus-user-pag-pg-qa-write
-  az-grp-patientcare-proddev-linus-audit-approvers:
   az-grp-patientcare-proddev-linus-audit-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-audit-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-audit-pag-pg-pd-read:
   az-grp-patientcare-proddev-linus-audit-pag-pg-pd-write:
   az-grp-patientcare-proddev-linus-audit-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-audit-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-audit-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-audit-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-argo:
+    users:
+      - bill.russell@trubridge.com
+      - blaine.baum@trubridge.com
+      - evan.mitchell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - jacob.olier@trubridge.com
+      - ethan.moody@trubridge.com
   az-grp-patientcare-proddev-linus-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - blaine.baum@trubridge.com
+      - evan.mitchell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - jacob.olier@trubridge.com
   az-grp-patientcare-proddev-linus-dev:
-  az-grp-patientcare-proddev-linus-github:
-  az-grp-patientcare-proddev-linus-tenant-approvers:
+    users:
+      - leah.nash@trubridge.com
+      - blaine.baum@trubridge.com
+      - charles.byrne@trubridge.com
+      - evan.mitchell@trubridge.com
+      - gary.overby@trubridge.com
+      - tim.ogletree@trubridge.com
+      - bill.russell@trubridge.com
+      - jacob.olier@trubridge.com
+      - marshal.thompson@trubridge.com
   az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-tenant-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-read:
   az-grp-patientcare-proddev-linus-tenant-pag-pg-pd-write:
   az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-tenant-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-tenant-pag-pg-qa-write:
-  az-grp-patientcare-proddev-linus-user-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-user-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-user-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-user-pag-pg-pd-read:
   az-grp-patientcare-proddev-linus-user-pag-pg-pd-write:
   az-grp-patientcare-proddev-linus-user-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-user-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
   az-grp-patientcare-proddev-linus-user-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-all
   az-grp-patientcare-proddev-linus-user-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-linus-dev
+  az-grp-patientcare-proddev-mccmai-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-mccmai-argo
+      - az-grp-patientcare-proddev-mccmai-approvers
+      - az-grp-patientcare-proddev-mccmai-codeowners
+      - az-grp-patientcare-proddev-mccmai-dev
+  az-grp-patientcare-proddev-mccmai-argo:
+  az-grp-patientcare-proddev-mccmai-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - steven.smith@trubridge.com
+      - mark.hirschfeldt@trubridge.com
+  az-grp-patientcare-proddev-mccmai-dev:
+    users:
+      - cheryl.kemp@trubridge.com
+      - george.sangillo@trubridge.com
+      - sam.clapper@trubridge.com
+      - thomas.moore@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
   az-grp-patientcare-proddev-note-all:
     nested_groups:
       - az-grp-patientcare-proddev-note-argo
       - az-grp-patientcare-proddev-note-codeowners
       - az-grp-patientcare-proddev-note-dev
       - az-grp-patientcare-proddev-note-filters-approvers
-      - az-grp-patientcare-proddev-note-filters-pag-pg-dev-read
-      - az-grp-patientcare-proddev-note-filters-pag-pg-dev-write
-      - az-grp-patientcare-proddev-note-filters-pag-pg-pd-read
-      - az-grp-patientcare-proddev-note-filters-pag-pg-pd-write
-      - az-grp-patientcare-proddev-note-filters-pag-pg-stg-read
-      - az-grp-patientcare-proddev-note-filters-pag-pg-stg-write
-      - az-grp-patientcare-proddev-note-filters-pag-pg-qa-read
-      - az-grp-patientcare-proddev-note-filters-pag-pg-qa-write
-      - az-grp-patientcare-proddev-note-github
       - az-grp-patientcare-proddev-note-notes-approvers
-      - az-grp-patientcare-proddev-note-notes-pag-pg-dev-read
-      - az-grp-patientcare-proddev-note-notes-pag-pg-dev-write
-      - az-grp-patientcare-proddev-note-notes-pag-pg-pd-read
-      - az-grp-patientcare-proddev-note-notes-pag-pg-pd-write
-      - az-grp-patientcare-proddev-note-notes-pag-pg-stg-read
-      - az-grp-patientcare-proddev-note-notes-pag-pg-stg-write
-      - az-grp-patientcare-proddev-note-notes-pag-pg-qa-read
-      - az-grp-patientcare-proddev-note-notes-pag-pg-qa-write
   az-grp-patientcare-proddev-note-argo:
   az-grp-patientcare-proddev-note-codeowners:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - james.dement@trubridge.com
+      - Jayasuriya.Prabu@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - Kendall.Smith@trubridge.com
+      - Mahesh.Pillai@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
   az-grp-patientcare-proddev-note-dev:
-  az-grp-patientcare-proddev-note-filters-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-codeowners
   az-grp-patientcare-proddev-note-filters-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
   az-grp-patientcare-proddev-note-filters-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
   az-grp-patientcare-proddev-note-filters-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-codeowners
   az-grp-patientcare-proddev-note-filters-pag-pg-pd-write:
   az-grp-patientcare-proddev-note-filters-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
   az-grp-patientcare-proddev-note-filters-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
   az-grp-patientcare-proddev-note-filters-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
   az-grp-patientcare-proddev-note-filters-pag-pg-qa-write:
-  az-grp-patientcare-proddev-note-github:
-  az-grp-patientcare-proddev-note-notes-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
   az-grp-patientcare-proddev-note-notes-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
+    users:
+      - Pooshparaj.Pandurangan@trubridge.com
   az-grp-patientcare-proddev-note-notes-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
   az-grp-patientcare-proddev-note-notes-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-codeowners
   az-grp-patientcare-proddev-note-notes-pag-pg-pd-write:
+    users:
+      - jonathon.bowie@trubridge.com
+      - nicole.oconnell@trubridge.com
   az-grp-patientcare-proddev-note-notes-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
+    users:
+      - Pooshparaj.Pandurangan@trubridge.com
   az-grp-patientcare-proddev-note-notes-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
   az-grp-patientcare-proddev-note-notes-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-note-all
+    users:
+      - Pooshparaj.Pandurangan@trubridge.com
   az-grp-patientcare-proddev-note-notes-pag-pg-qa-write:
-
+    nested_groups:
+      - az-grp-patientcare-proddev-note-dev
+  az-grp-patientcare-proddev-onc-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-onc-argo
+      - az-grp-patientcare-proddev-onc-codeowners
+      - az-grp-patientcare-proddev-onc-dev
+      - az-grp-patientcare-proddev-onc-approvers
+  az-grp-patientcare-proddev-onc-argo:
+    users:
+      - rob.resendez@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-onc-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-onc-dev:
+    users:
+      - harvey.mccreary@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
+      - wes.bryant@trubridge.com
   az-grp-patientcare-proddev-patcom-all:
     nested_groups:
       - az-grp-patientcare-proddev-patcom-argo
       - az-grp-patientcare-proddev-patcom-codeowners
       - az-grp-patientcare-proddev-patcom-deacon-approvers
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-read
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-write
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-read
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-write
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-read
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-write
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-read
-      - az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-write
       - az-grp-patientcare-proddev-patcom-dev
-      - az-grp-patientcare-proddev-patcom-github
       - az-grp-patientcare-proddev-patcom-ptcht-approvers
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-read
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-write
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-read
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-write
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-read
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-write
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-read
-      - az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-write
+      - az-grp-patientcare-proddev-patcom-ptcon-akv-officers
       - az-grp-patientcare-proddev-patcom-ptcon-approvers
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-read
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-write
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-read
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-write
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-read
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-write
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-read
-      - az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-write
       - az-grp-patientcare-proddev-patcom-qkcon-approvers
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-read
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-write
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-read
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-write
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-read
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-write
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-read
-      - az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-write
   az-grp-patientcare-proddev-patcom-argo:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-codeowners:
-  az-grp-patientcare-proddev-patcom-deacon-approvers:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - jacob.olier@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-pd-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-deacon-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-dev:
-  az-grp-patientcare-proddev-patcom-github:
-  az-grp-patientcare-proddev-patcom-ptcht-approvers:
+    users:
+      - jayasuriya.prabu@trubridge.com
+      - mohamed.yegiah@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - pravalika.madagoni@trubridge.com
+      - ram.prakash@trubridge.com
+      - saravanan.subramanian@trubridge.com
+      - sivakumar.somasundaram@trubridge.com
+      - sudharsanan.p@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - jacob.olier@trubridge.com
+      - senthil.srinivasan@trubridge.com
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-pd-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcht-pag-pg-qa-write:
-  az-grp-patientcare-proddev-patcom-ptcon-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
+  az-grp-patientcare-proddev-patcom-ptcon-akv-officers:
+    users:
+      - sivakumar.somasundaram@trubridge.com
+      - pooshparaj.pandurangan@trubridge.com
+      - lynn.schnobrich@trubridge.com
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-pd-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-ptcon-pag-pg-qa-write:
-  az-grp-patientcare-proddev-patcom-qkcon-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-pd-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-all
   az-grp-patientcare-proddev-patcom-qkcon-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-patcom-dev
   az-grp-patientcare-proddev-pdc-all:
     nested_groups:
       - az-grp-patientcare-proddev-pdc-argo
       - az-grp-patientcare-proddev-pdc-codeowners
       - az-grp-patientcare-proddev-pdc-console-approvers
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-dev-read
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-dev-write
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-pd-read
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-pd-write
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-stg-read
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-stg-write
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-qa-read
-      - az-grp-patientcare-proddev-pdc-console-pag-pg-qa-write
       - az-grp-patientcare-proddev-pdc-dev
-      - az-grp-patientcare-proddev-pdc-github
   az-grp-patientcare-proddev-pdc-argo:
   az-grp-patientcare-proddev-pdc-codeowners:
-  az-grp-patientcare-proddev-pdc-console-approvers:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - james.dement@trubridge.com
+      - Jayasuriya.Prabu@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - Kendall.Smith@trubridge.com
+      - Mahesh.Pillai@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
   az-grp-patientcare-proddev-pdc-console-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-all
   az-grp-patientcare-proddev-pdc-console-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-dev
   az-grp-patientcare-proddev-pdc-console-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-codeowners
   az-grp-patientcare-proddev-pdc-console-pag-pg-pd-write:
   az-grp-patientcare-proddev-pdc-console-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-all
   az-grp-patientcare-proddev-pdc-console-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-dev
   az-grp-patientcare-proddev-pdc-console-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-all
   az-grp-patientcare-proddev-pdc-console-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-dev
   az-grp-patientcare-proddev-pdc-dev:
-  az-grp-patientcare-proddev-pdc-github:
+    nested_groups:
+      - az-grp-patientcare-proddev-pdc-codeowners
   az-grp-patientcare-proddev-phr-all:
     nested_groups:
       - az-grp-patientcare-proddev-phr-argo
       - az-grp-patientcare-proddev-phr-codeowners
       - az-grp-patientcare-proddev-phr-ecrnow-approvers
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-read
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-write
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-read
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-write
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-read
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-write
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-read
-      - az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-write
       - az-grp-patientcare-proddev-phr-dev
-      - az-grp-patientcare-proddev-phr-github
   az-grp-patientcare-proddev-phr-argo:
+    users:
+      - patrick.peyton@trubridge.com
+      - wes.bryant@trubridge.com
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-dev
   az-grp-patientcare-proddev-phr-codeowners:
-  az-grp-patientcare-proddev-phr-ecrnow-approvers:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - wes.bryant@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-all
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-dev
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-dev
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-pd-write:
+    users:
+      - patrick.peyton@trubridge.com
+      - nathan.mccann@trubridge.com
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-all
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-dev
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-all
   az-grp-patientcare-proddev-phr-ecrnow-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-phr-dev
   az-grp-patientcare-proddev-phr-dev:
-  az-grp-patientcare-proddev-phr-github:
+    users:
+      - patrick.peyton@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
+      - tiffany.burt@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - wes.bryant@trubridge.com
   az-grp-patientcare-proddev-qualms-all:
     nested_groups:
       - az-grp-patientcare-proddev-qualms-alchemy-approvers
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-read
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-write
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-read
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-write
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-read
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-write
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-read
-      - az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-write
       - az-grp-patientcare-proddev-qualms-argo
       - az-grp-patientcare-proddev-qualms-codeowners
       - az-grp-patientcare-proddev-qualms-dev
-      - az-grp-patientcare-proddev-qualms-github
-  az-grp-patientcare-proddev-qualms-alchemy-approvers:
   az-grp-patientcare-proddev-qualms-argo:
   az-grp-patientcare-proddev-qualms-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
+      - justin.arnold@trubridge.com
+      - robert.engberg@trubridge.com
+      - michael.cramer@trubridge.com
   az-grp-patientcare-proddev-qualms-dev:
-  az-grp-patientcare-proddev-qualms-github:
+    users:
+      - jeff.evans@trubridge.com
+      - justin.arnold@trubridge.com
+      - michael.cramer@trubridge.com
+      - robert.engberg@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-all
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-dev
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-read:
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-pd-write:
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-all
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-dev
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-all
   az-grp-patientcare-proddev-qualms-alchemy-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-qualms-dev
   az-grp-patientcare-proddev-ssa-all:
     nested_groups:
       - az-grp-patientcare-proddev-ssa-argo
       - az-grp-patientcare-proddev-ssa-auth-approvers
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-read
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-write
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-read
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-write
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-read
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-write
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-read
-      - az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-write
       - az-grp-patientcare-proddev-ssa-codeowners
       - az-grp-patientcare-proddev-ssa-dev
-      - az-grp-patientcare-proddev-ssa-github
       - az-grp-patientcare-proddev-ssa-usersettings-approvers
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-read
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-write
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-read
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-write
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-read
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-write
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-read
-      - az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-write
   az-grp-patientcare-proddev-ssa-argo:
-  az-grp-patientcare-proddev-ssa-auth-approvers:
   az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-auth-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
   az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-auth-pag-pg-pd-write:
   az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-auth-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
   az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-auth-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
   az-grp-patientcare-proddev-ssa-codeowners:
+    users:
+      - arun.zachariah@trubridge.com
+      - bill.russell@trubridge.com
+      - james.dement@trubridge.com
+      - Jayasuriya.Prabu@trubridge.com
+      - jonathon.bowie@trubridge.com
+      - Kendall.Smith@trubridge.com
+      - Mahesh.Pillai@trubridge.com
+      - marshal.thompson@trubridge.com
+      - melissa.johnson@trubridge.com
+      - nicole.oconnell@trubridge.com
+      - subramanian.namasivayam@trubridge.com
+      - sudha.thirunavukkarasu@trubridge.com
   az-grp-patientcare-proddev-ssa-dev:
-  az-grp-patientcare-proddev-ssa-github:
-  az-grp-patientcare-proddev-ssa-usersettings-approvers:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-codeowners
+  az-grp-patientcare-proddev-thvoau-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-thvoau-argo
+      - az-grp-patientcare-proddev-thvoau-codeowners
+      - az-grp-patientcare-proddev-thvoau-dev
+      - az-grp-patientcare-proddev-thvoau-approvers
+  az-grp-patientcare-proddev-thvoau-argo:
+    users:
+      - harvey.mccreary@trubridge.com
+      - rob.resendez@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-thvoau-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - harvey.mccreary@trubridge.com
+      - justin.arnold@trubridge.com
+      - marshal.thompson@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-thvoau-dev:
+    users:
+      - harvey.mccreary@trubridge.com
+      - justin.arnold@trubridge.com
+      - nathan.mccann@trubridge.com
+      - rob.resendez@trubridge.com
+      - ryan.reeves@trubridge.com
+      - wes.bryant@trubridge.com
+  az-grp-patientcare-proddev-thvoau-approvers:
+    users:
+      - rob.resendez@trubridge.com
+      - wes.bryant@trubridge.com
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-dev-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-codeowners
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-pd-write:
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-stg-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-read:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-all
   az-grp-patientcare-proddev-ssa-usersettings-pag-pg-qa-write:
+    nested_groups:
+      - az-grp-patientcare-proddev-ssa-dev
+  az-grp-patientcare-proddev-trmlgy-all:
+    nested_groups:
+      - az-grp-patientcare-proddev-trmlgy-approvers
+      - az-grp-patientcare-proddev-trmlgy-argo
+      - az-grp-patientcare-proddev-trmlgy-codeowners
+      - az-grp-patientcare-proddev-trmlgy-dev
+  az-grp-patientcare-proddev-trmlgy-codeowners:
+    users:
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
+      - justin.arnold@trubridge.com
+      - robert.engberg@trubridge.com
+      - michael.cramer@trubridge.com
+  az-grp-patientcare-proddev-trmlgy-dev:
+    users:
+      - jeff.evans@trubridge.com
+      - justin.arnold@trubridge.com
+      - michael.cramer@trubridge.com
+      - robert.engberg@trubridge.com
+      - bill.russell@trubridge.com
+      - marshal.thompson@trubridge.com
+      - sean.wentworth@trubridge.com
