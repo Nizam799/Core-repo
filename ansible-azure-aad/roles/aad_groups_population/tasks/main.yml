@@ -205,7 +205,7 @@
 
         uri = page.get("@odata.nextLink")
 
-    print(json.dumps(spn_ids))
+    print(json.dumps(spn_ids, indent=2))
     EOF
   register: graph_spn_members
   changed_when: false
