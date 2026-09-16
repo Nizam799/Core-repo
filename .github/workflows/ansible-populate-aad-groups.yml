@@ -47,7 +47,12 @@ jobs:
 
       - name: Install ansible[azure]
         run: pip install ansible[azure]
-
+      - name: Download Azure Collection
+        run: |
+          curl -L \
+            -o azure-azcollection-3.6.0.tar.gz \
+            "https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/azure-azcollection-3.6.0.tar.gz"
+    
       - name: Install azure requirements
         run: |
           ansible-galaxy collection install azure.azcollection:3.6.0 --force
