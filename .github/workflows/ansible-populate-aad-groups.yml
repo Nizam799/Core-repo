@@ -9,7 +9,7 @@ on:
       - "deployments/**/**/**/core_role_definition/**"
       - "stacks/**/aad/**"
       - "stacks/**/role_definition/**"
-      - ".github/workflows/iam-apply.yml"
+      - ".github/workflows/ansible-populate-aad-groups.yml"
       - "ansible-azure-aad/**"
       - "!deployments/**/**/**/core_github_team/**"
 
@@ -56,4 +56,4 @@ jobs:
 
       - name: Run Ansible playbook
         run: |
-            ansible-playbook aad-az-grp-crp-dataplatform.yml -vvv
+            ansible-playbook "./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml" -vvv
