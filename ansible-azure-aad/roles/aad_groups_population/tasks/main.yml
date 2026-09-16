@@ -145,35 +145,70 @@
 
 ### Get members list of SPNs ###
 
+# - name: Retrieve SPNs of {{ aad_groups_population_aad_group_name }}
+#   ansible.builtin.shell: |
+#     python3 << 'EOF'
+#     import subprocess, json, sys
+
+#     uri = "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members/{{ spn }}?$select=id,displayName,appId&$top=999"
+#     query = "value[?appId!=null && displayName!=null].{id: id, appId: appId, displayName: displayName}"
+#     spn_ids = []
+
+#     while uri:
+#         result = subprocess.run(
+#             ["az", "rest", "--method", "GET", "--uri", uri, "--query", query, "-o", "json"],
+#             capture_output=True, text=True
+#         )
+#         if result.returncode != 0:
+#             print(result.stderr, file=sys.stderr)
+#             sys.exit(1)
+
+#         page = json.loads(result.stdout)
+#         spn_ids.extend(page.get("value", []))
+#         uri = page.get("@odata.nextLink")
+
+#     print(json.dumps({"value": spn_ids}))
+#     EOF
+#   vars:
+#     spn: "microsoft.graph.servicePrincipal"
+#   register: graph_spn_members
+#   changed_when: false
 - name: Retrieve SPNs of {{ aad_groups_population_aad_group_name }}
   ansible.builtin.shell: |
     python3 << 'EOF'
     import subprocess, json, sys
 
-    uri = "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members/{{ spn }}?$select=id,displayName,appId&$top=999"
-    query = "value[?appId!=null && displayName!=null].{id: id, appId: appId, displayName: displayName}"
+    uri = "https://graph.microsoft.com/beta/groups/{{ main_group.ad_groups[0].object_id }}/members/microsoft.graph.servicePrincipal?$select=id,displayName,appId&$top=999"
     spn_ids = []
 
     while uri:
         result = subprocess.run(
-            ["az", "rest", "--method", "GET", "--uri", uri, "--query", query, "-o", "json"],
+            ["az", "rest", "--method", "GET", "--uri", uri, "-o", "json"],
             capture_output=True, text=True
         )
+
         if result.returncode != 0:
             print(result.stderr, file=sys.stderr)
             sys.exit(1)
 
         page = json.loads(result.stdout)
-        spn_ids.extend(page.get("value", []))
+
+        spn_ids.extend([
+            {
+                "id": item["id"],
+                "appId": item["appId"],
+                "displayName": item["displayName"]
+            }
+            for item in page.get("value", [])
+            if item.get("appId") and item.get("displayName")
+        ])
+
         uri = page.get("@odata.nextLink")
 
-    print(json.dumps({"value": spn_ids}))
+    print(json.dumps(spn_ids))
     EOF
-  vars:
-    spn: "microsoft.graph.servicePrincipal"
   register: graph_spn_members
   changed_when: false
-
 # - name: Setting SPN fact
 #   ansible.builtin.set_fact:
 #     spn_members: "{{ graph_spn_members.stdout | from_json }}"
