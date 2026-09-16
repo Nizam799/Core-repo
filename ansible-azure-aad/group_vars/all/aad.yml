@@ -1,11 +1,11 @@
 ---
-# Owner: Nick Chao
+# Owner: John Immel
 gh_groups:
   gh-aad-iam-owners:
     privacy: closed
     description: A github managed team for platform approvers
     members:
-      - username: nick-chao_CPSI
+      - username: john-immel_CPSI
         role: maintainer
 aad_groups:
   # Azure AD AAD role groups
@@ -18,10 +18,9 @@ aad_groups:
       - gousiya.sayyad@trubridge.com
       - jason.phillips@trubridge.com
       - jeremy.parrillo@trubridge.com
-      - nick.chao@trubridge.com
+      - pradeep.toleti@trubridge.com
       - thomas.burt@trubridge.com
       - wynn.vanduyn@trubridge.com
-      - shrenik.punna@trubridge.com
   aad-rbac-directory-readers:
     spn_client_ids:
       - 71f12994-3b33-48aa-b14d-b906bf2b23ce # spn-lz-us-cpsicorp-qa-001
@@ -33,16 +32,14 @@ aad_groups:
       - c87b1eee-a66e-4e1f-bc30-4c57f95c7eed # spn-crp-mdp-dev-ingest-contributor COP-2937
       - aeac6f65-fb01-4ae4-acfc-3102290c0909 # spn-repo-cpsiscorp-github-core-repositories-reader COP-5635
   aad-rbac-global-reader:
-    spn_client_ids:
-      - 40683741-aaf9-433c-8c0d-f9cf5eb4dc70 # spn-aad-ca-admin
   aad-rbac-groups-admin:
     spn_client_ids:
       - 01b24af4-c5ea-40b1-9d1c-b13784def997 # spn-repo-cpsiscorp-github-core-repositories COP-5635
     users:
-      - nick.chao@trubridge.com
+      - john.immel@trubridge.com
   aad-rbac-privileged-role-administrator:
     users:
-      - nick.chao@trubridge.com
+      - john.immel@trubridge.com
   aad-rbac-spn-aad-argo-cd-oidc-cloud-app-admin:
     spn_client_ids:
       - 81463605-925a-4bb0-938c-d2fb307645b6 # uai-b36a5d988f7bd420afa1d23e42defff1d05c981f600840e0ea8f94e1a061fc9d-wfid

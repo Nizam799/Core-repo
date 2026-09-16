@@ -13,7 +13,9 @@ aad_groups:
       - brian.cranford@trubridge.com
       - cristin.shehan@trubridge.com
       - david.palmer@trubridge.com
+      - doug.fridley@trubridge.com
       - doug.toenes@trubridge.com
+      - gaillard.bixler@trubridge.com
       - holley.francis@trubridge.com
       - janice.couey@trubridge.com
       - jennifer.may@trubridge.com
@@ -26,6 +28,58 @@ aad_groups:
       - tiffany.lynes@trubridge.com
       - troy.dolly@trubridge.com
       - wesley.domning@trubridge.com
+  az-grp-crp-powerbi-patient-care-interface-dashboard: # Owners: sherry.gunderman@trubridge.com, travis.parker@trubridge.com
+    users:
+      - adam.robles@trubridge.com
+      - albusinharaj.selvakumar@trubridge.com
+      - anne.francis@trubridge.com
+      - ashley.uteg@trubridge.com
+      - balaji.sundaram@trubridge.com
+      - bharanidharan.r@trubridge.com
+      - charity.jackson@trubridge.com
+      - chris.kesting@trubridge.com
+      - divakar.p@trubridge.com
+      - eileen.wardrop@trubridge.com
+      - eric.steen@trubridge.com
+      - forrest.catlett@trubridge.com
+      - francois.elexus@trubridge.com
+      - george.kennedy@trubridge.com
+      - geremy.hanne@trubridge.com
+      - jackson.armstrong@trubridge.com
+      - james.jepko@trubridge.com
+      - james.lawley@trubridge.com
+      - jason.catlett@trubridge.com
+      - jonathan.hinds@trubridge.com
+      - judy.sutton@trubridge.com
+      - ladonna.lee@trubridge.com
+      - leif.schaffner@trubridge.com
+      - lynn.perry@trubridge.com
+      - maggie.chapman@trubridge.com
+      - mary.perez@trubridge.com
+      - matt.brown@trubridge.com
+      - matt.vogtner@trubridge.com
+      - michelle.littlefield@trubridge.com
+      - nicole.friday@trubridge.com
+      - paul.barber@trubridge.com
+      - ramachandran.m@trubridge.com
+      - ron.ogburn@trubridge.com
+      - samuel.everett@trubridge.com
+      - sara.moreland@trubridge.com
+      - sathiyan.rajendran@trubridge.com
+      - sean.meares@trubridge.com
+      - shannon.hardee@trubridge.com
+      - sherry.gunderman@trubridge.com
+      - sribalaji.sarvesan@trubridge.com
+      - stephen.wilkerson@trubridge.com
+      - steven.milligan@trubridge.com
+      - sylvia.berko@trubridge.com
+      - taylor.yancey@trubridge.com
+      - todd.carnley@trubridge.com
+      - travis.parker@trubridge.com
+      - tye.cochran@trubridge.com
+      - vijay.samikkannu@trubridge.com
+      - vijayasarathy.s@trubridge.com
+      - will.adams@trubridge.com
   az-grp-crp-powerbi-patient-care-support-metrics: # Owners: Jessica Krafthefer and Travis Parker
     users:
       - andrew.smith@trubridge.com

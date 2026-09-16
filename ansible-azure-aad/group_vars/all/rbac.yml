@@ -1,12 +1,10 @@
 ---
-# Owners : Nick Chao, John Immel
+# Owners : John Immel
 gh_groups:
   gh-rbac-iam-owners:
     privacy: closed
     description: A github managed team for rbac approvers
     members:
-      - username: nick-chao_CPSI
-        role: maintainer
       - username: john-immel_CPSI
         role: maintainer
 aad_groups:
@@ -42,17 +40,8 @@ aad_groups:
       - az-grp-crp-cloudops-all
       - az-grp-crp-dataplatform-all
       - az-grp-crp-itops-all
-      - az-grp-crp-proddev-cookies-all
-      - az-grp-crp-proddev-ehr-coe-all
-      - az-grp-crp-proddev-deacon-all
-      - az-grp-crp-proddev-drasticmeasures-all
-      - az-grp-crp-proddev-nitro-all
-      - az-grp-crp-patientcare-all
-      - az-grp-crp-proddev-patientconnect-all
-      - az-grp-crp-proddev-phantom-all
-      - az-grp-crp-proddev-phoenix-all
-      - az-grp-crp-proddev-puma-all
       - az-grp-crp-soc-all
+      - az-grp-patientcare-proddev-all
   az-rbac-mgs-lz-virtual-machine-user-login:
     nested_groups:
       - az-grp-crp-cloudops-groundzero
@@ -63,13 +52,10 @@ aad_groups:
   az-rbac-mgs-lz-us-customer-monitoring-reader:
     nested_groups:
       - az-grp-crp-cloudops-monitor-all
-      - az-grp-crp-proddev-monitor-all
   az-rbac-mgs-lz-us-customer-npd-policy-trigger:
     nested_groups:
       - az-grp-crp-dataplatform-engineers-data
   az-rbac-mgs-lz-us-customer-shd-contributor:
-    spn_client_ids:
-      - 371a8c1e-8f66-4866-aea4-40ce1699a4c1 # spn-ssvcs-us-cpsicorp-con-shd-001-aviatrix
   az-rbac-mgs-lz-us-customer-shd-cus-console-access:
     nested_groups:
       - az-grp-trb-itms-all
@@ -101,7 +87,6 @@ aad_groups:
       - atl-ece-prod-thrive-dev
       - atl-ece-rcm
       - az-grp-crp-cloudops-monitor-all
-      - az-grp-crp-proddev-monitor-all
   az-rbac-mgs-sandbox-akv-admin:
     spn_client_ids:
       - 97d44123-83b0-425d-a7b2-b5b1d295db5a # az-rbac-mgs-sandbox-akv-admin
@@ -113,27 +98,39 @@ aad_groups:
     nested_groups:
       - az-grp-crp-cloudops-all
   az-rbac-mgs-sandbox-us-customer-contributor:
-    nested_groups:
-      - az-grp-crp-cloudops-all
-      - az-grp-crp-innov-all
-      - az-grp-crp-itops-all
-      - az-grp-crp-proddev-all
-      - az-grp-crp-proddev-cookies-all
-      - az-grp-crp-proddev-ehr-coe-all
-      - az-grp-crp-proddev-deacon-all
-      - az-grp-crp-proddev-drasticmeasures-all
-      - az-grp-crp-proddev-nitro-all
-      - az-grp-crp-patientcare-all
-      - az-grp-crp-proddev-patientconnect-all
-      - az-grp-crp-proddev-phantom-all
-      - az-grp-crp-proddev-phoenix-all
-      - az-grp-crp-proddev-puma-all
-      - az-grp-crp-soc-all
+    users:
+      - arun.mohan@trubridge.com
+      - chase.kleinschmidt@trubridge.com
+      - cheri.gieske@trubridge.com
+      - christina.finazzo@trubridge.com
+      - daniel.flowers@trubridge.com
+      - divyesh.patel@trubridge.com
+      - gousiya.sayyad@trubridge.com
+      - jason.phillips@trubridge.com
+      - kathryn.coburn@trubridge.com
+      - lonney.scherr@trubridge.com
+      - matt.watts@trubridge.com
+      - michael.salmons@trubridge.com
+      - mohammed.nizamuddin@trubridge.com
+      - nate.stone@trubridge.com
+      - nick.widboom@trubridge.com
+      - pradeep.toleti@trubridge.com
+      - sanjana.sheshgir@trubridge.com
+      - swati.thakur@trubridge.com
+      - thomas.burt@trubridge.com
+      - travis.austin@trubridge.com
+      - wynn.vanduyn@trubridge.com
   az-rbac-mgs-sandbox-us-customer-owner:
     nested_groups:
       - az-grp-crp-ccoe-all
       - az-grp-crp-cloudops-mgr
   az-rbac-mgs-sandbox-us-customer-reader:
+    nested_groups:
+      - az-grp-crp-cloudops-all
+      - az-grp-crp-innov-all
+      - az-grp-crp-itops-all
+      - az-grp-patientcare-proddev-all
+      - az-grp-crp-soc-all
     spn_client_ids:
       - daf915ba-07e2-47ab-ab0c-b938fef579ca # spn-subs-sandbox-us-cpsicorp-shd-001-mdp-secrets
       - bd92f47c-f4b0-4e64-b166-9d7c9972821f # spn-subs-sandbox-us-cpsicorp-shd-001-data-platform-security
@@ -167,6 +164,9 @@ aad_groups:
     nested_groups:
       - az-grp-crp-ccoe-all
       - az-grp-crp-soc-mgr
+  az-rbac-mgs-tenant-root-group-cost-contributor:
+    nested_groups:
+      - az-grp-crp-dataplatform-finops
   az-rbac-subs-lz-us-customer-dev-001-adf-run:
     nested_groups:
       - az-grp-crp-dataplatform-engineers-data
@@ -212,6 +212,9 @@ aad_groups:
   az-rbac-subs-ssvcs-us-hybrid-mgmt-shd-001-template-spec-contributor:
     nested_groups:
       - az-grp-crp-soc-all
+  az-rbac-rg-rg-crp-cost-data-shd-usea-001-stgblob-reader:
+    nested_groups:
+      - az-grp-crp-dataplatform-finops
   az-rbac-rg-rg-crp-los-app-dev-usea-001-akv-secrets-officer:
     spn_client_ids:
       - 7d2f1975-7257-4ccc-80c7-c6998ef081f8 # func-crp-los-app-dev-usea-001
@@ -236,9 +239,6 @@ aad_groups:
   az-rbac-rg-rg-crp-los-app-stg-usea-001-stgblob-contributor:
     spn_client_ids:
       - 95ced8dd-6e49-4774-9fc1-8dd201a31bf6 # func-crp-los-app-stg-usea-001
-  az-rbac-rg-rg-crp-mdp-data-dev-usea-001-hub-virtual-machine-user-login:
-    nested_groups:
-      - az-grp-crp-dataplatform-engineers-data
   az-rbac-rg-rg-crp-mdp-data-dev-usea-001-user-access-admin:
     spn_client_ids:
       - 28d70d77-66d7-419a-9e35-3cf199ee0b30 # spn-subs-lz-us-cpsicorp-dev-001-data-platform-security

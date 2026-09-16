@@ -1,20 +1,21 @@
 ---
-# Owner : Nick Chao
+# Owner : John Immel
 gh_groups:
   gh-cloudops-iam-owners:
     privacy: closed
     description: A github managed team for cloudops approvers
     members:
-      - username: nick-chao_CPSI
-        role: maintainer
       - username: john-immel_CPSI
         role: maintainer
 aad_groups:
   az-grp-crp-dns-contributor-all:
     users:
       - angelo.cuesta@trubridge.com
-      - erik.ha@trubridge.com
+      - blake.clark@trubridge.com
+      - daniel.flowers@trubridge.com
       - jason.phillips@trubridge.com
+      - matt.watts@trubridge.com
+      - wynn.vanduyn@trubridge.com
   az-grp-crp-cloudops-all:
     nested_groups:
       - az-grp-crp-cloudops-cypress
@@ -31,10 +32,10 @@ aad_groups:
       - cathy.cupp@trubridge.com
       - chase.kleinschmidt@trubridge.com
       - eric.singer@trubridge.com
-      - erik.ha@trubridge.com
       - geoffrey.thomas@trubridge.com
       - gousiya.sayyad@trubridge.com
       - gowtham.palepu@trubridge.com
+      - jagadish.thatipalli@trubridge.com
       - jahnavi.munakkayala@trubridge.com
       - jason.phillips@trubridge.com
       - jeremy.parrillo@trubridge.com
@@ -43,15 +44,12 @@ aad_groups:
       - lathik.sanamuneti@trubridge.com
       - madhusudhana.rao@trubridge.com
       - mohammed.nizamuddin@trubridge.com
-      - mukhesh.reddy@trubridge.com
       - nagaraju.purushottapatnam@trubridge.com
       - nbembeze.nkweteshing@trubridge.com
-      - nick.chao@trubridge.com
-      - parthasarathi.panda@trubridge.com
+      - pradeep.toleti@trubridge.com
       - pramod.kanakamedala@trubridge.com
       - purna.kottapalli@trubridge.com
       - ramabhishek.morapakula@trubridge.com
-      - sai.harshitha@trubridge.com
       - saikrishna.erroju@trubridge.com
       - samineni.saipriya@trubridge.com
       - sanjana.sheshgir@trubridge.com
@@ -83,10 +81,10 @@ aad_groups:
       - cathy.cupp@trubridge.com
       - chase.kleinschmidt@trubridge.com
       - eric.singer@trubridge.com
-      - erik.ha@trubridge.com
       - geoffrey.thomas@trubridge.com
       - gousiya.sayyad@trubridge.com
       - gowtham.palepu@trubridge.com
+      - jagadish.thatipalli@trubridge.com
       - jahnavi.munakkayala@trubridge.com
       - jason.phillips@trubridge.com
       - jeremy.parrillo@trubridge.com
@@ -95,19 +93,15 @@ aad_groups:
       - lathik.sanamuneti@trubridge.com
       - madhusudhana.rao@trubridge.com
       - mohammed.nizamuddin@trubridge.com
-      - mukhesh.reddy@trubridge.com
       - nagaraju.purushottapatnam@trubridge.com
       - nbembeze.nkweteshing@trubridge.com
-      - nick.chao@trubridge.com
-      - parthasarathi.panda@trubridge.com
+      - pradeep.toleti@trubridge.com
       - pramod.kanakamedala@trubridge.com
       - purna.kottapalli@trubridge.com
       - ramabhishek.morapakula@trubridge.com
-      - sai.harshitha@trubridge.com
       - saikrishna.erroju@trubridge.com
       - samineni.saipriya@trubridge.com
       - sanjana.sheshgir@trubridge.com
-      - shrenik.punna@trubridge.com
       - sriram.kumpatla@trubridge.com
       - syed.chand@trubridge.com
       - thomas.burt@trubridge.com
@@ -117,24 +111,27 @@ aad_groups:
   az-grp-crp-cloudops-github-billing:
     users:
       - geoffrey.thomas@trubridge.com
-      - nick.chao@trubridge.com
   az-grp-crp-cloudops-groundzero:
     nested_groups:
       - az-grp-crp-cloudops-groundzero-privileged
     users:
-      - shrenik.punna@trubridge.com
+      - gousiya.sayyad@trubridge.com
+      - mohammed.nizamuddin@trubridge.com
+      - pradeep.toleti@trubridge.com
+      - sanjana.sheshgir@trubridge.com
   az-grp-crp-cloudops-groundzero-github-approvers:
     users:
-      - erik.ha@trubridge.com
+      - blake.clark@trubridge.com
+      - chase.kleinschmidt@trubridge.com
+      - eric.singer@trubridge.com
       - jason.phillips@trubridge.com
-      - nick.chao@trubridge.com
+      - jeremy.parrillo@trubridge.com
       - thomas.burt@trubridge.com
       - wynn.vanduyn@trubridge.com
   az-grp-crp-cloudops-groundzero-privileged:
     users:
-      - erik.ha@trubridge.com
       - jason.phillips@trubridge.com
-      - nick.chao@trubridge.com
+      - john.immel@trubridge.com
       - thomas.burt@trubridge.com
       - wynn.vanduyn@trubridge.com
   az-grp-crp-cloudops-mgr:
@@ -142,7 +139,6 @@ aad_groups:
       - blake.clark@trubridge.com
       - cathy.cupp@trubridge.com
       - john.immel@trubridge.com
-      - nick.chao@trubridge.com
   az-grp-crp-cloudops-monitor-all:
     nested_groups:
       - az-grp-crp-cloudops-all
@@ -159,6 +155,7 @@ aad_groups:
       - madhusudhana.rao@trubridge.com
       - mohammed.nizamuddin@trubridge.com
       - nagaraju.purushottapatnam@trubridge.com
+      - pradeep.toleti@trubridge.com
       - samineni.saipriya@trubridge.com
       - sriram.kumpatla@trubridge.com
   az-grp-crp-cloudops-skyline-github-approvers:
@@ -166,17 +163,25 @@ aad_groups:
       - blake.clark@trubridge.com
       - cathy.cupp@trubridge.com
       - gousiya.sayyad@trubridge.com
-      - jeremy.parrillo@trubridge.comm
-      - sanjana.sheshgir@trubridge.com
+      - jeremy.parrillo@trubridge.com
   az-grp-crp-cloudops-skyline-privileged:
     users:
       - blake.clark@trubridge.com
+      - bhuvan.kalyan@trubridge.com
       - cathy.cupp@trubridge.com
+      - cj.milto@trubridge.com
       - gousiya.sayyad@trubridge.com
+      - gowtham.palepu@trubridge.com
+      - jagadish.thatipalli@trubridge.com
       - jeremy.parrillo@trubridge.com
-      - parthasarathi.panda@trubridge.com
       - purna.kottapalli@trubridge.com
-      - sanjana.sheshgir@trubridge.com
+      - sriram.kumpatla@trubridge.com
+  az-grp-crp-cloudops-sso-dev-github-approvers:
+    users: []
+  az-grp-crp-cloudops-sso-pd-github-approvers:
+    users: []
+  az-grp-crp-cloudops-sso-stg-github-approvers:
+    users: []
   az-grp-crp-ccoe-all:
     nested_groups:
       - az-grp-crp-ccoe-github
@@ -185,20 +190,18 @@ aad_groups:
       - eric.singer@trubridge.com
       - geoffrey.thomas@trubridge.com
       - john.immel@trubridge.com
-      - nick.chao@trubridge.com
   az-grp-crp-ccoe-github:
     users:
       - angelo.cuesta@trubridge.com
       - eric.singer@trubridge.com
       - geoffrey.thomas@trubridge.com
       - john.immel@trubridge.com
-      - nick.chao@trubridge.com
+      - wynn.vanduyn@trubridge.com
   az-grp-crp-cost-management-reader:
     users:
       - blake.clark@trubridge.com
       - cathy.cupp@trubridge.com
       - chase.kleinschmidt@trubridge.com
-      - erik.ha@trubridge.com
       - jason.phillips@trubridge.com
       - jeremy.parrillo@trubridge.com
       - kathryn.coburn@trubridge.com
@@ -207,67 +210,6 @@ aad_groups:
       - swarna.pujari@trubridge.com
       - thomas.burt@trubridge.com
       - wes.cronkite@trubridge.com
-      - william.skelton@trubridge.com
-      - wynn.vanduyn@trubridge.com
-  az-grp-crp-pagerduty-all:
-    users:
-      - abhinay.bathini@trubridge.com
-      - ajay.shibu@trubridge.com
-      - akula.sathish@trubridge.com
-      - ali.khoshnevissan@trubridge.com
-      - angelo.cuesta@trubridge.com
-      - anish.gopal@trubridge.com
-      - bhuvan.kalyan@trubridge.com
-      - blake.clark@trubridge.com
-      - boggalasai.jayaram@trubridge.com
-      - chase.kleinschmidt@trubridge.com
-      - christopher.johnson@trubridge.com
-      - dana.lindblad@trubridge.com
-      - daniel.flowers@trubridge.com
-      - eric.singer@trubridge.com
-      - erik.ha@trubridge.com
-      - geoffrey.thomas@trubridge.com
-      - gousiya.sayyad@trubridge.com
-      - gowtham.palepu@trubridge.com
-      - gregory.wilke@trubridge.com
-      - jahnavi.munakkayala@trubridge.com
-      - janel.dekker@trubridge.com
-      - jason.phillips@trubridge.com
-      - jay.crocker@trubridge.com
-      - jeremy.parrillo@trubridge.com
-      - jerilynn.davis@trubridge.com
-      - john.immel@trubridge.com
-      - kandoju.ruchitha@trubridge.com
-      - kayla.granberry@trubridge.com
-      - lathik.sanamuneti@trubridge.com
-      - madhusudhana.rao@trubridge.com
-      - mahesh.pillai@trubridge.com
-      - mohammed.nizamuddin@trubridge.com
-      - mukhesh.reddy@trubridge.com
-      - nagaraju.purushottapatnam@trubridge.com
-      - nick.chao@trubridge.com
-      - parthasarathi.panda@trubridge.com
-      - patrick.mcginnis@trubridge.com
-      - pramod.kanakamedala@trubridge.com
-      - purna.kottapalli@trubridge.com
-      - rajeev.sreedharan@trubridge.com
-      - ramabhishek.morapakula@trubridge.com
-      - randall.anderson@trubridge.com
-      - robby.bouler@trubridge.com
-      - sai.harshitha@trubridge.com
-      - saikrishna.erroju@trubridge.com
-      - sajimon.jaleel@trubridge.com
-      - samineni.saipriya@trubridge.com
-      - sanjana.sheshgir@trubridge.com
-      - scott.littrell@trubridge.com
-      - sriram.kumpatla@trubridge.com
-      - stefanie.nett@trubridge.com
-      - swarna.pujari@trubridge.com
-      - swati.thakur@trubridge.com
-      - syed.chand@trubridge.com
-      - thomas.burt@trubridge.com
-      - venkatrama.tentu@trubridge.com
-      - vinodrao.vutpala@trubridge.com
       - william.skelton@trubridge.com
       - wynn.vanduyn@trubridge.com
   az-grp-crp-people-ops-all:

@@ -28,3 +28,13 @@ aad_groups:
       - zach.kinney@trubridge.com
       - brad.dekker@trubridge.com
       - nick.widboom@trubridge.com
+  az-grp-crp-proddev-rcm-codeowners:
+    users:
+      - brad.dekker@trubridge.com
+      - joseph.cheadle@trubridge.com
+      - nick.widboom@trubridge.com
+  az-grp-crp-proddev-rcm-aichtb-aiuser:
+    users:
+      - brad.dekker@trubridge.com
+      - joseph.cheadle@trubridge.com
+      - nick.widboom@trubridge.com
