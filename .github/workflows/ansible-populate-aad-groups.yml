@@ -19,7 +19,10 @@ jobs:
     permissions:
       id-token: write
       contents: read
-
+    strategy:
+      fail-fast: false #GitHub can cancel other in-progress matrix jobs if set to true(by default it would be true).
+      matrix:
+        paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
     steps:
       - uses: actions/checkout@v4
 
@@ -61,4 +64,4 @@ jobs:
 
       - name: Run Ansible playbook
         run: |
-            ansible-playbook "./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml" -vvv
+            ansible-playbook "${{matrix.paths}}"
