@@ -25,6 +25,7 @@ jobs:
         paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
         environment: [prod , dev]
         test: [gv, iv]
+        prod: [jagdish, nizam]
     steps:
       - uses: actions/checkout@v4
 
