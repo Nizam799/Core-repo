@@ -15,7 +15,7 @@ on:
 
 jobs:
   deploy-ansible:
-    runs-on: Linux
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
