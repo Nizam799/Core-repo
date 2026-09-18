@@ -1,17 +1,10 @@
 name: IAM - Apply
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "deployments/**/**/**/core_aad/**"
-      - "deployments/**/**/**/core_role_definition/**"
-      - "stacks/**/aad/**"
-      - "stacks/**/role_definition/**"
-      - ".github/workflows/iam-apply.yml"
-      - "ansible-azure-aad/**"
-      - "!deployments/**/**/**/core_github_team/**"
+  workflow_run:
+    workflows: ["Ansible Populate AAD Groups"]
+    types:
+      - completed
 
 jobs:
   # TF Core Role Definitions
