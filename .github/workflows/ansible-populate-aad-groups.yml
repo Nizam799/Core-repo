@@ -28,9 +28,6 @@ jobs:
       matrix:  # Using matrix would create multiple jobs for each path specified
         paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
         environment: [prod , dev]
-        exclude:
-          - environment: prod
-            paths: ./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml
     steps:
       - uses: actions/checkout@v4
 
