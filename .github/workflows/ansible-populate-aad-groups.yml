@@ -3,7 +3,7 @@ name: Ansible Populate AAD Groups
 on:
   pull_request_target:
     branches:
-      - cop
+      - main
     paths:
       - "deployments/**/**/**/core_aad/**"
       - "deployments/**/**/**/core_role_definition/**"
@@ -32,6 +32,8 @@ jobs:
           - environment: prod
             paths: ./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml
           - environment: dev
+            paths: ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml
+          - environment: prod
             paths: ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml
     steps:
       - uses: actions/checkout@v4
