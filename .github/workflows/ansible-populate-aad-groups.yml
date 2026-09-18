@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false #GitHub can cancel other in-progress matrix jobs if set to true(by default it would be true).
       matrix:  # Using matrix would create multiple jobs for each path specified
-        paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
+        # paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
         # environment: [prod , dev]
         include:
           - environment: prod
