@@ -12,6 +12,10 @@ on:
       - ".github/workflows/ansible-populate-aad-groups.yml"
       - "ansible-azure-aad/**"
       - "!deployments/**/**/**/core_github_team/**"
+  
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 
 jobs:
   deploy-ansible:
@@ -22,9 +26,9 @@ jobs:
     strategy:
       fail-fast: false #GitHub can cancel other in-progress matrix jobs if set to true(by default it would be true).
       matrix:  # Using matrix would create multiple jobs for each path specified
-        # paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
-        # environment: [prod , dev]
-        include:
+        paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
+        environment: [prod , dev]
+        exclude:
           - environment: prod
             paths: ./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml
           - environment: dev
