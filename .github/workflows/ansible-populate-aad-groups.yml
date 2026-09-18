@@ -3,7 +3,7 @@ name: Ansible Populate AAD Groups
 on:
   pull_request_target:
     branches:
-      - main
+      - cop
     paths:
       - "deployments/**/**/**/core_aad/**"
       - "deployments/**/**/**/core_role_definition/**"
