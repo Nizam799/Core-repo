@@ -33,6 +33,8 @@ jobs:
             paths: ./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml
           - environment: dev
             paths: ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml
+          - environment: prod
+            paths: ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml
     steps:
       - uses: actions/checkout@v4
 
