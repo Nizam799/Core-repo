@@ -1,7 +1,7 @@
 name: Ansible Populate AAD Groups
 
 on:
-  push:
+  pull_request_target:
     branches:
       - main
     paths:
@@ -28,6 +28,11 @@ jobs:
       matrix:  # Using matrix would create multiple jobs for each path specified
         paths: [./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml , ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml]
         environment: [prod , dev]
+        exclude: #excludes the below mentioned combination. And we can use include to explicitly include other combinations if needed.
+          - environment: prod
+            paths: ./ansible-azure-aad/aad-az-grp-crp-dataplatform.yml
+          - environment: dev
+            paths: ./ansible-azure-aad/aad-az-grp-crp-cloudops.yml
     steps:
       - uses: actions/checkout@v4
 
