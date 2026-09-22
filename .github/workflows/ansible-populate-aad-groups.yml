@@ -8,7 +8,6 @@ on:
       - "deployments/**/**/**/core_aad/**"
       - "deployments/**/**/**/core_role_definition/**"
       - "stacks/**/aad/**"
-      - "stacks/**/role_definition/**"
       - ".github/workflows/ansible-populate-aad-groups.yml"
       - "ansible-azure-aad/**"
       - "!deployments/**/**/**/core_github_team/**"
